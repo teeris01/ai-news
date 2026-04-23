@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Edition — April 17, 2026</title>
+<title>Morning Edition — April 23, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -170,6 +170,21 @@
     max-width: 68ch;
   }
 
+  .story-body p + p { margin-top: 1rem; }
+
+  .pull-quote {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+    line-height: 1.35;
+    margin: 2.2rem 0 1.8rem;
+    padding-left: 1.4rem;
+    border-left: 3px solid currentColor;
+    max-width: 30ch;
+    letter-spacing: -0.01em;
+  }
+
   .story-link {
     display: inline-block;
     margin-top: 2rem;
@@ -210,6 +225,18 @@
     margin-bottom: 1.2rem;
   }
 
+  .meta-row {
+    font-family: var(--inter);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
 
   /* ════════════════════════════════
      STORY 01 — HERO / CREAM GIANT
@@ -263,9 +290,38 @@
 
   .story-01 .cat-badge { background: #d4a853; color: #1a1a1a; }
 
+  .story-01 .bench-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+    max-width: 64ch;
+  }
+  .story-01 .bench-card {
+    background: rgba(212,168,83,0.1);
+    border-left: 3px solid #d4a853;
+    padding: 1rem 1.1rem;
+  }
+  .story-01 .bench-num {
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    line-height: 1;
+  }
+  .story-01 .bench-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(26,26,26,0.6);
+    margin-top: 0.35rem;
+    font-weight: 600;
+  }
+
 
   /* ════════════════════════════════
-     STORY 02 — DARK MIDNIGHT
+     STORY 02 — DARK MIDNIGHT / AMAZON
   ════════════════════════════════ */
   .story-02 {
     background: #0d0d1a;
@@ -316,6 +372,31 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     opacity: 0.5;
+  }
+
+  .story-02 .mini-stat {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .story-02 .mini-stat div { border-top: 1px solid rgba(167,139,250,0.3); padding-top: 0.7rem; }
+  .story-02 .mini-stat strong {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #a78bfa;
+    display: block;
+    line-height: 1;
+  }
+  .story-02 .mini-stat span {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-top: 0.3rem;
+    display: block;
   }
 
   .story-02 .story-source { color: #a78bfa; opacity: 0.8; }
@@ -397,947 +478,831 @@
     inset: 10px;
     border: 2px dashed #ff3b30;
     border-radius: 50%;
-    opacity: 0.4;
   }
 
-  .story-03 .stamp-num {
+  .story-03 .stamp-number {
     font-family: var(--fraunces);
-    font-size: clamp(3rem, 7vw, 7rem);
     font-weight: 900;
     font-style: italic;
+    font-size: clamp(3rem, 6vw, 5rem);
     color: #ff3b30;
-    line-height: 0.9;
+    line-height: 1;
   }
 
-  .story-03 .stamp-text {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #ff3b30;
-    margin-top: 0.5rem;
-  }
-
-  .story-03 .story-body { color: rgba(255,208,208,0.8); }
-  .story-03 .story-link { color: #ff3b30; }
-  .story-03 .story-source { color: #ff3b30; opacity: 1; }
-  .story-03 .cat-badge { background: rgba(255,59,48,0.2); color: #ff3b30; }
-
-
-  /* ════════════════════════════════
-     STORY 04 — TERMINAL GREEN
-  ════════════════════════════════ */
-  .story-04 {
-    background: #040d04;
-    color: #00ff41;
-    font-family: var(--inter);
-  }
-
-  .story-04 .inner {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 80ch;
-    position: relative;
-    z-index: 1;
-  }
-
-  .story-04 .terminal-chrome {
-    background: #0a1a0a;
-    border: 1px solid #00ff4130;
-    border-radius: 8px;
-    padding: 2rem 2.5rem;
-    margin-bottom: 3rem;
-    font-size: 0.82rem;
-    line-height: 2;
-    font-family: 'Courier New', monospace;
-  }
-
-  .story-04 .terminal-chrome .prompt { color: #00ff41; opacity: 0.6; }
-  .story-04 .terminal-chrome .cmd { color: #00ff41; }
-  .story-04 .terminal-chrome .out { color: #88ff99; opacity: 0.8; }
-
-  .story-04 .story-num {
-    font-size: clamp(12rem, 28vw, 32rem);
-    color: rgba(0,255,65,0.04);
-    right: -2vw;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .story-04 .story-headline {
-    font-size: clamp(2.5rem, 5vw, 5.5rem);
-    font-weight: 800;
-    color: #00ff41;
-    max-width: 20ch;
-    margin-bottom: 1.5rem;
-  }
-
-  .story-04 .story-body { color: #88ff99; max-width: 60ch; }
-  .story-04 .story-source { color: #00ff41; opacity: 1; }
-  .story-04 .story-link { color: #00ff41; }
-  .story-04 .cat-badge { background: rgba(0,255,65,0.1); color: #00ff41; border: 1px solid rgba(0,255,65,0.3); }
-
-  .cursor {
-    display: inline-block;
-    width: 0.6em;
-    height: 1em;
-    background: #00ff41;
-    animation: blink 1s step-end infinite;
-    vertical-align: text-bottom;
-    margin-left: 2px;
-  }
-
-  @keyframes blink { 50% { opacity: 0; } }
-
-
-  /* ════════════════════════════════
-     STORY 05 — IVORY EDITORIAL
-  ════════════════════════════════ */
-  .story-05 {
-    background: #fffdf5;
-    color: #1a1a0f;
-    padding: 8vw 10vw;
-  }
-
-  .story-05 .inner {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  .story-05 .story-num {
-    font-size: clamp(12rem, 25vw, 28rem);
-    color: #f0ead0;
-    left: -3vw;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 0;
-  }
-
-  .story-05 .story-headline {
-    font-size: clamp(2.4rem, 4.5vw, 5rem);
-    font-weight: 800;
-    color: #1a1a0f;
-    margin-bottom: 2.5rem;
-    border-bottom: 2px solid #c8b87a;
-    padding-bottom: 1.5rem;
-  }
-
-  .story-05 .drop-cap-text {
-    font-family: var(--inter);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #2a2a1f;
-    column-count: 2;
-    column-gap: 3rem;
-    column-rule: 1px solid #e0d8b0;
-  }
-
-  .story-05 .drop-cap-text::first-letter {
-    font-family: var(--fraunces);
-    font-size: 5.5em;
-    font-weight: 900;
-    font-style: italic;
-    float: left;
-    line-height: 0.75;
-    margin-right: 0.1em;
-    margin-top: 0.05em;
-    color: #8b7340;
-  }
-
-  .story-05 .story-source { color: #8b7340; opacity: 1; }
-  .story-05 .story-link { color: #1a1a0f; }
-  .story-05 .cat-badge { background: #f5e6b8; color: #7a5c20; }
-
-  .story-05 .footnote {
-    margin-top: 2rem;
+  .story-03 .stamp-label {
     font-size: 0.75rem;
-    color: #888;
-    border-top: 1px solid #e0d8b0;
-    padding-top: 1rem;
-    font-style: italic;
-  }
-
-
-  /* ════════════════════════════════
-     STORY 06 — DEEP INDIGO / STATS
-  ════════════════════════════════ */
-  .story-06 {
-    background: #1a0f2e;
-    color: #fff;
-    min-height: 100vh;
-  }
-
-  .story-06 .inner {
-    min-height: 80vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 3rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .story-06 .story-headline {
-    font-size: clamp(2.2rem, 4.5vw, 5rem);
-    font-weight: 800;
-    max-width: 22ch;
-    color: #fff;
-  }
-
-  .story-06 .stat-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 4vw;
-    flex-wrap: wrap;
-  }
-
-  .story-06 .stat-item { flex: 1 1 200px; }
-
-  .story-06 .stat-num {
-    font-family: var(--fraunces);
-    font-size: clamp(4rem, 10vw, 11rem);
-    font-weight: 900;
-    font-style: italic;
-    line-height: 0.9;
-    display: block;
-  }
-
-  .story-06 .stat-num.gold { color: #d4a853; }
-  .story-06 .stat-num.violet { color: #c084fc; }
-  .story-06 .stat-num.teal { color: #2dd4bf; }
-
-  .story-06 .stat-desc {
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-top: 0.4rem;
-    display: block;
-  }
-
-  .story-06 .story-body { opacity: 0.8; }
-  .story-06 .story-source { color: #c084fc; opacity: 1; }
-  .story-06 .story-link { color: #c084fc; }
-  .story-06 .cat-badge { background: rgba(192,132,252,0.2); color: #c084fc; }
-
-  .story-06 .story-num {
-    font-size: clamp(14rem, 30vw, 36rem);
-    color: rgba(255,255,255,0.025);
-    right: -3vw;
-    bottom: -5vw;
-  }
-
-
-  /* ════════════════════════════════
-     STORY 07 — AMBER EDITORIAL
-  ════════════════════════════════ */
-  .story-07 {
-    background: #2a1f0a;
-    color: #f5e8c0;
-  }
-
-  .story-07 .inner {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 6vw;
-    align-items: center;
-    min-height: 80vh;
-  }
-
-  .story-07 .left-col { position: relative; z-index: 1; }
-  .story-07 .right-col { position: relative; }
-
-  .story-07 .story-headline {
-    font-size: clamp(2.8rem, 5.5vw, 6rem);
-    font-weight: 900;
-    color: #d4a853;
+    color: #ff3b30;
+    margin-top: 0.8rem;
     max-width: 14ch;
   }
 
-  .story-07 .story-num {
-    font-size: clamp(16rem, 34vw, 40rem);
-    color: rgba(212,168,83,0.08);
-    right: -3vw;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .story-07 .pull-quote {
-    font-family: var(--fraunces);
-    font-size: clamp(1.4rem, 3vw, 2.4rem);
-    font-style: italic;
-    font-weight: 400;
-    color: #d4a853;
-    border-left: 4px solid #d4a853;
-    padding-left: 1.5rem;
-    line-height: 1.4;
-    opacity: 0.9;
-  }
-
-  .story-07 .story-body { color: rgba(245,232,192,0.8); }
-  .story-07 .story-source { color: #d4a853; opacity: 1; }
-  .story-07 .story-link { color: #d4a853; }
-  .story-07 .cat-badge { background: rgba(212,168,83,0.2); color: #d4a853; }
+  .story-03 .story-source { color: #ff6b6b; }
+  .story-03 .story-body { color: #ffd0d0; }
+  .story-03 .story-link { color: #ff6b6b; }
+  .story-03 .cat-badge { background: rgba(255,60,60,0.2); color: #ff3b30; }
 
 
   /* ════════════════════════════════
-     STORY 08 — SPLIT TEAL/DARK
+     STORY 04 — FOREST GREEN / MYTHOS
   ════════════════════════════════ */
-  .story-08 {
-    background: #e8f8f5;
-    color: #0a2a25;
-    padding: 0;
-    min-height: 100vh;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
+  .story-04 {
+    background: #0f1f1a;
+    color: #d8e8dd;
   }
 
-  .story-08 .left-panel {
-    background: #0a3d35;
-    color: #e8f8f5;
-    padding: 6vw 4vw;
+  .story-04 .story-num {
+    font-size: clamp(20rem, 40vw, 46rem);
+    color: rgba(120,200,150,0.06);
+    left: -5vw;
+    top: -4vw;
+  }
+
+  .story-04 .inner { position: relative; z-index: 1; max-width: 56rem; }
+
+  .story-04 .story-headline {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 800;
+    color: #e8f5ed;
+    max-width: 18ch;
+  }
+
+  .story-04 .kicker-line {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 0.8rem;
+    align-items: center;
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.3vw, 1.9rem);
+    color: #78c896;
+    margin-bottom: 1rem;
+  }
+  .story-04 .kicker-line::before {
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background: #78c896;
+  }
+
+  .story-04 .story-body { color: #c8dcd0; }
+  .story-04 .pull-quote { color: #78c896; }
+  .story-04 .story-source { color: #78c896; opacity: 0.8; }
+  .story-04 .story-link { color: #78c896; }
+  .story-04 .cat-badge { background: rgba(120,200,150,0.15); color: #78c896; }
+
+
+  /* ════════════════════════════════
+     STORY 05 — OLIVE / WARM TAN (GPT-5.5)
+  ════════════════════════════════ */
+  .story-05 {
+    background: #2b2820;
+    color: #e6decc;
+  }
+
+  .story-05 .story-num {
+    font-size: clamp(20rem, 40vw, 46rem);
+    color: rgba(230,210,150,0.05);
+    right: -4vw;
+    bottom: -6vw;
+  }
+
+  .story-05 .inner {
     position: relative;
-    overflow: hidden;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 4vw;
+    align-items: start;
   }
 
-  .story-08 .right-panel {
-    padding: 6vw 4vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .story-05 .story-headline {
+    font-size: clamp(2.6rem, 5vw, 5.5rem);
+    font-weight: 800;
+    color: #f2e6c4;
+    max-width: 16ch;
   }
 
-  .story-08 .story-num {
-    font-size: clamp(14rem, 28vw, 32rem);
-    color: rgba(255,255,255,0.04);
+  .story-05 .pull-quote { color: #e6c969; border-left-color: #e6c969; }
+  .story-05 .story-body { color: #d6ceb8; }
+  .story-05 .story-source { color: #e6c969; opacity: 0.85; }
+  .story-05 .story-link { color: #e6c969; }
+  .story-05 .cat-badge { background: rgba(230,201,105,0.15); color: #e6c969; }
+
+  .story-05 .odds-panel {
+    background: rgba(230,201,105,0.08);
+    border: 1px solid rgba(230,201,105,0.25);
+    padding: 1.6rem 1.5rem;
+  }
+  .story-05 .odds-panel .o-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e6c969;
+    margin-bottom: 0.6rem;
+  }
+  .story-05 .odds-panel .o-big {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(4.5rem, 9vw, 7rem);
+    color: #f2e6c4;
+    line-height: 1;
+  }
+  .story-05 .odds-panel .o-sub {
+    font-size: 0.78rem;
+    color: #d6ceb8;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+  .story-05 .odds-panel .o-div {
+    height: 1px;
+    background: rgba(230,201,105,0.25);
+    margin: 1.3rem 0;
+  }
+  .story-05 .odds-panel dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1rem;
+    font-size: 0.78rem;
+  }
+  .story-05 .odds-panel dt { color: #e6c969; font-weight: 600; letter-spacing: 0.06em; }
+  .story-05 .odds-panel dd { color: #d6ceb8; }
+
+
+  /* ════════════════════════════════
+     STORY 06 — DUSTY ROSE / CURSOR
+  ════════════════════════════════ */
+  .story-06 {
+    background: #2a1a1f;
+    color: #f0d6d8;
+  }
+
+  .story-06 .story-num {
+    font-size: clamp(20rem, 42vw, 48rem);
+    color: rgba(232,130,150,0.06);
+    right: -3vw;
+    top: -6vw;
+  }
+
+  .story-06 .inner { position: relative; z-index: 1; max-width: 62rem; }
+
+  .story-06 .story-headline {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 900;
+    color: #f8e4e8;
+    max-width: 16ch;
+  }
+
+  .story-06 .money-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+  .story-06 .money-row > div {
+    border-top: 1px solid rgba(232,130,150,0.4);
+    padding-top: 0.7rem;
+  }
+  .story-06 .money-row strong {
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: #e88196;
+    display: block;
+    line-height: 1;
+  }
+  .story-06 .money-row span {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 0.35rem;
+    display: block;
+  }
+
+  .story-06 .story-body { color: #e8c8cd; }
+  .story-06 .pull-quote { color: #e88196; }
+  .story-06 .story-source { color: #e88196; opacity: 0.85; }
+  .story-06 .story-link { color: #e88196; }
+  .story-06 .cat-badge { background: rgba(232,130,150,0.15); color: #e88196; }
+
+
+  /* ════════════════════════════════
+     STORY 07 — SLATE BLUE / MANAGED AGENTS
+  ════════════════════════════════ */
+  .story-07 {
+    background: #141c28;
+    color: #d8e2f0;
+  }
+
+  .story-07 .story-num {
+    font-size: clamp(18rem, 36vw, 42rem);
+    color: rgba(120,160,230,0.06);
     left: -3vw;
     bottom: -4vw;
   }
 
-  .story-08 .story-headline {
-    font-size: clamp(2.5rem, 4.5vw, 5rem);
-    font-weight: 900;
-    color: #e8f8f5;
-    max-width: 14ch;
+  .story-07 .inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4vw;
+    align-items: center;
+    min-height: 80vh;
   }
 
-  .story-08 .teal-stat {
-    font-family: var(--fraunces);
-    font-size: clamp(4rem, 9vw, 10rem);
-    font-weight: 900;
-    font-style: italic;
-    color: #2dd4bf;
-    line-height: 0.9;
+  .story-07 .story-headline {
+    font-size: clamp(2.6rem, 5.2vw, 5.8rem);
+    font-weight: 800;
+    color: #ebf0fa;
+    max-width: 17ch;
   }
 
-  .story-08 .teal-label {
-    font-size: 0.75rem;
+  .story-07 .story-body { color: #c4d0e4; }
+  .story-07 .pull-quote { color: #79a4e6; border-left-color: #79a4e6; }
+  .story-07 .story-source { color: #79a4e6; opacity: 0.85; }
+  .story-07 .story-link { color: #79a4e6; }
+  .story-07 .cat-badge { background: rgba(121,164,230,0.15); color: #79a4e6; }
+
+  .story-07 .panel {
+    background: rgba(121,164,230,0.06);
+    border: 1px solid rgba(121,164,230,0.2);
+    padding: 2rem 1.6rem;
+  }
+  .story-07 .panel h4 {
+    font-family: var(--inter);
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(232,248,245,0.5);
-    margin-top: 0.4rem;
+    color: #79a4e6;
+    margin-bottom: 1rem;
   }
-
-  .story-08 .right-headline {
+  .story-07 .panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  .story-07 .panel li {
+    font-family: var(--inter);
+    font-size: 0.92rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(121,164,230,0.18);
+    color: #d8e2f0;
+    line-height: 1.5;
+  }
+  .story-07 .panel li:first-child { border-top: 0; }
+  .story-07 .panel li strong {
     font-family: var(--fraunces);
-    font-size: clamp(1.8rem, 3.5vw, 3.5rem);
-    font-weight: 700;
-    color: #0a2a25;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-style: italic;
+    font-weight: 900;
+    color: #79a4e6;
+    margin-right: 0.4rem;
   }
-
-  .story-08 .story-body { color: #1a4040; }
-  .story-08 .story-source-teal { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #0a9981; margin-bottom: 1.2rem; }
-  .story-08 .story-link { color: #0a3d35; }
-  .story-08 .cat-badge { background: rgba(45,212,191,0.15); color: #0a9981; }
 
 
   /* ════════════════════════════════
-     STORY 09 — NEWSPAPER COLUMNS
+     STORY 08 — AMBER CREAM / DEEPSEEK
+  ════════════════════════════════ */
+  .story-08 {
+    background: #efe6d2;
+    color: #2a1f12;
+  }
+
+  .story-08 .story-num {
+    font-size: clamp(22rem, 44vw, 50rem);
+    color: rgba(184,124,46,0.08);
+    right: -5vw;
+    top: -6vw;
+  }
+
+  .story-08 .inner { position: relative; z-index: 1; max-width: 60rem; }
+
+  .story-08 .story-headline {
+    font-size: clamp(3rem, 6vw, 6.4rem);
+    font-weight: 800;
+    color: #2a1f12;
+    max-width: 15ch;
+  }
+
+  .story-08 .story-body { color: #2a1f12; }
+  .story-08 .pull-quote { color: #b87c2e; }
+  .story-08 .story-source { color: #b87c2e; opacity: 0.85; }
+  .story-08 .story-link { color: #2a1f12; }
+  .story-08 .cat-badge { background: #b87c2e; color: #efe6d2; }
+
+  .story-08 .kicker {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    color: #b87c2e;
+    margin-bottom: 0.8rem;
+  }
+
+
+  /* ════════════════════════════════
+     STORY 09 — TEAL DEEP / GEMINI
   ════════════════════════════════ */
   .story-09 {
-    background: #f8f5f0;
-    color: #1a1a1a;
-    padding: 7vw 8vw;
+    background: #0a2024;
+    color: #d0e8ea;
   }
 
   .story-09 .story-num {
-    font-size: clamp(10rem, 20vw, 24rem);
-    color: rgba(0,0,0,0.04);
-    right: -2vw;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: clamp(20rem, 40vw, 46rem);
+    color: rgba(100,210,210,0.05);
+    left: -4vw;
+    bottom: -6vw;
   }
 
-  .story-09 .headline-rule {
-    font-family: var(--fraunces);
-    font-size: clamp(2.5rem, 5.5vw, 6.5rem);
-    font-weight: 900;
-    line-height: 1;
-    max-width: 22ch;
-    margin-bottom: 0.5rem;
-    position: relative;
-    z-index: 1;
+  .story-09 .inner { position: relative; z-index: 1; max-width: 58rem; }
+
+  .story-09 .story-headline {
+    font-size: clamp(2.8rem, 5.4vw, 6rem);
+    font-weight: 800;
+    color: #e6faf9;
+    max-width: 18ch;
   }
 
-  .story-09 .subhead {
-    font-size: 1rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 3px double #1a1a1a;
-  }
-
-  .story-09 .columns {
-    column-count: 3;
-    column-gap: 3rem;
-    column-rule: 1px solid #ccc;
-    font-size: 0.95rem;
-    line-height: 1.75;
-    position: relative;
-    z-index: 1;
-  }
-
-  .story-09 .story-source { color: #555; margin-bottom: 1.5rem; }
-  .story-09 .story-link { color: #1a1a1a; }
-  .story-09 .cat-badge { background: #e8e0d0; color: #5a4a30; }
+  .story-09 .story-body { color: #bddada; }
+  .story-09 .pull-quote { color: #64d2d2; border-left-color: #64d2d2; }
+  .story-09 .story-source { color: #64d2d2; opacity: 0.85; }
+  .story-09 .story-link { color: #64d2d2; }
+  .story-09 .cat-badge { background: rgba(100,210,210,0.15); color: #64d2d2; }
 
 
   /* ════════════════════════════════
-     STORY 10 — FULL-BLEED FINALE
+     STORY 10 — CHARCOAL BREACH
   ════════════════════════════════ */
   .story-10 {
-    background: linear-gradient(135deg, #1a0530 0%, #0d1a3a 40%, #001a0d 100%);
-    color: #fff;
-    min-height: 100vh;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .story-10 .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4vw 6vw 0;
-  }
-
-  .story-10 .issue-label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-  }
-
-  .story-10 .center-mass {
-    padding: 4vw 6vw;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: #181818;
+    color: #e4e0d8;
   }
 
   .story-10 .story-num {
-    font-size: clamp(18rem, 38vw, 50rem);
-    color: rgba(255,255,255,0.025);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+    font-size: clamp(20rem, 42vw, 48rem);
+    color: rgba(255,60,60,0.04);
+    right: -4vw;
+    top: -2vw;
+  }
+
+  .story-10 .inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5vw;
+    align-items: center;
+    min-height: 78vh;
   }
 
   .story-10 .story-headline {
-    font-size: clamp(3rem, 7vw, 8.5rem);
+    font-size: clamp(2.8rem, 5.6vw, 6rem);
     font-weight: 900;
+    color: #fff;
     max-width: 16ch;
-    background: linear-gradient(135deg, #a78bfa, #38bdf8, #4ade80);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    z-index: 1;
   }
 
-  .story-10 .story-body { opacity: 0.75; max-width: 60ch; position: relative; z-index: 1; }
+  .story-10 .story-body { color: #c9c4b8; }
+  .story-10 .pull-quote { color: #ff6b6b; border-left-color: #ff6b6b; }
+  .story-10 .story-source { color: #ff6b6b; opacity: 0.8; }
+  .story-10 .story-link { color: #ff6b6b; }
+  .story-10 .cat-badge { background: rgba(255,60,60,0.18); color: #ff6b6b; }
 
-  .story-10 .bottom-colophon {
-    padding: 2rem 6vw;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+  .story-10 .timeline {
+    border-left: 2px solid rgba(255,107,107,0.4);
+    padding-left: 1.4rem;
+  }
+  .story-10 .timeline .t-item { padding: 0.8rem 0; position: relative; }
+  .story-10 .timeline .t-item::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.9rem;
+    top: 1.25rem;
+  }
+  .story-10 .timeline .t-date {
+    font-family: var(--fraunces);
+    font-style: italic;
+    color: #ff6b6b;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .story-10 .timeline .t-label {
+    font-size: 0.92rem;
+    color: #e4e0d8;
+    margin-top: 0.2rem;
+    line-height: 1.5;
   }
 
-  .story-10 .story-source { color: rgba(255,255,255,0.4); margin-bottom: 1.5rem; position: relative; z-index: 1; }
-  .story-10 .story-link { color: #a78bfa; position: relative; z-index: 1; }
 
   /* ─── BACK PAGE ─── */
   .back-page {
     background: #1a1a1a;
     color: #f5f0e8;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 6vw 6vw 5vw;
     text-align: center;
-    padding: 6vw;
   }
 
-  .back-page .wrap-title {
+  .back-page h2 {
     font-family: var(--fraunces);
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(3rem, 7vw, 6.5rem);
     font-weight: 900;
     font-style: italic;
-    line-height: 1;
-    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: #d4a853;
+    margin-bottom: 1.2rem;
   }
 
-  .back-page .wrap-title span { color: #d4a853; }
-
-  .back-page .wrap-sub {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 3rem;
+  .back-page .back-sub {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    color: #f5f0e8;
+    opacity: 0.8;
+    max-width: 42ch;
+    margin: 0 auto 2.5rem;
+    line-height: 1.4;
   }
 
-  .back-page .wrap-body {
-    font-size: 1.05rem;
+  .back-summary {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: left;
+    border-top: 1px solid rgba(212,168,83,0.3);
+    padding-top: 2.2rem;
+  }
+
+  .back-summary p {
+    font-size: 0.95rem;
     line-height: 1.75;
-    max-width: 60ch;
-    opacity: 0.7;
-    margin-bottom: 2rem;
+    opacity: 0.85;
+    margin-bottom: 1rem;
   }
 
-  .back-page .wrap-rule {
-    width: 80px;
-    height: 3px;
-    background: #d4a853;
-    margin: 0 auto 2rem;
-  }
-
-  .back-page .wrap-meta {
-    font-size: 0.7rem;
-    font-weight: 600;
+  .back-colophon {
+    text-align: center;
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(212,168,83,0.2);
+    font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #555;
+    opacity: 0.55;
+    line-height: 2;
   }
 
-  /* ─── DIVIDERS ─── */
-  .story-divider {
-    height: 6px;
-    background: linear-gradient(90deg, #d4a853, #c084fc, #38bdf8);
+  .back-colophon .issue-no {
+    font-family: var(--fraunces);
+    font-style: italic;
+    font-weight: 900;
+    color: #d4a853;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
   }
+
 
   /* ─── RESPONSIVE ─── */
-  @media (max-width: 768px) {
-    .masthead { flex-direction: column; align-items: flex-start; padding: 2rem; }
+  @media (max-width: 960px) {
+    .masthead { padding: 2rem 1.5rem 1.5rem; flex-direction: column; align-items: flex-start; }
     .masthead-meta { text-align: left; }
+    .toc-strip { padding: 1rem 1.5rem; }
+    .story { padding: 10vw 6vw; }
     .story-02 .inner,
     .story-03 .inner,
-    .story-07 .inner { grid-template-columns: 1fr; }
-    .story-08 { grid-template-columns: 1fr !important; }
-    .story-05 .drop-cap-text { column-count: 1; }
-    .story-09 .columns { column-count: 1; }
-    .story-03 .stamp-wrap { display: none; }
-    .toc-strip { padding: 1rem 2rem; }
+    .story-05 .inner,
+    .story-07 .inner,
+    .story-10 .inner { grid-template-columns: 1fr !important; gap: 3rem; min-height: 0; }
+    .story-01 .bench-grid,
+    .story-06 .money-row { grid-template-columns: 1fr 1fr; }
+    .story-03 .stamp { transform: rotate(-4deg); }
   }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     MASTHEAD
-════════════════════════════════════════ -->
+<!-- ════════════════════ MASTHEAD ════════════════════ -->
 <header class="masthead">
-  <div>
-    <div class="masthead-title">
-      <span>Curated for Jani</span>
-      Morning<br>Edition
-    </div>
-  </div>
+  <h1 class="masthead-title">
+    <span>AI Weekly · Issue No. 03</span>
+    Morning<br>Edition
+  </h1>
   <div class="masthead-meta">
-    <strong>Friday, April 17, 2026</strong>
-    Issue No. 2<br>
-    AI &amp; Developer Intelligence<br>
-    Top 10 from Hacker News
+    <strong>Thursday, 23 April 2026</strong>
+    Curated for Jani Teerioja<br>
+    Ten stories · one hour's read<br>
+    Published from Helsinki
   </div>
 </header>
 <div class="section-rule"></div>
 
-<!-- ═══════════════════════════════════════
-     TABLE OF CONTENTS STRIP
-════════════════════════════════════════ -->
-<nav class="toc-strip">
-  <a href="#story-01" class="toc-chip"><span class="chip-num">1</span> Claude Mythos Goes Live</a>
-  <a href="#story-02" class="toc-chip"><span class="chip-num">2</span> OpenAI "Spud" Almost Here</a>
-  <a href="#story-03" class="toc-chip"><span class="chip-num">3</span> MCPwn: Nginx 9.8 Exploit</a>
-  <a href="#story-04" class="toc-chip"><span class="chip-num">4</span> MCP Hits 97M Downloads</a>
-  <a href="#story-05" class="toc-chip"><span class="chip-num">5</span> Snap Axes 16% of Staff</a>
-  <a href="#story-06" class="toc-chip"><span class="chip-num">6</span> Gemini 3.1 Benchmark Crown</a>
-  <a href="#story-07" class="toc-chip"><span class="chip-num">7</span> Claude Code: Most Loved Tool</a>
-  <a href="#story-08" class="toc-chip"><span class="chip-num">8</span> Wayve's $60M Chip Bet</a>
-  <a href="#story-09" class="toc-chip"><span class="chip-num">9</span> 85% of Devs Use AI Daily</a>
-  <a href="#story-10" class="toc-chip"><span class="chip-num">10</span> Anthropic's $30B Streak</a>
+<!-- ════════════════════ TOC STRIP ════════════════════ -->
+<nav class="toc-strip" aria-label="Inside this issue">
+  <a class="toc-chip" href="#s1"><span class="chip-num">01</span> Opus 4.7 Lands</a>
+  <a class="toc-chip" href="#s2"><span class="chip-num">02</span> Amazon's $25B Bet</a>
+  <a class="toc-chip" href="#s3"><span class="chip-num">03</span> MCP Supply Chain</a>
+  <a class="toc-chip" href="#s4"><span class="chip-num">04</span> Claude Mythos</a>
+  <a class="toc-chip" href="#s5"><span class="chip-num">05</span> GPT-5.5 "Spud"</a>
+  <a class="toc-chip" href="#s6"><span class="chip-num">06</span> Cursor at $50B</a>
+  <a class="toc-chip" href="#s7"><span class="chip-num">07</span> Managed Agents</a>
+  <a class="toc-chip" href="#s8"><span class="chip-num">08</span> DeepSeek Rises</a>
+  <a class="toc-chip" href="#s9"><span class="chip-num">09</span> Gemini Enterprise</a>
+  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Mythos Breach</a>
 </nav>
 
-
-<!-- ═══════════════════════════════════════
-     STORY 01 — CLAUDE MYTHOS PREVIEW
-     Hero cream layout — FLAGGED FOR YOU
-════════════════════════════════════════ -->
-<section id="story-01" class="story story-01">
+<!-- ════════════════════ STORY 01 ════════════════════ -->
+<section class="story story-01" id="s1">
   <div class="story-num">01</div>
   <div class="inner">
     <div class="story-flag"></div>
     <div class="eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="cat-badge">Anthropic · AI Models</span>
+      <span class="eyebrow-line"></span>
+      <span class="cat-badge">Lead · Model Release</span>
     </div>
-    <div class="kicker">Step change confirmed</div>
-    <h2 class="story-headline">Anthropic's Mythos: The Most Capable AI Ever Built</h2>
-    <p class="story-source">Fortune · TechCrunch · April 7–17, 2026 · 🔥 High Priority</p>
-    <div class="story-body">
-      <p>What started as an embarrassing data leak on March 26 — when a CMS misconfiguration exposed nearly 3,000 unpublished Anthropic assets — has become one of the most consequential AI announcements of the year. Anthropic has officially confirmed <em>Claude Mythos</em>, a model it describes as representing "a step change" in AI performance. The leaked draft blog post wasn't wrong: Mythos scores 93.9% on SWE-bench Verified and 94.6% on GPQA Diamond, numbers that leave every competitor in the dust by a wide margin.</p>
-      <p style="margin-top:1rem;">The model's public debut isn't a mass release — it's a tightly controlled preview under <em>Project Glasswing</em>, a new defensive security initiative with 12 partner organizations including AWS, Apple, Microsoft, and NVIDIA. The rationale is plain: Anthropic's own draft warned that Mythos is "currently far ahead of any other AI model in cyber capabilities" and poses "unprecedented cybersecurity risks." The preview partners are deploying it exclusively for defensive security scanning, not general use.</p>
-      <p style="margin-top:1rem;">Internally the model is also referred to as <em>Capybara</em> — a new tier above Opus. It found thousands of zero-day vulnerabilities across every major OS and browser during red-team evaluations. What this signals for Anthropic's roadmap: the company isn't slowing down, and the gap between its frontier models and the public Claude lineup is larger than most outsiders assumed.</p>
+    <p class="kicker">It beats GPT-5.4 and Gemini 3.1 Pro on the benchmarks that matter most to you.</p>
+    <h2 class="story-headline">Opus 4.7 arrives, and it was built for orchestrators.</h2>
+    <div class="meta-row">
+      <span>Source · Anthropic</span>
+      <span>Shipped · April 16, 2026</span>
+      <span>Price · $5 / $25 per M tokens</span>
     </div>
-    <div style="margin-top:2rem;">
-      <a href="https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/" class="story-link">Read Article</a>
-      <a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" class="story-link">Original Fortune Report</a>
+    <div class="story-body" style="margin-top: 1.5rem;">
+      <p>Anthropic's most capable generally available model is now sitting in front of every Claude Code user by default, and it is unusually aggressive about it — Claude Code now runs Opus 4.7 at the new <em>xhigh</em> effort level out of the box on every plan. That single default change is the real headline. Opus 4.7 is no longer a model you opt into for hard problems; it is the floor.</p>
+      <p>The numbers explain the confidence. SWE-bench Verified jumps from 80.8% to 87.6%. SWE-bench Pro — the harder private variant — goes from 53.4% to 64.3%, beating GPT-5.4's 57.7%. CursorBench climbs from 58% to 70%. Anthropic reports a 14% improvement in multi-step agentic reasoning with roughly a third as many tool errors as the previous generation. The vision tower tripled in resolution to 3.75 megapixels, which finally makes computer-use agents reliable on dense UI screenshots.</p>
+      <p>Two feature additions deserve specific attention from anyone running production agent pipelines. <strong>Task budgets</strong>, in public beta on the Claude Platform API, let you cap the token spend on a single long-running task so parallelized agents don't silently blow through margin. And the new <code>/ultrareview</code> command in Claude Code runs a structured self-critique pass over a diff before the model claims it is done — a small thing that moves a lot of eng time off of reviewing Claude's homework.</p>
     </div>
+    <div class="bench-grid">
+      <div class="bench-card"><div class="bench-num">87.6%</div><div class="bench-label">SWE-bench Verified</div></div>
+      <div class="bench-card"><div class="bench-num">64.3%</div><div class="bench-label">SWE-bench Pro</div></div>
+      <div class="bench-card"><div class="bench-num">70%</div><div class="bench-label">CursorBench</div></div>
+    </div>
+    <a class="story-link" href="https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/" target="_blank" rel="noopener">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 02 — OPENAI "SPUD"
-     Dark midnight — big stat layout
-════════════════════════════════════════ -->
-<section id="story-02" class="story story-02">
+<!-- ════════════════════ STORY 02 ════════════════════ -->
+<section class="story story-02" id="s2">
   <div class="story-num">02</div>
   <div class="inner">
     <div>
-      <span class="cat-badge">OpenAI · GPT Series</span>
-      <h2 class="story-headline">OpenAI's <span class="accent">Secret Weapon</span> Is Almost Ready</h2>
-      <p class="story-source">LumiChats · Abhishek Gautam · Polymarket · April 2026</p>
-      <div class="story-body">
-        <p>OpenAI's next major model — internally codenamed <em>Spud</em> — completed pretraining around March 24 and is now deep in safety evaluation and red-teaming. The model will ship publicly as either GPT-5.5 or GPT-6, depending entirely on how the final benchmarks land. If the performance jump over GPT-5.4 is generational, expect GPT-6. Sam Altman has told employees it is a "very strong model" that could "really accelerate the economy" — which, for Altman, is unusually restrained praise.</p>
-        <p style="margin-top:1rem;">The current window is April 21 to May 25. That timeline puts the release squarely in competition with the Anthropic Mythos broader rollout and whatever Google DeepMind is cooking. The AI lab race has rarely felt this compressed. Polymarket put 67% odds on a pre-May-1 release as of mid-April; those odds are drifting toward late April.</p>
+      <p class="story-source">CNBC · Engadget · Reuters</p>
+      <span class="cat-badge">Deal · Infrastructure</span>
+      <h2 class="story-headline">Amazon <span class="accent">doubles down</span> on Anthropic with another $25B — and a $100B AWS lock-in.</h2>
+      <div class="story-body" style="margin-top: 1.5rem;">
+        <p>The cloud alignment is now fully drawn. Amazon announced on Monday it will invest up to $25B more in Anthropic — $5B immediately at the existing $380B valuation, plus up to $20B tied to commercial milestones — stacked on top of the $8B it had already put in. In return, Anthropic has committed to spend more than $100 billion on AWS over the next decade and to run its frontier models on AWS Trainium silicon for at least that long.</p>
+        <p>Read between the lines: this is Amazon's answer to Microsoft–OpenAI and Google's in-house stack, and it turns Anthropic into a ten-year demand engine for Trainium. Anthropic will bring almost <em>one gigawatt</em> of combined Trainium2 and Trainium3 capacity online before year end. The full Claude Platform will also be available natively inside AWS — existing billing, IAM, VPCs — rather than living solely behind the Bedrock marketplace.</p>
       </div>
-      <a href="https://www.abhs.in/blog/openai-spud-gpt-5-5-release-date-polymarket-april-2026" class="story-link">Read Article</a>
-      <a href="https://polymarket.com/event/gpt-5pt5-released-on/will-gpt-5pt5-be-released-on-april-30-2026" class="story-link">HN Discussion</a>
+      <p class="pull-quote">A ten-year commitment on custom silicon is the strongest signal yet that Anthropic never intends to be a GPU company.</p>
+      <a class="story-link" href="https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" target="_blank" rel="noopener">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/from?site=cnbc.com" target="_blank" rel="noopener">HN discussion</a>
     </div>
     <div>
-      <span class="big-stat">~3wks</span>
-      <span class="stat-label">Estimated time to release after pretraining</span>
-      <div style="margin-top:3rem;">
-        <span class="big-stat" style="font-size: clamp(3rem,7vw,8rem);">GPT-6?</span>
-        <span class="stat-label">Name TBD — depends on benchmark delta vs. GPT-5.4</span>
+      <span class="big-stat">$25B</span>
+      <span class="stat-label">Fresh commitment · announced April 20</span>
+      <div class="mini-stat">
+        <div><strong>$100B+</strong><span>Anthropic's AWS spend over the decade</span></div>
+        <div><strong>1 GW</strong><span>Trainium2 + Trainium3 online by Dec</span></div>
+        <div><strong>$380B</strong><span>Anthropic's current valuation</span></div>
+        <div><strong>$33B</strong><span>Total Amazon capital committed</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 03 — MCPwn VULNERABILITY
-     Dark red alert layout
-════════════════════════════════════════ -->
-<section id="story-03" class="story story-03">
+<!-- ════════════════════ STORY 03 ════════════════════ -->
+<section class="story story-03" id="s3">
   <div class="story-num">03</div>
   <div class="inner">
     <div>
-      <div class="cat-badge">Security · CVE-2026-33032</div>
-      <div class="cvss-badge">CVSS 9.8 Critical</div>
-      <h2 class="story-headline">"MCPwn" — The Nginx Exploit Named After the Protocol It Betrays</h2>
-      <p class="story-source">The Hacker News · Picus Security · April 15, 2026</p>
-      <div class="story-body">
-        <p>The irony is almost too perfect: a critical authentication bypass vulnerability in nginx-ui has been nicknamed <em>MCPwn</em> by researchers at Pluto Security because it exploits nginx-ui's support for Model Context Protocol servers — the very protocol that Anthropic spent two years championing as the universal interface for AI systems. CVE-2026-33032 carries a CVSS score of 9.8 and enables full takeover of the web server in two HTTP requests.</p>
-        <p style="margin-top:1rem;">Here's how it works: nginx-ui added MCP server support in late 2025, exposing two HTTP-accessible endpoints for AI model communication. One of them — <code style="color:#ff8080;">/mcp_message</code> — was implemented without any authentication, giving any host on the network access to 12 MCP tools including config writes with automatic nginx reload. An attacker sends a GET to <code style="color:#ff8080;">/mcp</code> to get a session ID, then a POST to <code style="color:#ff8080;">/mcp_message</code> to invoke any tool. Full takeover in seconds.</p>
-        <p style="margin-top:1rem;">About 2,689 instances are exposed on the internet. Recorded Future has listed it among the 31 most actively exploited vulnerabilities in March 2026. Patch immediately if you run nginx-ui.</p>
+      <div class="story-flag"></div>
+      <span class="cvss-badge">Critical · Supply Chain</span>
+      <span class="cat-badge" style="display:inline-block; margin-left:0.5rem;">MCP Advisory</span>
+      <p class="story-source">OX Security · The Register · Tom's Hardware</p>
+      <h2 class="story-headline">The MCP supply chain has a 200,000-server problem.</h2>
+      <div class="story-body" style="margin-top: 1rem;">
+        <p>OX Security's April 15 disclosure is the first systemic security finding against MCP — and it is not a bug. It is a design decision. The official Anthropic MCP SDKs in Python, TypeScript, Java, and Rust accept arbitrary command strings on the STDIO transport and execute them regardless of whether the server process successfully starts. Feed the loader a malicious command, receive an error, and the command has already run.</p>
+        <p>The blast radius is the part that changes how you treat it. Ox counts <strong>200+ open-source projects</strong>, <strong>150M downloads</strong>, <strong>7,000+ publicly reachable servers</strong> and up to <strong>200,000 vulnerable instances</strong> — flagship tools like LiteLLM, LangFlow, Windsurf, Cursor, Flowise, DocsGPT and GPT Researcher are all affected. Four exploit families have been demonstrated, including zero-click prompt injection inside AI coding IDEs.</p>
+        <p>Anthropic's position, confirmed to <em>The Register</em>, is that STDIO's behavior is expected and that sanitization belongs to the developer. That answer is defensible from a protocol-designer's chair. It is also the moment MCP's governance question — now sitting under the Linux Foundation's Agentic AI Foundation — stops being theoretical.</p>
       </div>
-      <a href="https://thehackernews.com/2026/04/critical-nginx-ui-vulnerability-cve.html" class="story-link">Read Article</a>
-      <a href="https://www.picussecurity.com/resource/blog/cve-2026-33032-mcpwn-how-a-missing-middleware-call-in-nginx-ui-hands-attackers-full-web-server-takeover" class="story-link">Technical Deep-Dive</a>
+      <p class="pull-quote">"Expected behavior" is how supply-chain fires start.</p>
+      <a class="story-link" href="https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/" target="_blank" rel="noopener">Read advisory</a>
+      <a class="story-link" href="https://news.ycombinator.com/from?site=ox.security" target="_blank" rel="noopener">HN discussion</a>
     </div>
     <div class="stamp-wrap">
       <div class="stamp">
-        <div class="stamp-num">9.8</div>
-        <div class="stamp-text">CVSS Critical<br>Patch Now</div>
+        <div class="stamp-number">200K</div>
+        <div class="stamp-label">MCP servers potentially exposed</div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 04 — MCP 97M DOWNLOADS
-     Terminal green — FLAGGED FOR YOU
-════════════════════════════════════════ -->
-<section id="story-04" class="story story-04">
+<!-- ════════════════════ STORY 04 ════════════════════ -->
+<section class="story story-04" id="s4">
   <div class="story-num">04</div>
   <div class="inner">
-    <div class="story-flag"></div>
-    <div class="terminal-chrome">
-      <div><span class="prompt">$ </span><span class="cmd">npm info @modelcontextprotocol/sdk downloads</span></div>
-      <div><span class="out">weekly: 22,750,000</span></div>
-      <div><span class="out">monthly: 97,000,000 ↑ 340% YoY</span></div>
-      <div><span class="out">all-time: 612,000,000+</span></div>
-      <div><span class="prompt">$ </span><span class="cmd">echo "MCP has won"</span></div>
-      <div><span class="out">MCP has won<span class="cursor"></span></span></div>
+    <p class="story-source">Anthropic · AISI · Foreign Policy</p>
+    <div class="kicker-line">Project Glasswing, explained</div>
+    <span class="cat-badge">Safety · Cyber</span>
+    <h2 class="story-headline">Claude Mythos is the first model that changed the cyber calculus.</h2>
+    <div class="story-body" style="margin-top: 1.5rem;">
+      <p>Anthropic previewed Mythos to about fifty partner organizations on April 7 — AWS, Apple, Google, Microsoft, JPMorgan, NVIDIA, the Linux Foundation, CrowdStrike, Palo Alto, and a handful of government bodies. In the weeks since, Mythos has reportedly found <em>thousands</em> of previously unknown high-severity vulnerabilities across every major operating system and every major browser. The UK AI Security Institute concluded Mythos is "strikingly capable" on offensive cyber tasks that, until now, separated top human red teams from everyone else.</p>
+      <p>This is the moment the defenders-first narrative collides with reality. Project Glasswing's premise is that if frontier AI can find zero-days at scale, the ethical move is to find them first and patch them into the software the world runs on before the model — or something like it — gets into adversarial hands. Anthropic has privately warned U.S. officials that Mythos makes large-scale autonomous cyberattacks materially more feasible. The AISI evaluation doesn't disagree.</p>
     </div>
-    <div class="cat-badge">MCP · Agentic Infrastructure</div>
-    <h2 class="story-headline">MCP Crossed 97M Monthly Downloads. The Standard Has Won.</h2>
-    <p class="story-source">Linux Foundation · Agentic AI Foundation · March 2026</p>
-    <div class="story-body">
-      <p>Model Context Protocol hit 97 million SDK downloads in March 2026 — up 340% year-over-year — cementing its transition from an experimental Anthropic proposal to the foundational plumbing of the agentic AI era. Every major AI provider now ships MCP-compatible tooling: OpenAI's AGENTS.md, Google's Gemini tool-use layer, xAI's Grok integrations, and hundreds of third-party frameworks all speak MCP natively.</p>
-      <p style="margin-top:1rem;">The Linux Foundation formalized this in December 2025 with the Agentic AI Foundation, anchored by contributions from Anthropic's MCP, OpenAI's AGENTS.md, and Block's goose framework. What began as one company's bet on a common protocol is now governed as open infrastructure. The CVE-2026-33032 irony aside, MCP's success means that every developer building AI agents now writes to a single, well-defined interface — which is exactly the outcome Anthropic was aiming for when it open-sourced the spec in late 2024.</p>
+    <p class="pull-quote">"With Mythos, a single operator suddenly has a lot more ways to attack." — ETH Zürich</p>
+    <div class="meta-row">
+      <span>Announced · April 7</span>
+      <span>Partners · 50 orgs</span>
+      <span>Status · Preview, not GA</span>
     </div>
-    <a href="https://llm-stats.com/ai-news" class="story-link">Read Article</a>
-    <a href="https://news.ycombinator.com/item?id=46776523" class="story-link">HN Discussion</a>
+    <a class="story-link" href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 05 — SNAP LAYOFFS
-     Ivory editorial / drop-cap
-════════════════════════════════════════ -->
-<section id="story-05" class="story story-05">
+<!-- ════════════════════ STORY 05 ════════════════════ -->
+<section class="story story-05" id="s5">
   <div class="story-num">05</div>
   <div class="inner">
-    <div class="cat-badge">Tech Industry · AI Economics</div>
-    <p class="story-source">TechCrunch · CNBC · April 15, 2026</p>
-    <h2 class="story-headline">Snap Axes 16% of Workforce as AI Agents Write 65% of Its Code</h2>
-    <div class="drop-cap-text">
-      Snap announced Tuesday that it is laying off approximately 1,000 employees — 16% of its global workforce — while simultaneously closing over 300 open positions. The company cited AI-driven efficiencies as the primary catalyst, and unlike most tech companies that add similar disclaimers to soften the optics, Snap put hard numbers behind it: AI agents already generate over 65% of new code and handle more than one million internal queries per month.
-
-      CEO Evan Spiegel framed the cuts not as a retreat but as a structural transformation toward what the industry is calling "AI-native operations" — where the core architecture of a company is designed around autonomous agent capabilities rather than human team structures. The savings are substantial: Snap expects to reduce its annualized cost base by more than $500 million by the second half of 2026. Its stock jumped 11% on the announcement.
-
-      The numbers reflect a broader industry reckoning. Tech layoffs in 2026 have disproportionately hit roles where AI tools have reached reliable competence: QA, entry-level engineering, content moderation, and customer-facing data analysis. Snap isn't alone — Oracle and Amazon have made similar moves this year. What distinguishes Snap is the candor. Most companies quietly shift headcount while euphemistically citing "efficiency." Snap published the AI productivity metrics. That transparency is either brave or a preview of what disclosure norms will eventually require.
+    <div>
+      <p class="story-source">Polymarket · The Information · LumiChats</p>
+      <span class="cat-badge">Imminent · OpenAI</span>
+      <h2 class="story-headline">"Spud" is almost here — and Polymarket thinks it ships today.</h2>
+      <div class="story-body" style="margin-top: 1.5rem;">
+        <p>OpenAI's next foundation model, internally codenamed <em>Spud</em> and widely expected to ship as GPT-5.5, finished pretraining on or around March 24. Sam Altman has confirmed it internally as "a very strong model" that could "really accelerate the economy," and references to it have already leaked out of the Codex tool and the ChatGPT interface. Polymarket traders as of Wednesday evening were pricing an <strong>86% probability</strong> that Spud ships on April 23 — i.e., today — following Altman's "really excited for this week" tease and a scheduled noon-PT livestream.</p>
+        <p>What's been telegraphed so far: a reworked agentic runtime (native computer use built into the base model, not bolted on by an SDK), tighter tool-use primitives meant to undercut Claude Code on its home turf, and a unification story that finally merges the GPT-4o lineage with the reasoning line. If the benchmarks land where Altman implies, the pressure pops back to Anthropic within the week. Watch whether Opus 4.7's SWE-bench Pro lead survives the day.</p>
+      </div>
+      <p class="pull-quote">"This is not a screenshot." — OpenAI's pre-livestream teaser</p>
+      <a class="story-link" href="https://www.abhs.in/blog/openai-spud-gpt-5-5-release-date-polymarket-april-2026" target="_blank" rel="noopener">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/from?site=openai.com" target="_blank" rel="noopener">HN discussion</a>
     </div>
-    <div class="footnote">Market context: The agentic AI market reached $9 billion in 2026. Enterprises deploying autonomous AI systems that can execute multi-step business processes without human intervention now number in the thousands.</div>
-    <a href="https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/" class="story-link">Read Article</a>
-    <a href="https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html" class="story-link">CNBC Coverage</a>
+    <aside class="odds-panel">
+      <div class="o-label">Polymarket · April 23</div>
+      <div class="o-big">86%</div>
+      <div class="o-sub">Implied probability that GPT-5.5 ships today, as of Wednesday's close.</div>
+      <div class="o-div"></div>
+      <dl>
+        <dt>Pretraining</dt><dd>Mar 24, 2026</dd>
+        <dt>Typical gap</dt><dd>3–6 weeks</dd>
+        <dt>Livestream</dt><dd>12:00 PT today</dd>
+        <dt>Headline feature</dt><dd>Native computer use</dd>
+        <dt>Target</dt><dd>Agentic parity with Claude</dd>
+      </dl>
+    </aside>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 06 — GEMINI 3.1 BENCHMARKS
-     Deep indigo / big stat layout
-════════════════════════════════════════ -->
-<section id="story-06" class="story story-06">
+<!-- ════════════════════ STORY 06 ════════════════════ -->
+<section class="story story-06" id="s6">
   <div class="story-num">06</div>
   <div class="inner">
-    <div>
-      <div class="cat-badge">Google DeepMind · Gemini</div>
-      <h2 class="story-headline">Gemini 3.1 Pro Rewrites the Benchmark Leaderboard — Again</h2>
-      <p class="story-source">LLM Stats · AI FOD · February–March 2026</p>
-      <div class="story-body">
-        <p>Google DeepMind's Gemini 3.1 Pro landed in February with benchmark numbers that reordered the competitive landscape. The headline stat — 77.1% on ARC-AGI-2, more than double Gemini 3 Pro's score — landed in the AI community like a thunderclap. It also leads on 13 of 16 standard benchmarks, including sustained tops in multimodal reasoning and long-context retrieval.</p>
-        <p style="margin-top:1rem;">The real-time voice and image analysis capabilities added in 3.1 push it into territory where it competes directly with GPT-5.4 in live interaction scenarios. The model that Google demoed at DeepMind's February event isn't just an incremental step — it represents the company finally narrowing the gap on reasoning tasks where Claude models had carved out a distinct advantage. The three-way race (Anthropic, OpenAI, Google) is genuinely close for the first time in two years.</p>
-      </div>
+    <p class="story-source">Bloomberg · CNBC · TechFundingNews</p>
+    <span class="cat-badge">Private Markets · AI Coding</span>
+    <h2 class="story-headline">Cursor is raising $2B at $50B — and SpaceX may buy the whole thing for $60B anyway.</h2>
+    <div class="money-row">
+      <div><strong>$2B</strong><span>Round size</span></div>
+      <div><strong>$50B</strong><span>Pre-money valuation</span></div>
+      <div><strong>$6B</strong><span>Year-end ARR forecast</span></div>
     </div>
-    <div class="stat-row">
-      <div class="stat-item">
-        <span class="stat-num gold">77.1%</span>
-        <span class="stat-desc">ARC-AGI-2 — double Gemini 3's score</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num violet">13/16</span>
-        <span class="stat-desc">Standard benchmarks where Gemini 3.1 leads</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num teal">2×</span>
-        <span class="stat-desc">ARC-AGI-2 improvement over previous generation</span>
-      </div>
+    <div class="story-body">
+      <p>Cursor, now formally Anysphere, entered the week in the kind of position that stops being about fundraising and starts being about auction dynamics. Bloomberg first reported on April 17 that the company was in talks to raise $2B at a valuation north of $50B, co-led by Andreessen Horowitz with Nvidia and Thrive Capital. By February, Cursor's annual run rate had already crossed $2B, making it the fastest B2B software company in history to hit $1B ARR — faster than Slack, Zoom, or Snowflake.</p>
+      <p>Then the room shifted. Bloomberg followed up Wednesday with a line that recontextualizes the entire round: Elon Musk's SpaceX is in talks to acquire Cursor outright for <strong>$60B</strong>. A16z and Thrive are staring at windfalls on the order of a 50× from their early checks. If the acquisition closes, it is the largest private software exit in history — and it locks Cursor's AI coding stack into Musk's orbit alongside xAI. For the dozen teams still deciding between Cursor and Claude Code, the deal matters less for the multiple and more for the strategic question: whose roadmap do you want your editor on?</p>
     </div>
-    <div>
-      <a href="https://af.net/realtime/ai-model-benchmarks-april-2026-comparing-gpt-5-claude-4-6-gemini-3/" class="story-link">Benchmark Comparison</a>
-    </div>
+    <p class="pull-quote">Fastest to $1B ARR in the history of B2B software. Now being bid on by the world's most controversial buyer.</p>
+    <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-22/andreessen-thrive-poised-for-windfall-from-spacex-s-cursor-bid" target="_blank" rel="noopener">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/from?site=bloomberg.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 07 — CLAUDE CODE DOMINANCE
-     Amber editorial — FLAGGED FOR YOU
-════════════════════════════════════════ -->
-<section id="story-07" class="story story-07">
+<!-- ════════════════════ STORY 07 ════════════════════ -->
+<section class="story story-07" id="s7">
   <div class="story-num">07</div>
   <div class="inner">
-    <div class="left-col">
+    <div>
       <div class="story-flag"></div>
-      <div class="cat-badge">Claude Code · Developer Tools</div>
-      <h2 class="story-headline">Claude Code: The Developer's Most Loved AI Coding Tool</h2>
-      <p class="story-source">Fungies.io · Faros.ai · JetBrains · 2026 Survey Data</p>
-      <div class="story-body">
-        <p>The numbers are stark. In 2026 developer surveys, Claude Code holds a 46% "most loved" rating among developers who use AI coding tools — compared to Cursor at 19% and GitHub Copilot at 9%. That's not an edge; that's a rout. What's driving it: developers consistently cite Claude Code's superiority on complex, multi-file refactoring and debugging tasks, the category that actually consumes senior engineer time.</p>
-        <p style="margin-top:1rem;">Among developers using both Claude Code and Copilot, 61% rate Claude Code as more accurate for complex debugging. Meanwhile, Copilot retains 73% preference for routine completions — a natural division of labor that's emerging across the industry. The average experienced developer now uses 2.3 AI tools simultaneously. The market is converging on Claude Code for deep work and Copilot for ambient assistance.</p>
-        <p style="margin-top:1rem;">GitHub Copilot's scale is still formidable — 20 million all-time users, 4.7 million paid subscribers — but the "most loved" signal predicts where developer workflows are heading, not where they are today. For a tool that launched in May 2025, those favorability numbers represent an unprecedented adoption arc.</p>
+      <p class="story-source">Anthropic · SiliconANGLE · InfoWorld</p>
+      <span class="cat-badge">Product · Agents</span>
+      <h2 class="story-headline">Claude Managed Agents makes Anthropic the hosting layer, not just the model.</h2>
+      <div class="story-body" style="margin-top: 1.5rem;">
+        <p>The April 8 public-beta launch of Claude Managed Agents is the quietest move with the loudest implication in this issue. For the first time, you can define an agent's task, tools, and guardrails, then hand it off to Anthropic to run — sandboxed containers, built-in tools, streaming events — with Anthropic handling the second job entirely. Pricing starts at $0.08 per runtime hour on top of standard token costs, which is about $58 a month for a 24/7 agent before inference.</p>
+        <p>Combined with the public Agent Skills specification — the same packaged-skill format you are already using in Cowork — Managed Agents closes the loop: specialize with a Skill, deploy as a Managed Agent, observe through the Claude Platform. It is not an accident that this shipped two weeks before Opus 4.7 turned xhigh on by default. The ambition is the full agent stack on Anthropic's rails, with AWS underneath.</p>
       </div>
-      <a href="https://fungies.io/claude-code-vs-cursor-vs-copilot-2026/" class="story-link">Read Article</a>
-      <a href="https://news.ycombinator.com/item?id=44678535" class="story-link">HN Discussion</a>
+      <p class="pull-quote">The model is the easy part. Running it reliably for months on end is what Anthropic just took off your plate.</p>
+      <a class="story-link" href="https://www.infoworld.com/article/4156852/anthropic-rolls-out-claude-managed-agents.html" target="_blank" rel="noopener">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
     </div>
-    <div class="right-col">
-      <div class="pull-quote">"61% of developers using both tools rate Claude Code as more accurate for complex debugging and refactoring."</div>
-    </div>
+    <aside class="panel">
+      <h4>What ships in the beta</h4>
+      <ul>
+        <li><strong>01</strong>Composable APIs — create agents, configure containers, run sessions end-to-end.</li>
+        <li><strong>02</strong>Sandboxed execution with secure tool access and SSE streaming.</li>
+        <li><strong>03</strong>Packaged Agent Skills: pre-built for Word, Excel, PPT, PDF; bring your own.</li>
+        <li><strong>04</strong>Task budgets on the API — cap token spend per long-running session.</li>
+        <li><strong>05</strong>$0.08 / runtime hour · roughly $58 / month for a 24-7 agent before tokens.</li>
+      </ul>
+    </aside>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 08 — WAYVE $60M
-     Split teal/dark layout
-════════════════════════════════════════ -->
-<section id="story-08" class="story story-08">
-  <div class="left-panel">
-    <div class="story-num">08</div>
-    <div class="cat-badge" style="background:rgba(45,212,191,0.2);color:#2dd4bf;display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2px;margin-bottom:1.2rem;">Autonomous Vehicles</div>
-    <h2 class="story-headline">Wayve Locks in $60M from the Chip Giants</h2>
-    <div style="margin-top:2rem;">
-      <div class="teal-stat">$60M</div>
-      <div class="teal-label">Extension to $1.2B Series D — bringing total raise to ~$1.5B</div>
+<!-- ════════════════════ STORY 08 ════════════════════ -->
+<section class="story story-08" id="s8">
+  <div class="story-num">08</div>
+  <div class="inner">
+    <p class="story-source">Bloomberg · The Information · PYMNTS</p>
+    <p class="kicker">Alibaba and Tencent are reportedly first in.</p>
+    <span class="cat-badge">Funding · China</span>
+    <h2 class="story-headline">DeepSeek opens its first-ever fundraise at a $20B valuation.</h2>
+    <div class="story-body" style="margin-top: 1.5rem;">
+      <p>DeepSeek, which spent two years operating as the world's most famous self-funded frontier lab, has finally broken and is raising outside capital. Bloomberg and <em>The Information</em> report the round is targeting a valuation north of $20B, with both Alibaba and Tencent circling. For context: that is about one-nineteenth of Anthropic's current mark and roughly one-fortieth of OpenAI's last print, despite DeepSeek's models landing inside 2–3 points of the frontier on most public evals.</p>
+      <p>The twist is political. A Chinese lab accepting strategic capital from China's two largest internet platforms — right as the U.S. tightens Trainium export controls and as the Linux Foundation's Agentic AI Foundation tries to keep MCP politically neutral — reshapes how Western clouds treat DeepSeek's open weights. V4 is expected in Q2. Whether it ships before or after Beijing has formal equity in the company is now the question that matters.</p>
     </div>
-    <div style="margin-top:2rem; display:flex; gap:1.5rem; flex-wrap:wrap;">
-      <div>
-        <div class="teal-stat" style="font-size:clamp(2rem,4vw,4rem);">AMD</div>
-        <div class="teal-label">Investor</div>
-      </div>
-      <div>
-        <div class="teal-stat" style="font-size:clamp(2rem,4vw,4rem);">Arm</div>
-        <div class="teal-label">Investor</div>
-      </div>
-      <div>
-        <div class="teal-stat" style="font-size:clamp(2rem,4vw,4rem);">QCOM</div>
-        <div class="teal-label">Investor</div>
-      </div>
-    </div>
-    <p class="story-source" style="margin-top:2rem;color:#2dd4bf;opacity:1;">TechCrunch · CNBC · April 15, 2026</p>
-    <a href="https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/" class="story-link" style="color:#2dd4bf;margin-top:1.5rem;">Read Article</a>
-  </div>
-  <div class="right-panel">
-    <div class="story-source-teal">Startup · Autonomous Driving · April 2026</div>
-    <div class="right-headline">The mapless approach to autonomous driving just got validated by the entire chip stack</div>
-    <div class="story-body">
-      <p>British startup Wayve has extended its already-impressive $1.2 billion Series D with a $60 million injection from AMD, Arm, and Qualcomm — three companies whose chips are already embedded in millions of production vehicles. The strategic significance goes beyond the dollar amount. By bringing in all three chip architects simultaneously, Wayve is signaling that its software can run across every automotive compute platform currently in production vehicles, from Qualcomm's Snapdragon Ride to ARM-based SoCs to AMD's auto-grade silicon.</p>
-      <p style="margin-top:1rem;">Wayve's differentiator is its mapless approach: where Waymo and others rely on exhaustive HD maps of every road, Wayve's AI learns to drive from video data, extrapolating to new environments without pre-mapped routes. The $1.5 billion total raise and $8.6 billion valuation reflect a bet that this approach scales globally in ways that map-based systems cannot. Earlier investors include NVIDIA, Microsoft, Uber, Mercedes-Benz, and Stellantis — an unusual coalition of the usual autonomous vehicle suspects and traditional OEMs.</p>
-    </div>
-    <a href="https://www.cnbc.com/2026/04/15/wayve-fund-raise-amd-qualcomm-arm.html" class="story-link">CNBC Coverage</a>
+    <p class="pull-quote">The only frontier lab still operating cheap. That stops today.</p>
+    <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-22/deepseek-in-talks-to-raise-at-20-billion-value-the-information" target="_blank" rel="noopener">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/from?site=bloomberg.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 09 — 85% DEVELOPER AI ADOPTION
-     Newspaper columns layout
-════════════════════════════════════════ -->
-<section id="story-09" class="story story-09">
+<!-- ════════════════════ STORY 09 ════════════════════ -->
+<section class="story story-09" id="s9">
   <div class="story-num">09</div>
-  <div class="cat-badge">Developer Trends · AI Coding</div>
-  <h2 class="headline-rule">85% of Developers Now Use AI Coding Tools Regularly</h2>
-  <p class="subhead">From early-adopter curiosity to unremarkable professional default — AI assistance has arrived in the terminal.</p>
-  <p class="story-source">JetBrains 2025 Dev Survey · GitHub · Stack Overflow · 2026</p>
-  <div class="columns">
-    The JetBrains 2025 Developer Ecosystem Survey found that 85% of developers now use AI coding tools regularly — a figure that would have been science fiction three years ago. More striking: 95% use them at least weekly, and 75% say AI assists with more than half of their coding work. This isn't a productivity edge anymore. It's table stakes.
-
-    The GitHub numbers back it up from a different angle. Over 51% of all code committed to GitHub in early 2026 was either generated or substantially assisted by an AI code generator. The transition from code completion to code creation — entire functions, test suites, and application scaffolds from natural language descriptions — is the quiet revolution buried in those statistics.
-
-    The average experienced developer now uses 2.3 AI tools simultaneously, typically combining one tool for complex multi-file reasoning (where Claude Code dominates) with one for ambient inline completion (where Copilot maintains strength). The market has implicitly partitioned into tiers: deep work versus shallow completion.
-
-    What does this mean structurally? The productivity gains are real but unevenly distributed. Senior engineers who adapt AI tools into their workflow are seeing 40–60% throughput increases on certain task types. Junior engineers are seeing AI handle the work that used to be their learning environment. The industry is still working out what that means for career development pathways — but the 85% adoption figure suggests the debate is happening in a world where AI tools are already omnipresent, not hypothetical.
-
-    The tools topping developer surveys for "most loved" ratings in 2026: Claude Code (46%), Cursor (19%), GitHub Copilot (9%). The tools by total user count: GitHub Copilot (20M+ users, 4.7M paid subscribers), Cursor (estimated 3M+), Claude Code (growing rapidly post-May 2025 launch).
-  </div>
-  <a href="https://www.getpanto.ai/blog/ai-coding-assistant-statistics" class="story-link" style="margin-top:2rem;">Read Full Survey Data</a>
-  <a href="https://fungies.io/claude-code-vs-cursor-vs-github-copilot-2026-2/" class="story-link">2026 Tool Comparison</a>
-</section>
-
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     STORY 10 — ANTHROPIC $30B ARR
-     Full-bleed gradient finale — FLAGGED
-════════════════════════════════════════ -->
-<section id="story-10" class="story story-10">
-  <div class="story-num">10</div>
-  <div class="top-bar">
-    <span class="issue-label">Story 10 of 10 · Morning Edition No. 2</span>
-    <span class="issue-label">April 17, 2026</span>
-  </div>
-  <div class="center-mass">
-    <div class="story-flag"></div>
-    <div class="cat-badge" style="background:rgba(167,139,250,0.2);color:#a78bfa;display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2px;margin-bottom:1.5rem;">Anthropic · Business</div>
-    <h2 class="story-headline">Anthropic's $30B ARR: The Unlikely Comeback Story That Wasn't</h2>
-    <p class="story-source" style="color:rgba(255,255,255,0.4);margin-bottom:1.5rem;position:relative;z-index:1;font-size:0.72rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;">Multiple Sources · April 2026</p>
-    <div class="story-body">
-      <p>By April 2026, Anthropic's annualized recurring revenue sits at approximately $30 billion — surpassing OpenAI's estimated $25 billion ARR in what is perhaps the most surprising competitive inversion in Silicon Valley history. A company founded in 2021 by ex-OpenAI researchers, which spent its first two years operating in OpenAI's shadow, has outgrown its progenitor on the metric that matters most to investors and enterprise buyers.</p>
-      <p style="margin-top:1rem;">The reasons are interconnected. Claude Sonnet 4.6 became the leading agentic model by GDPval-AA Elo score (1,633 points) — the benchmark enterprise buyers use when selecting models for autonomous pipelines. MCP adoption drove ecosystem lock-in at the tooling layer. Claude Code captured developer mindshare among the professionals who influence enterprise procurement. And the Mythos preview, even in its tightly restricted form, signals that the frontier gap Anthropic is maintaining over competitors is growing, not shrinking.</p>
-      <p style="margin-top:1rem;">The commercial flywheel that Dario Amodei described in 2022 — build the safest models, which attract enterprise trust, which funds safety research — appears to be working. Anthropic is not winning despite its safety focus; it may be winning because of it.</p>
+  <div class="inner">
+    <p class="story-source">SiliconANGLE · Google Cloud Next 2026</p>
+    <span class="cat-badge">Enterprise · Agentic</span>
+    <h2 class="story-headline">Google puts Gemini Enterprise at the center of an agentic taskforce.</h2>
+    <div class="story-body" style="margin-top: 1.5rem;">
+      <p>At Cloud Next 2026 on Wednesday, Google reframed its agent story around a single product: Gemini Enterprise. The pitch is explicit about the pain: corporate AI agents today are siloed, hard to monitor, and lose context across long tasks. Google's answer is a shared agent plane that spans Workspace, Vertex, and now third-party connectors via MCP and A2A, with persistence designed to survive multi-day workflows — monthly reconciliations, multi-week sales cycles, SOX testing.</p>
+      <p>The architecturally interesting part is that Google is explicitly adopting MCP and A2A as the interop standard rather than pushing its own competing protocol. Six months ago that would have been a surprise. Today, with the Linux Foundation sitting at the center, it is a cost-of-entry. The real bet is that the observability, identity, and compliance layers around agents are where Google out-executes Anthropic and OpenAI on enterprise.</p>
     </div>
-    <a href="https://llm-stats.com/llm-updates" class="story-link" style="color:#a78bfa;">Revenue Data</a>
-    <a href="https://news.ycombinator.com/item?id=46884883" class="story-link" style="color:#a78bfa;">HN Discussion</a>
-  </div>
-  <div class="bottom-colophon">
-    <span>Morning Edition · Issue No. 2 · April 17, 2026</span>
-    <span>Curated for Jani Teerioja</span>
-    <span>AI &amp; Developer Intelligence</span>
+    <p class="pull-quote">Persistence across days, not just turns, is the quiet feature everyone will copy.</p>
+    <a class="story-link" href="https://siliconangle.com/2026/04/22/google-puts-gemini-enterprise-heart-new-agentic-taskforce-enterprise-automation/" target="_blank" rel="noopener">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/from?site=siliconangle.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<div class="story-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     BACK PAGE
-════════════════════════════════════════ -->
-<section class="back-page">
-  <div class="wrap-title">That's a <span>wrap.</span></div>
-  <div class="wrap-sub">Morning Edition · Issue No. 2 · April 17, 2026</div>
-  <div class="wrap-rule"></div>
-  <div class="wrap-body">
-    This week's edition covered the launch of Anthropic's Mythos Preview, OpenAI's imminent Spud release, MCP's milestone 97M monthly downloads, a critical nginx-ui vulnerability with a MCP-themed name, Snap's AI-driven workforce reduction, Gemini 3.1's benchmark leadership, Claude Code's developer dominance, Wayve's chip-backed autonomous driving bet, AI coding adoption statistics, and Anthropic's commercial ascent to $30B ARR. Three stories were flagged for direct relevance to your work with Claude, MCP, and the Anthropic ecosystem.
+<!-- ════════════════════ STORY 10 ════════════════════ -->
+<section class="story story-10" id="s10">
+  <div class="story-num">10</div>
+  <div class="inner">
+    <div>
+      <p class="story-source">Engadget · Bloomberg · Euronews</p>
+      <span class="cat-badge">Incident · Governance</span>
+      <h2 class="story-headline">A Discord-linked group found its way into Claude Mythos.</h2>
+      <div class="story-body" style="margin-top: 1rem;">
+        <p>Anthropic confirmed on Tuesday that it is investigating unauthorized access to Claude Mythos Preview — the same not-yet-GA model discussed two spreads up. According to Bloomberg, the intruders were not a nation-state team. They were a private online community who made an <em>educated guess</em> about the model's hosting URL based on Anthropic's naming conventions, then pivoted through a third-party contractor portal to reach it.</p>
+        <p>Nothing about the intrusion path is sophisticated. That is exactly why it matters. A model Anthropic has spent the last two weeks warning governments is capable of industrial-scale cyber offense was reached through URL guessing plus a vendor's single-factor login. The breach will make it harder for Anthropic to argue against external red-team mandates the next time Congress asks, and it is already reshaping the contractor-access checklist every frontier lab is quietly updating this week.</p>
+      </div>
+      <p class="pull-quote">The model that finds zero-days was reached through a guessed URL.</p>
+      <a class="story-link" href="https://www.engadget.com/ai/anthropic-is-investigating-unauthorized-access-of-its-mythos-cybersecurity-tool-091017168.html" target="_blank" rel="noopener">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/from?site=engadget.com" target="_blank" rel="noopener">HN discussion</a>
+    </div>
+    <aside class="timeline">
+      <div class="t-item">
+        <div class="t-date">April 7</div>
+        <div class="t-label">Mythos Preview announced · 50 partner orgs receive access.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">April 15</div>
+        <div class="t-label">OX Security discloses MCP supply-chain flaw (see Story 03).</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">April 20</div>
+        <div class="t-label">Anthropic notifies partners of anomalous access patterns.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">April 21–22</div>
+        <div class="t-label">Bloomberg reports Discord-linked group reached Mythos via vendor portal.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Today</div>
+        <div class="t-label">Investigation ongoing · no confirmed weights exfiltration.</div>
+      </div>
+    </aside>
   </div>
-  <div class="wrap-meta">
-    Generated autonomously · Published to github.com/teeris01/ai-news · Curated for Jani Teerioja
+</section>
+
+<!-- ════════════════════ BACK PAGE ════════════════════ -->
+<section class="back-page">
+  <h2>That's a wrap.</h2>
+  <p class="back-sub">Three of this week's ten stories flagged specifically for you — Opus 4.7, Managed Agents, and the MCP supply-chain advisory. The rest of the lineup tracks the infrastructure and capital shifts that set the context around them.</p>
+  <div class="back-summary">
+    <p>The throughline of the week is consolidation. Amazon's $25B into Anthropic and the ten-year Trainium commitment put Claude on the same long-duration footing that Azure gave OpenAI. Claude Managed Agents turns the Anthropic platform into a full hosting layer, not just a model. Opus 4.7 at xhigh by default inside Claude Code quietly raises the baseline for every coding agent shipping this year. On the other side of the Pacific, DeepSeek is for the first time taking outside capital, and Alibaba and Tencent are the likely first-movers.</p>
+    <p>The darker throughline is that agentic infrastructure is starting to surface the classical security problems that SaaS took fifteen years to learn. The MCP STDIO exposure, the Claude Mythos contractor-portal breach, and Anthropic's own warnings about frontier models in offensive cyber are three faces of the same realization: agents deployed at scale look a lot like an operating system, and nobody has written that operating system's hardening guide yet.</p>
+    <p>Next week: Spud's benchmark dust settling, any live post-mortem from Anthropic on the Mythos breach, and — fingers crossed — a public timeline on when Agent Skills moves from beta to GA. See you Thursday.</p>
+  </div>
+  <div class="back-colophon">
+    <span class="issue-no">Issue No. 03 · Vol. I</span>
+    Morning Edition AI Weekly<br>
+    Curated by Claude · Published Thursdays at 07:00<br>
+    For Jani Teerioja · teeris@gmail.com
   </div>
 </section>
 
