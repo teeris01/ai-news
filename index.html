@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Edition — April 23, 2026</title>
+<title>Morning Edition — May 19, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -70,13 +70,6 @@
     color: #d4a853;
     font-size: 1.1rem;
     letter-spacing: 0.05em;
-  }
-
-  /* ─── SECTION RULE ─── */
-  .section-rule {
-    background: #d4a853;
-    height: 3px;
-    width: 100%;
   }
 
   /* ─── TOC STRIP ─── */
@@ -161,6 +154,7 @@
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
+    font-style: italic;
   }
 
   .story-body {
@@ -187,7 +181,7 @@
 
   .story-link {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-family: var(--inter);
     font-size: 0.75rem;
     font-weight: 700;
@@ -196,13 +190,12 @@
     text-decoration: none;
     padding: 0.6rem 1.4rem;
     border: 2px solid currentColor;
-    opacity: 0.7;
+    opacity: 0.75;
     transition: opacity 0.15s;
   }
   .story-link:hover { opacity: 1; }
-  .story-link + .story-link { margin-left: 1rem; }
+  .story-link + .story-link { margin-left: 0.6rem; }
 
-  /* ─── NUMERAL ─── */
   .story-num {
     font-family: var(--fraunces);
     font-weight: 900;
@@ -213,7 +206,6 @@
     user-select: none;
   }
 
-  /* ─── CATEGORY BADGE ─── */
   .cat-badge {
     display: inline-block;
     font-size: 0.65rem;
@@ -238,1072 +230,542 @@
     flex-wrap: wrap;
   }
 
-  /* ════════════════════════════════
-     STORY 01 — HERO / CREAM GIANT
-  ════════════════════════════════ */
-  .story-01 {
-    background: #f5f0e8;
-    color: #1a1a1a;
-    padding-top: 6vw;
-    padding-bottom: 6vw;
-  }
+  .inner { position: relative; z-index: 1; }
 
+  /* ── STORY 01 — Cream hero, OpenClaw ── */
+  .story-01 { background: #f5f0e8; color: #1a1a1a; }
   .story-01 .story-num {
     font-size: clamp(20rem, 42vw, 48rem);
     color: #e8e0d0;
     right: -4vw;
-    top: -4vw;
+    top: -6vw;
     z-index: 0;
   }
-
-  .story-01 .inner { position: relative; z-index: 1; }
-
   .story-01 .story-headline {
-    font-size: clamp(3.2rem, 7.5vw, 8rem);
-    max-width: 14ch;
+    font-size: clamp(3rem, 6.8vw, 7rem);
+    max-width: 18ch;
     font-weight: 800;
   }
-
-  .story-01 .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .story-01 .eyebrow-line {
-    height: 2px;
-    width: 60px;
-    background: #d4a853;
-  }
-
+  .story-01 .cat-badge { background: #d4a853; color: #1a1a1a; }
   .story-01 .story-link { color: #1a1a1a; }
-
   .story-01 .kicker {
     font-family: var(--fraunces);
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
     font-style: italic;
-    font-weight: 400;
     color: #d4a853;
     margin-bottom: 0.8rem;
   }
 
-  .story-01 .cat-badge { background: #d4a853; color: #1a1a1a; }
-
-  .story-01 .bench-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 1.2rem;
-    margin-top: 2rem;
-    max-width: 64ch;
-  }
-  .story-01 .bench-card {
-    background: rgba(212,168,83,0.1);
-    border-left: 3px solid #d4a853;
-    padding: 1rem 1.1rem;
-  }
-  .story-01 .bench-num {
-    font-family: var(--fraunces);
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.2rem;
-    color: #1a1a1a;
-    line-height: 1;
-  }
-  .story-01 .bench-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(26,26,26,0.6);
-    margin-top: 0.35rem;
-    font-weight: 600;
-  }
-
-
-  /* ════════════════════════════════
-     STORY 02 — DARK MIDNIGHT / AMAZON
-  ════════════════════════════════ */
-  .story-02 {
-    background: #0d0d1a;
-    color: #e8e4f0;
-    min-height: 100vh;
-  }
-
+  /* ── STORY 02 — Midnight purple, Opus 4.7 ── */
+  .story-02 { background: #0d0d1a; color: #e8e4f0; }
   .story-02 .story-num {
     font-size: clamp(18rem, 38vw, 44rem);
-    color: rgba(180,160,255,0.06);
+    color: rgba(180,160,255,0.07);
     right: -2vw;
     bottom: -6vw;
     z-index: 0;
   }
-
-  .story-02 .inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5vw;
-    align-items: center;
-    min-height: 80vh;
-  }
-
   .story-02 .story-headline {
-    font-size: clamp(2.8rem, 5.5vw, 6rem);
+    font-size: clamp(2.6rem, 5vw, 5.4rem);
     font-weight: 800;
     color: #fff;
+    max-width: 18ch;
   }
-
   .story-02 .accent { color: #a78bfa; }
-
-  .story-02 .big-stat {
-    font-family: var(--fraunces);
-    font-size: clamp(5rem, 12vw, 14rem);
-    font-weight: 900;
-    font-style: italic;
-    color: #a78bfa;
-    line-height: 0.9;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .story-02 .stat-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.5;
-  }
-
-  .story-02 .mini-stat {
-    margin-top: 2.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  .story-02 .mini-stat div { border-top: 1px solid rgba(167,139,250,0.3); padding-top: 0.7rem; }
-  .story-02 .mini-stat strong {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: #a78bfa;
-    display: block;
-    line-height: 1;
-  }
-  .story-02 .mini-stat span {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.55;
-    margin-top: 0.3rem;
-    display: block;
-  }
-
-  .story-02 .story-source { color: #a78bfa; opacity: 0.8; }
-  .story-02 .story-body { opacity: 0.85; }
+  .story-02 .cat-badge { background: #a78bfa; color: #0d0d1a; }
   .story-02 .story-link { color: #a78bfa; }
-  .story-02 .cat-badge { background: rgba(167,139,250,0.2); color: #a78bfa; }
 
-
-  /* ════════════════════════════════
-     STORY 03 — RED ALERT / SECURITY
-  ════════════════════════════════ */
-  .story-03 {
-    background: #0a0505;
-    color: #ffd0d0;
-  }
-
-  .story-03 .inner {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 6vw;
-    align-items: center;
-    min-height: 80vh;
-    position: relative;
-    z-index: 1;
-  }
-
+  /* ── STORY 03 — Spice / olive (security) Shai-Hulud ── */
+  .story-03 { background: #2c2418; color: #f0e8d8; }
   .story-03 .story-num {
-    font-size: clamp(18rem, 38vw, 44rem);
-    color: rgba(255,60,60,0.05);
-    right: -2vw;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .story-03 .story-headline {
-    font-size: clamp(2.8rem, 5.5vw, 6.5rem);
-    font-weight: 900;
-    color: #ff3b30;
-    max-width: 15ch;
-  }
-
-  .story-03 .cvss-badge {
-    display: inline-block;
-    background: #ff3b30;
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    border-radius: 2px;
-    margin-bottom: 1rem;
-  }
-
-  .story-03 .stamp-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .story-03 .stamp {
-    width: clamp(180px, 26vw, 340px);
-    height: clamp(180px, 26vw, 340px);
-    border: 6px solid #ff3b30;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-    transform: rotate(-8deg);
-  }
-
-  .story-03 .stamp::after {
-    content: '';
-    position: absolute;
-    inset: 10px;
-    border: 2px dashed #ff3b30;
-    border-radius: 50%;
-  }
-
-  .story-03 .stamp-number {
-    font-family: var(--fraunces);
-    font-weight: 900;
-    font-style: italic;
-    font-size: clamp(3rem, 6vw, 5rem);
-    color: #ff3b30;
-    line-height: 1;
-  }
-
-  .story-03 .stamp-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #ff3b30;
-    margin-top: 0.8rem;
-    max-width: 14ch;
-  }
-
-  .story-03 .story-source { color: #ff6b6b; }
-  .story-03 .story-body { color: #ffd0d0; }
-  .story-03 .story-link { color: #ff6b6b; }
-  .story-03 .cat-badge { background: rgba(255,60,60,0.2); color: #ff3b30; }
-
-
-  /* ════════════════════════════════
-     STORY 04 — FOREST GREEN / MYTHOS
-  ════════════════════════════════ */
-  .story-04 {
-    background: #0f1f1a;
-    color: #d8e8dd;
-  }
-
-  .story-04 .story-num {
-    font-size: clamp(20rem, 40vw, 46rem);
-    color: rgba(120,200,150,0.06);
-    left: -5vw;
+    font-size: clamp(18rem, 36vw, 42rem);
+    color: rgba(212,168,83,0.06);
+    left: -2vw;
     top: -4vw;
   }
+  .story-03 .story-headline {
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
+    color: #f5e6c8;
+    max-width: 20ch;
+  }
+  .story-03 .cat-badge { background: #c84a3a; color: #fff; }
+  .story-03 .story-link { color: #f5e6c8; }
+  .story-03 .accent { color: #d4a853; }
 
-  .story-04 .inner { position: relative; z-index: 1; max-width: 56rem; }
-
+  /* ── STORY 04 — Slate blue, Mozilla v Chrome ── */
+  .story-04 { background: #1e2a3a; color: #e0e6f0; }
+  .story-04 .story-num {
+    font-size: clamp(18rem, 38vw, 44rem);
+    color: rgba(120,180,220,0.08);
+    right: -3vw;
+    top: -4vw;
+  }
   .story-04 .story-headline {
-    font-size: clamp(3rem, 6vw, 6.5rem);
-    font-weight: 800;
-    color: #e8f5ed;
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
+    color: #fff;
     max-width: 18ch;
   }
+  .story-04 .cat-badge { background: #6aa6d4; color: #1e2a3a; }
+  .story-04 .story-link { color: #6aa6d4; }
+  .story-04 .accent { color: #6aa6d4; }
 
-  .story-04 .kicker-line {
-    display: flex;
-    gap: 0.8rem;
-    align-items: center;
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-size: clamp(1.2rem, 2.3vw, 1.9rem);
-    color: #78c896;
-    margin-bottom: 1rem;
-  }
-  .story-04 .kicker-line::before {
-    content: '';
-    width: 2.5rem;
-    height: 2px;
-    background: #78c896;
-  }
-
-  .story-04 .story-body { color: #c8dcd0; }
-  .story-04 .pull-quote { color: #78c896; }
-  .story-04 .story-source { color: #78c896; opacity: 0.8; }
-  .story-04 .story-link { color: #78c896; }
-  .story-04 .cat-badge { background: rgba(120,200,150,0.15); color: #78c896; }
-
-
-  /* ════════════════════════════════
-     STORY 05 — OLIVE / WARM TAN (GPT-5.5)
-  ════════════════════════════════ */
-  .story-05 {
-    background: #2b2820;
-    color: #e6decc;
-  }
-
+  /* ── STORY 05 — Mint / sage, Pu.sh agent ── */
+  .story-05 { background: #e8efe6; color: #1a2418; }
   .story-05 .story-num {
-    font-size: clamp(20rem, 40vw, 46rem);
-    color: rgba(230,210,150,0.05);
-    right: -4vw;
-    bottom: -6vw;
-  }
-
-  .story-05 .inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 2fr 1.2fr;
-    gap: 4vw;
-    align-items: start;
-  }
-
-  .story-05 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.5rem);
-    font-weight: 800;
-    color: #f2e6c4;
-    max-width: 16ch;
-  }
-
-  .story-05 .pull-quote { color: #e6c969; border-left-color: #e6c969; }
-  .story-05 .story-body { color: #d6ceb8; }
-  .story-05 .story-source { color: #e6c969; opacity: 0.85; }
-  .story-05 .story-link { color: #e6c969; }
-  .story-05 .cat-badge { background: rgba(230,201,105,0.15); color: #e6c969; }
-
-  .story-05 .odds-panel {
-    background: rgba(230,201,105,0.08);
-    border: 1px solid rgba(230,201,105,0.25);
-    padding: 1.6rem 1.5rem;
-  }
-  .story-05 .odds-panel .o-label {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #e6c969;
-    margin-bottom: 0.6rem;
-  }
-  .story-05 .odds-panel .o-big {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-weight: 900;
-    font-size: clamp(4.5rem, 9vw, 7rem);
-    color: #f2e6c4;
-    line-height: 1;
-  }
-  .story-05 .odds-panel .o-sub {
-    font-size: 0.78rem;
-    color: #d6ceb8;
-    margin-top: 0.5rem;
-    line-height: 1.4;
-  }
-  .story-05 .odds-panel .o-div {
-    height: 1px;
-    background: rgba(230,201,105,0.25);
-    margin: 1.3rem 0;
-  }
-  .story-05 .odds-panel dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.4rem 1rem;
-    font-size: 0.78rem;
-  }
-  .story-05 .odds-panel dt { color: #e6c969; font-weight: 600; letter-spacing: 0.06em; }
-  .story-05 .odds-panel dd { color: #d6ceb8; }
-
-
-  /* ════════════════════════════════
-     STORY 06 — DUSTY ROSE / CURSOR
-  ════════════════════════════════ */
-  .story-06 {
-    background: #2a1a1f;
-    color: #f0d6d8;
-  }
-
-  .story-06 .story-num {
-    font-size: clamp(20rem, 42vw, 48rem);
-    color: rgba(232,130,150,0.06);
-    right: -3vw;
-    top: -6vw;
-  }
-
-  .story-06 .inner { position: relative; z-index: 1; max-width: 62rem; }
-
-  .story-06 .story-headline {
-    font-size: clamp(3rem, 6vw, 6.5rem);
-    font-weight: 900;
-    color: #f8e4e8;
-    max-width: 16ch;
-  }
-
-  .story-06 .money-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-    margin: 2rem 0;
-  }
-  .story-06 .money-row > div {
-    border-top: 1px solid rgba(232,130,150,0.4);
-    padding-top: 0.7rem;
-  }
-  .story-06 .money-row strong {
-    font-family: var(--fraunces);
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.4rem;
-    color: #e88196;
-    display: block;
-    line-height: 1;
-  }
-  .story-06 .money-row span {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.65;
-    margin-top: 0.35rem;
-    display: block;
-  }
-
-  .story-06 .story-body { color: #e8c8cd; }
-  .story-06 .pull-quote { color: #e88196; }
-  .story-06 .story-source { color: #e88196; opacity: 0.85; }
-  .story-06 .story-link { color: #e88196; }
-  .story-06 .cat-badge { background: rgba(232,130,150,0.15); color: #e88196; }
-
-
-  /* ════════════════════════════════
-     STORY 07 — SLATE BLUE / MANAGED AGENTS
-  ════════════════════════════════ */
-  .story-07 {
-    background: #141c28;
-    color: #d8e2f0;
-  }
-
-  .story-07 .story-num {
     font-size: clamp(18rem, 36vw, 42rem);
-    color: rgba(120,160,230,0.06);
+    color: #d4ddd0;
+    right: -3vw;
+    bottom: -8vw;
+  }
+  .story-05 .story-headline {
+    font-size: clamp(2.6rem, 5vw, 5.4rem);
+    color: #1a2418;
+    max-width: 18ch;
+    font-weight: 800;
+  }
+  .story-05 .cat-badge { background: #4a6b3e; color: #fff; }
+  .story-05 .story-link { color: #1a2418; }
+  .story-05 .accent { color: #4a6b3e; }
+  .story-05 code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: rgba(74,107,62,0.12);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+  }
+
+  /* ── STORY 06 — Dusty rose, Honker SQLite ── */
+  .story-06 { background: #efdcd6; color: #3a1c20; }
+  .story-06 .story-num {
+    font-size: clamp(18rem, 36vw, 42rem);
+    color: #e3c8c0;
     left: -3vw;
+    top: -4vw;
+  }
+  .story-06 .story-headline {
+    font-size: clamp(2.4rem, 4.5vw, 5rem);
+    color: #3a1c20;
+    max-width: 18ch;
+  }
+  .story-06 .cat-badge { background: #a04a3c; color: #fff; }
+  .story-06 .story-link { color: #3a1c20; }
+  .story-06 .accent { color: #a04a3c; }
+
+  /* ── STORY 07 — Deep navy, LinkedIn scanning ── */
+  .story-07 { background: #0a1424; color: #d8e0ec; }
+  .story-07 .story-num {
+    font-size: clamp(18rem, 38vw, 44rem);
+    color: rgba(255,80,80,0.06);
+    right: -3vw;
     bottom: -4vw;
   }
-
-  .story-07 .inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4vw;
-    align-items: center;
-    min-height: 80vh;
-  }
-
   .story-07 .story-headline {
-    font-size: clamp(2.6rem, 5.2vw, 5.8rem);
-    font-weight: 800;
-    color: #ebf0fa;
-    max-width: 17ch;
-  }
-
-  .story-07 .story-body { color: #c4d0e4; }
-  .story-07 .pull-quote { color: #79a4e6; border-left-color: #79a4e6; }
-  .story-07 .story-source { color: #79a4e6; opacity: 0.85; }
-  .story-07 .story-link { color: #79a4e6; }
-  .story-07 .cat-badge { background: rgba(121,164,230,0.15); color: #79a4e6; }
-
-  .story-07 .panel {
-    background: rgba(121,164,230,0.06);
-    border: 1px solid rgba(121,164,230,0.2);
-    padding: 2rem 1.6rem;
-  }
-  .story-07 .panel h4 {
-    font-family: var(--inter);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #79a4e6;
-    margin-bottom: 1rem;
-  }
-  .story-07 .panel ul {
-    list-style: none;
-    padding: 0;
-  }
-  .story-07 .panel li {
-    font-family: var(--inter);
-    font-size: 0.92rem;
-    padding: 0.75rem 0;
-    border-top: 1px solid rgba(121,164,230,0.18);
-    color: #d8e2f0;
-    line-height: 1.5;
-  }
-  .story-07 .panel li:first-child { border-top: 0; }
-  .story-07 .panel li strong {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-weight: 900;
-    color: #79a4e6;
-    margin-right: 0.4rem;
-  }
-
-
-  /* ════════════════════════════════
-     STORY 08 — AMBER CREAM / DEEPSEEK
-  ════════════════════════════════ */
-  .story-08 {
-    background: #efe6d2;
-    color: #2a1f12;
-  }
-
-  .story-08 .story-num {
-    font-size: clamp(22rem, 44vw, 50rem);
-    color: rgba(184,124,46,0.08);
-    right: -5vw;
-    top: -6vw;
-  }
-
-  .story-08 .inner { position: relative; z-index: 1; max-width: 60rem; }
-
-  .story-08 .story-headline {
-    font-size: clamp(3rem, 6vw, 6.4rem);
-    font-weight: 800;
-    color: #2a1f12;
-    max-width: 15ch;
-  }
-
-  .story-08 .story-body { color: #2a1f12; }
-  .story-08 .pull-quote { color: #b87c2e; }
-  .story-08 .story-source { color: #b87c2e; opacity: 0.85; }
-  .story-08 .story-link { color: #2a1f12; }
-  .story-08 .cat-badge { background: #b87c2e; color: #efe6d2; }
-
-  .story-08 .kicker {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-size: clamp(1.2rem, 2.4vw, 2rem);
-    color: #b87c2e;
-    margin-bottom: 0.8rem;
-  }
-
-
-  /* ════════════════════════════════
-     STORY 09 — TEAL DEEP / GEMINI
-  ════════════════════════════════ */
-  .story-09 {
-    background: #0a2024;
-    color: #d0e8ea;
-  }
-
-  .story-09 .story-num {
-    font-size: clamp(20rem, 40vw, 46rem);
-    color: rgba(100,210,210,0.05);
-    left: -4vw;
-    bottom: -6vw;
-  }
-
-  .story-09 .inner { position: relative; z-index: 1; max-width: 58rem; }
-
-  .story-09 .story-headline {
-    font-size: clamp(2.8rem, 5.4vw, 6rem);
-    font-weight: 800;
-    color: #e6faf9;
-    max-width: 18ch;
-  }
-
-  .story-09 .story-body { color: #bddada; }
-  .story-09 .pull-quote { color: #64d2d2; border-left-color: #64d2d2; }
-  .story-09 .story-source { color: #64d2d2; opacity: 0.85; }
-  .story-09 .story-link { color: #64d2d2; }
-  .story-09 .cat-badge { background: rgba(100,210,210,0.15); color: #64d2d2; }
-
-
-  /* ════════════════════════════════
-     STORY 10 — CHARCOAL BREACH
-  ════════════════════════════════ */
-  .story-10 {
-    background: #181818;
-    color: #e4e0d8;
-  }
-
-  .story-10 .story-num {
-    font-size: clamp(20rem, 42vw, 48rem);
-    color: rgba(255,60,60,0.04);
-    right: -4vw;
-    top: -2vw;
-  }
-
-  .story-10 .inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 5vw;
-    align-items: center;
-    min-height: 78vh;
-  }
-
-  .story-10 .story-headline {
-    font-size: clamp(2.8rem, 5.6vw, 6rem);
-    font-weight: 900;
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
     color: #fff;
-    max-width: 16ch;
+    max-width: 20ch;
   }
-
-  .story-10 .story-body { color: #c9c4b8; }
-  .story-10 .pull-quote { color: #ff6b6b; border-left-color: #ff6b6b; }
-  .story-10 .story-source { color: #ff6b6b; opacity: 0.8; }
-  .story-10 .story-link { color: #ff6b6b; }
-  .story-10 .cat-badge { background: rgba(255,60,60,0.18); color: #ff6b6b; }
-
-  .story-10 .timeline {
-    border-left: 2px solid rgba(255,107,107,0.4);
-    padding-left: 1.4rem;
-  }
-  .story-10 .timeline .t-item { padding: 0.8rem 0; position: relative; }
-  .story-10 .timeline .t-item::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #ff6b6b;
-    border-radius: 50%;
-    position: absolute;
-    left: -1.9rem;
-    top: 1.25rem;
-  }
-  .story-10 .timeline .t-date {
+  .story-07 .cat-badge { background: #ff5050; color: #fff; }
+  .story-07 .story-link { color: #ff8888; }
+  .story-07 .accent { color: #ff8888; }
+  .story-07 .big-stat {
     font-family: var(--fraunces);
     font-style: italic;
-    color: #ff6b6b;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-  }
-  .story-10 .timeline .t-label {
-    font-size: 0.92rem;
-    color: #e4e0d8;
-    margin-top: 0.2rem;
-    line-height: 1.5;
-  }
-
-
-  /* ─── BACK PAGE ─── */
-  .back-page {
-    background: #1a1a1a;
-    color: #f5f0e8;
-    padding: 6vw 6vw 5vw;
-    text-align: center;
-  }
-
-  .back-page h2 {
-    font-family: var(--fraunces);
-    font-size: clamp(3rem, 7vw, 6.5rem);
     font-weight: 900;
-    font-style: italic;
-    letter-spacing: -0.02em;
-    color: #d4a853;
-    margin-bottom: 1.2rem;
+    font-size: clamp(4rem, 9vw, 9rem);
+    color: #ff5050;
+    line-height: 0.9;
+    margin: 2rem 0 0.5rem;
   }
-
-  .back-page .back-sub {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-    color: #f5f0e8;
-    opacity: 0.8;
-    max-width: 42ch;
-    margin: 0 auto 2.5rem;
-    line-height: 1.4;
-  }
-
-  .back-summary {
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: left;
-    border-top: 1px solid rgba(212,168,83,0.3);
-    padding-top: 2.2rem;
-  }
-
-  .back-summary p {
-    font-size: 0.95rem;
-    line-height: 1.75;
-    opacity: 0.85;
-    margin-bottom: 1rem;
-  }
-
-  .back-colophon {
-    text-align: center;
-    margin-top: 3.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(212,168,83,0.2);
-    font-size: 0.72rem;
+  .story-07 .stat-label {
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.55;
-    line-height: 2;
+    opacity: 0.6;
   }
 
-  .back-colophon .issue-no {
+  /* ── STORY 08 — Warm amber, Belgium nuclear ── */
+  .story-08 { background: #f4e5c5; color: #2a1f10; }
+  .story-08 .story-num {
+    font-size: clamp(20rem, 40vw, 46rem);
+    color: #e8d4a0;
+    left: -2vw;
+    top: -6vw;
+  }
+  .story-08 .story-headline {
+    font-size: clamp(2.6rem, 5vw, 5.4rem);
+    color: #2a1f10;
+    max-width: 18ch;
+    font-weight: 800;
+  }
+  .story-08 .cat-badge { background: #c87a1a; color: #fff; }
+  .story-08 .story-link { color: #2a1f10; }
+  .story-08 .accent { color: #c87a1a; }
+
+  /* ── STORY 09 — Charcoal, Klein/NSA ── */
+  .story-09 { background: #1a1a1a; color: #d8d8d8; }
+  .story-09 .story-num {
+    font-size: clamp(18rem, 36vw, 42rem);
+    color: rgba(212,168,83,0.05);
+    right: -3vw;
+    bottom: -6vw;
+  }
+  .story-09 .story-headline {
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
+    color: #f5e6c8;
+    max-width: 20ch;
+  }
+  .story-09 .cat-badge { background: #888; color: #1a1a1a; }
+  .story-09 .story-link { color: #d4a853; }
+  .story-09 .accent { color: #d4a853; }
+
+  /* ── STORY 10 — Pale teal, binary search ── */
+  .story-10 { background: #d8e6e3; color: #0f2a24; }
+  .story-10 .story-num {
+    font-size: clamp(18rem, 36vw, 42rem);
+    color: #c0d4cf;
+    right: -3vw;
+    top: -4vw;
+  }
+  .story-10 .story-headline {
+    font-size: clamp(2.4rem, 4.5vw, 5rem);
+    color: #0f2a24;
+    max-width: 20ch;
+  }
+  .story-10 .cat-badge { background: #2a6a5e; color: #fff; }
+  .story-10 .story-link { color: #0f2a24; }
+  .story-10 .accent { color: #2a6a5e; }
+
+  /* ── BACK PAGE ── */
+  .backpage {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    padding: 6vw 6vw;
+    text-align: center;
+    border-top: 4px solid #d4a853;
+  }
+  .backpage h2 {
     font-family: var(--fraunces);
     font-style: italic;
     font-weight: 900;
-    color: #d4a853;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
+    font-size: clamp(3rem, 7vw, 6rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .backpage h2 span { color: #d4a853; }
+  .backpage p {
+    font-family: var(--inter);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 60ch;
+    margin: 0 auto 1.2rem;
+    opacity: 0.85;
+  }
+  .backpage .footer-rule {
+    width: 80px;
+    height: 2px;
+    background: #d4a853;
+    margin: 2.5rem auto 1.5rem;
+  }
+  .backpage .footer-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #999;
   }
 
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 960px) {
-    .masthead { padding: 2rem 1.5rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  @media (max-width: 800px) {
+    .masthead { flex-direction: column; align-items: flex-start; padding: 2rem 1.4rem; }
     .masthead-meta { text-align: left; }
-    .toc-strip { padding: 1rem 1.5rem; }
-    .story { padding: 10vw 6vw; }
-    .story-02 .inner,
-    .story-03 .inner,
-    .story-05 .inner,
-    .story-07 .inner,
-    .story-10 .inner { grid-template-columns: 1fr !important; gap: 3rem; min-height: 0; }
-    .story-01 .bench-grid,
-    .story-06 .money-row { grid-template-columns: 1fr 1fr; }
-    .story-03 .stamp { transform: rotate(-4deg); }
+    .toc-strip { padding: 1rem 1.4rem; }
+    .story { padding: 8vw 6vw; }
   }
 </style>
 </head>
 <body>
 
-<!-- ════════════════════ MASTHEAD ════════════════════ -->
+<!-- ── MASTHEAD ── -->
 <header class="masthead">
-  <h1 class="masthead-title">
-    <span>AI Weekly · Issue No. 03</span>
+  <div class="masthead-title">
+    <span>AI Weekly</span>
     Morning<br>Edition
-  </h1>
+  </div>
   <div class="masthead-meta">
-    <strong>Thursday, 23 April 2026</strong>
-    Curated for Jani Teerioja<br>
-    Ten stories · one hour's read<br>
-    Published from Helsinki
+    <strong>No. 005</strong>
+    Tuesday<br>
+    May 19, 2026<br>
+    Curated for Jani
   </div>
 </header>
-<div class="section-rule"></div>
 
-<!-- ════════════════════ TOC STRIP ════════════════════ -->
-<nav class="toc-strip" aria-label="Inside this issue">
-  <a class="toc-chip" href="#s1"><span class="chip-num">01</span> Opus 4.7 Lands</a>
-  <a class="toc-chip" href="#s2"><span class="chip-num">02</span> Amazon's $25B Bet</a>
-  <a class="toc-chip" href="#s3"><span class="chip-num">03</span> MCP Supply Chain</a>
-  <a class="toc-chip" href="#s4"><span class="chip-num">04</span> Claude Mythos</a>
-  <a class="toc-chip" href="#s5"><span class="chip-num">05</span> GPT-5.5 "Spud"</a>
-  <a class="toc-chip" href="#s6"><span class="chip-num">06</span> Cursor at $50B</a>
-  <a class="toc-chip" href="#s7"><span class="chip-num">07</span> Managed Agents</a>
-  <a class="toc-chip" href="#s8"><span class="chip-num">08</span> DeepSeek Rises</a>
-  <a class="toc-chip" href="#s9"><span class="chip-num">09</span> Gemini Enterprise</a>
-  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Mythos Breach</a>
+<!-- ── TOC STRIP ── -->
+<nav class="toc-strip">
+  <a class="toc-chip" href="#s1"><span class="chip-num">01</span> Claude Code &amp; OpenClaw</a>
+  <a class="toc-chip" href="#s2"><span class="chip-num">02</span> Opus 4.7 Stylometry</a>
+  <a class="toc-chip" href="#s3"><span class="chip-num">03</span> Shai-Hulud in PyTorch Lightning</a>
+  <a class="toc-chip" href="#s4"><span class="chip-num">04</span> Mozilla vs. Prompt API</a>
+  <a class="toc-chip" href="#s5"><span class="chip-num">05</span> 400-Line Agent Harness</a>
+  <a class="toc-chip" href="#s6"><span class="chip-num">06</span> Queues Inside SQLite</a>
+  <a class="toc-chip" href="#s7"><span class="chip-num">07</span> LinkedIn's Extension Scan</a>
+  <a class="toc-chip" href="#s8"><span class="chip-num">08</span> Belgium Reverses on Nuclear</a>
+  <a class="toc-chip" href="#s9"><span class="chip-num">09</span> Room 641A Revisited</a>
+  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Beating Binary Search</a>
 </nav>
 
-<!-- ════════════════════ STORY 01 ════════════════════ -->
+<!-- ════════════════════════════════
+     STORY 01 — Claude Code / OpenClaw
+═══════════════════════════════ -->
 <section class="story story-01" id="s1">
-  <div class="story-num">01</div>
+  <span class="story-num">01</span>
   <div class="inner">
-    <div class="story-flag"></div>
-    <div class="eyebrow">
-      <span class="eyebrow-line"></span>
-      <span class="cat-badge">Lead · Model Release</span>
-    </div>
-    <p class="kicker">It beats GPT-5.4 and Gemini 3.1 Pro on the benchmarks that matter most to you.</p>
-    <h2 class="story-headline">Opus 4.7 arrives, and it was built for orchestrators.</h2>
+    <span class="story-flag"></span>
+    <span class="cat-badge">Anthropic · Claude Code</span>
+    <div class="kicker">The string match heard around the dev world</div>
+    <h1 class="story-headline">Claude Code is quietly refusing — or upcharging — commits that mention "OpenClaw."</h1>
     <div class="meta-row">
-      <span>Source · Anthropic</span>
-      <span>Shipped · April 16, 2026</span>
-      <span>Price · $5 / $25 per M tokens</span>
-    </div>
-    <div class="story-body" style="margin-top: 1.5rem;">
-      <p>Anthropic's most capable generally available model is now sitting in front of every Claude Code user by default, and it is unusually aggressive about it — Claude Code now runs Opus 4.7 at the new <em>xhigh</em> effort level out of the box on every plan. That single default change is the real headline. Opus 4.7 is no longer a model you opt into for hard problems; it is the floor.</p>
-      <p>The numbers explain the confidence. SWE-bench Verified jumps from 80.8% to 87.6%. SWE-bench Pro — the harder private variant — goes from 53.4% to 64.3%, beating GPT-5.4's 57.7%. CursorBench climbs from 58% to 70%. Anthropic reports a 14% improvement in multi-step agentic reasoning with roughly a third as many tool errors as the previous generation. The vision tower tripled in resolution to 3.75 megapixels, which finally makes computer-use agents reliable on dense UI screenshots.</p>
-      <p>Two feature additions deserve specific attention from anyone running production agent pipelines. <strong>Task budgets</strong>, in public beta on the Claude Platform API, let you cap the token spend on a single long-running task so parallelized agents don't silently blow through margin. And the new <code>/ultrareview</code> command in Claude Code runs a structured self-critique pass over a diff before the model claims it is done — a small thing that moves a lot of eng time off of reviewing Claude's homework.</p>
-    </div>
-    <div class="bench-grid">
-      <div class="bench-card"><div class="bench-num">87.6%</div><div class="bench-label">SWE-bench Verified</div></div>
-      <div class="bench-card"><div class="bench-num">64.3%</div><div class="bench-label">SWE-bench Pro</div></div>
-      <div class="bench-card"><div class="bench-num">70%</div><div class="bench-label">CursorBench</div></div>
-    </div>
-    <a class="story-link" href="https://www.marktechpost.com/2026/04/18/anthropic-releases-claude-opus-4-7-a-major-upgrade-for-agentic-coding-high-resolution-vision-and-long-horizon-autonomous-tasks/" target="_blank" rel="noopener">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
-  </div>
-</section>
-
-<!-- ════════════════════ STORY 02 ════════════════════ -->
-<section class="story story-02" id="s2">
-  <div class="story-num">02</div>
-  <div class="inner">
-    <div>
-      <p class="story-source">CNBC · Engadget · Reuters</p>
-      <span class="cat-badge">Deal · Infrastructure</span>
-      <h2 class="story-headline">Amazon <span class="accent">doubles down</span> on Anthropic with another $25B — and a $100B AWS lock-in.</h2>
-      <div class="story-body" style="margin-top: 1.5rem;">
-        <p>The cloud alignment is now fully drawn. Amazon announced on Monday it will invest up to $25B more in Anthropic — $5B immediately at the existing $380B valuation, plus up to $20B tied to commercial milestones — stacked on top of the $8B it had already put in. In return, Anthropic has committed to spend more than $100 billion on AWS over the next decade and to run its frontier models on AWS Trainium silicon for at least that long.</p>
-        <p>Read between the lines: this is Amazon's answer to Microsoft–OpenAI and Google's in-house stack, and it turns Anthropic into a ten-year demand engine for Trainium. Anthropic will bring almost <em>one gigawatt</em> of combined Trainium2 and Trainium3 capacity online before year end. The full Claude Platform will also be available natively inside AWS — existing billing, IAM, VPCs — rather than living solely behind the Bedrock marketplace.</p>
-      </div>
-      <p class="pull-quote">A ten-year commitment on custom silicon is the strongest signal yet that Anthropic never intends to be a GPU company.</p>
-      <a class="story-link" href="https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html" target="_blank" rel="noopener">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/from?site=cnbc.com" target="_blank" rel="noopener">HN discussion</a>
-    </div>
-    <div>
-      <span class="big-stat">$25B</span>
-      <span class="stat-label">Fresh commitment · announced April 20</span>
-      <div class="mini-stat">
-        <div><strong>$100B+</strong><span>Anthropic's AWS spend over the decade</span></div>
-        <div><strong>1 GW</strong><span>Trainium2 + Trainium3 online by Dec</span></div>
-        <div><strong>$380B</strong><span>Anthropic's current valuation</span></div>
-        <div><strong>$33B</strong><span>Total Amazon capital committed</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════ STORY 03 ════════════════════ -->
-<section class="story story-03" id="s3">
-  <div class="story-num">03</div>
-  <div class="inner">
-    <div>
-      <div class="story-flag"></div>
-      <span class="cvss-badge">Critical · Supply Chain</span>
-      <span class="cat-badge" style="display:inline-block; margin-left:0.5rem;">MCP Advisory</span>
-      <p class="story-source">OX Security · The Register · Tom's Hardware</p>
-      <h2 class="story-headline">The MCP supply chain has a 200,000-server problem.</h2>
-      <div class="story-body" style="margin-top: 1rem;">
-        <p>OX Security's April 15 disclosure is the first systemic security finding against MCP — and it is not a bug. It is a design decision. The official Anthropic MCP SDKs in Python, TypeScript, Java, and Rust accept arbitrary command strings on the STDIO transport and execute them regardless of whether the server process successfully starts. Feed the loader a malicious command, receive an error, and the command has already run.</p>
-        <p>The blast radius is the part that changes how you treat it. Ox counts <strong>200+ open-source projects</strong>, <strong>150M downloads</strong>, <strong>7,000+ publicly reachable servers</strong> and up to <strong>200,000 vulnerable instances</strong> — flagship tools like LiteLLM, LangFlow, Windsurf, Cursor, Flowise, DocsGPT and GPT Researcher are all affected. Four exploit families have been demonstrated, including zero-click prompt injection inside AI coding IDEs.</p>
-        <p>Anthropic's position, confirmed to <em>The Register</em>, is that STDIO's behavior is expected and that sanitization belongs to the developer. That answer is defensible from a protocol-designer's chair. It is also the moment MCP's governance question — now sitting under the Linux Foundation's Agentic AI Foundation — stops being theoretical.</p>
-      </div>
-      <p class="pull-quote">"Expected behavior" is how supply-chain fires start.</p>
-      <a class="story-link" href="https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/" target="_blank" rel="noopener">Read advisory</a>
-      <a class="story-link" href="https://news.ycombinator.com/from?site=ox.security" target="_blank" rel="noopener">HN discussion</a>
-    </div>
-    <div class="stamp-wrap">
-      <div class="stamp">
-        <div class="stamp-number">200K</div>
-        <div class="stamp-label">MCP servers potentially exposed</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════ STORY 04 ════════════════════ -->
-<section class="story story-04" id="s4">
-  <div class="story-num">04</div>
-  <div class="inner">
-    <p class="story-source">Anthropic · AISI · Foreign Policy</p>
-    <div class="kicker-line">Project Glasswing, explained</div>
-    <span class="cat-badge">Safety · Cyber</span>
-    <h2 class="story-headline">Claude Mythos is the first model that changed the cyber calculus.</h2>
-    <div class="story-body" style="margin-top: 1.5rem;">
-      <p>Anthropic previewed Mythos to about fifty partner organizations on April 7 — AWS, Apple, Google, Microsoft, JPMorgan, NVIDIA, the Linux Foundation, CrowdStrike, Palo Alto, and a handful of government bodies. In the weeks since, Mythos has reportedly found <em>thousands</em> of previously unknown high-severity vulnerabilities across every major operating system and every major browser. The UK AI Security Institute concluded Mythos is "strikingly capable" on offensive cyber tasks that, until now, separated top human red teams from everyone else.</p>
-      <p>This is the moment the defenders-first narrative collides with reality. Project Glasswing's premise is that if frontier AI can find zero-days at scale, the ethical move is to find them first and patch them into the software the world runs on before the model — or something like it — gets into adversarial hands. Anthropic has privately warned U.S. officials that Mythos makes large-scale autonomous cyberattacks materially more feasible. The AISI evaluation doesn't disagree.</p>
-    </div>
-    <p class="pull-quote">"With Mythos, a single operator suddenly has a lot more ways to attack." — ETH Zürich</p>
-    <div class="meta-row">
-      <span>Announced · April 7</span>
-      <span>Partners · 50 orgs</span>
-      <span>Status · Preview, not GA</span>
-    </div>
-    <a class="story-link" href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
-  </div>
-</section>
-
-<!-- ════════════════════ STORY 05 ════════════════════ -->
-<section class="story story-05" id="s5">
-  <div class="story-num">05</div>
-  <div class="inner">
-    <div>
-      <p class="story-source">Polymarket · The Information · LumiChats</p>
-      <span class="cat-badge">Imminent · OpenAI</span>
-      <h2 class="story-headline">"Spud" is almost here — and Polymarket thinks it ships today.</h2>
-      <div class="story-body" style="margin-top: 1.5rem;">
-        <p>OpenAI's next foundation model, internally codenamed <em>Spud</em> and widely expected to ship as GPT-5.5, finished pretraining on or around March 24. Sam Altman has confirmed it internally as "a very strong model" that could "really accelerate the economy," and references to it have already leaked out of the Codex tool and the ChatGPT interface. Polymarket traders as of Wednesday evening were pricing an <strong>86% probability</strong> that Spud ships on April 23 — i.e., today — following Altman's "really excited for this week" tease and a scheduled noon-PT livestream.</p>
-        <p>What's been telegraphed so far: a reworked agentic runtime (native computer use built into the base model, not bolted on by an SDK), tighter tool-use primitives meant to undercut Claude Code on its home turf, and a unification story that finally merges the GPT-4o lineage with the reasoning line. If the benchmarks land where Altman implies, the pressure pops back to Anthropic within the week. Watch whether Opus 4.7's SWE-bench Pro lead survives the day.</p>
-      </div>
-      <p class="pull-quote">"This is not a screenshot." — OpenAI's pre-livestream teaser</p>
-      <a class="story-link" href="https://www.abhs.in/blog/openai-spud-gpt-5-5-release-date-polymarket-april-2026" target="_blank" rel="noopener">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/from?site=openai.com" target="_blank" rel="noopener">HN discussion</a>
-    </div>
-    <aside class="odds-panel">
-      <div class="o-label">Polymarket · April 23</div>
-      <div class="o-big">86%</div>
-      <div class="o-sub">Implied probability that GPT-5.5 ships today, as of Wednesday's close.</div>
-      <div class="o-div"></div>
-      <dl>
-        <dt>Pretraining</dt><dd>Mar 24, 2026</dd>
-        <dt>Typical gap</dt><dd>3–6 weeks</dd>
-        <dt>Livestream</dt><dd>12:00 PT today</dd>
-        <dt>Headline feature</dt><dd>Native computer use</dd>
-        <dt>Target</dt><dd>Agentic parity with Claude</dd>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<!-- ════════════════════ STORY 06 ════════════════════ -->
-<section class="story story-06" id="s6">
-  <div class="story-num">06</div>
-  <div class="inner">
-    <p class="story-source">Bloomberg · CNBC · TechFundingNews</p>
-    <span class="cat-badge">Private Markets · AI Coding</span>
-    <h2 class="story-headline">Cursor is raising $2B at $50B — and SpaceX may buy the whole thing for $60B anyway.</h2>
-    <div class="money-row">
-      <div><strong>$2B</strong><span>Round size</span></div>
-      <div><strong>$50B</strong><span>Pre-money valuation</span></div>
-      <div><strong>$6B</strong><span>Year-end ARR forecast</span></div>
+      <span>twitter.com/theo · via HN</span>
+      <span>865 points</span>
+      <span>497 comments</span>
     </div>
     <div class="story-body">
-      <p>Cursor, now formally Anysphere, entered the week in the kind of position that stops being about fundraising and starts being about auction dynamics. Bloomberg first reported on April 17 that the company was in talks to raise $2B at a valuation north of $50B, co-led by Andreessen Horowitz with Nvidia and Thrive Capital. By February, Cursor's annual run rate had already crossed $2B, making it the fastest B2B software company in history to hit $1B ARR — faster than Slack, Zoom, or Snowflake.</p>
-      <p>Then the room shifted. Bloomberg followed up Wednesday with a line that recontextualizes the entire round: Elon Musk's SpaceX is in talks to acquire Cursor outright for <strong>$60B</strong>. A16z and Thrive are staring at windfalls on the order of a 50× from their early checks. If the acquisition closes, it is the largest private software exit in history — and it locks Cursor's AI coding stack into Musk's orbit alongside xAI. For the dozen teams still deciding between Cursor and Claude Code, the deal matters less for the multiple and more for the strategic question: whose roadmap do you want your editor on?</p>
+      <p>Anthropic appears to have shipped a server-side filter that, by simple regex, downgrades or rejects requests from Claude Code sessions when the model sees the words "OpenClaw" or "Hermes" in a commit message, file, or diff. The community read is unambiguous: Anthropic is throttling open-source coding harnesses that wrap their API and resell the capacity, especially under flat-rate plans where heavy power users blow through the unit economics.</p>
+      <p>What set HN on fire wasn't the policy — most agreed unlimited plans on a frontier model were never going to last — it was the implementation. A plain string match, with no whitelist for Claude Code's own system prompt or tool surface, means legitimate developers working on adjacent open-source projects, or just discussing the harness in a README, are getting silently degraded. Anthropic eats its own dog food on Claude Code; this looks like ops triage, not policy.</p>
+      <p>For an orchestrator like you, the read-through is sharper: the price of using Claude through someone else's wrapper is now structurally different from using it directly. Bring-your-own-key for OSS harnesses is becoming the safe default. The era of "unlimited Claude for $20" is officially in the rearview.</p>
+      <div class="pull-quote">Didn't they think — we need to make sure Claude Code is never banned?</div>
+      <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47963204" target="_blank">HN Discussion</a>
     </div>
-    <p class="pull-quote">Fastest to $1B ARR in the history of B2B software. Now being bid on by the world's most controversial buyer.</p>
-    <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-22/andreessen-thrive-poised-for-windfall-from-spacex-s-cursor-bid" target="_blank" rel="noopener">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/from?site=bloomberg.com" target="_blank" rel="noopener">HN discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════ STORY 07 ════════════════════ -->
+<!-- ════════════════════════════════
+     STORY 02 — Opus 4.7 stylometry
+═══════════════════════════════ -->
+<section class="story story-02" id="s2">
+  <span class="story-num">02</span>
+  <div class="inner">
+    <span class="story-flag"></span>
+    <span class="cat-badge">Anthropic · Privacy</span>
+    <h1 class="story-headline">Opus 4.7 can name <span class="accent">strangers</span> from four sentences they wrote.</h1>
+    <div class="meta-row">
+      <span>theargumentmag.com · Kelsey Piper</span>
+      <span>115 points</span>
+      <span>58 comments</span>
+    </div>
+    <div class="story-body">
+      <p>Kelsey Piper paste-tested Opus 4.7 with snippets from her own unpublished writing — incognito, no memory, no account context, also verified through the raw API. It correctly identified her, again and again. Other HN commenters reproduced the result with their own drafts on the first try. One reader fed a 475-word blog post and the model nailed it in one shot.</p>
+      <p>The capability isn't memory; it's stylometry at frontier scale. The model has internalized enough of the public web that the way you write — sentence rhythm, vocabulary cadence, argumentative tics — is now a fingerprint. Earlier Claudes couldn't do this reliably. Opus 4.7 can. The Argument piece reads it for what it is: the end of casual pseudonymity on the open web for anyone with even a modest writing footprint.</p>
+      <p>The mitigations are bleak. Run your writing through a local model to neutralize tone, and you've destroyed the voice that made it worth reading. Don't, and frontier models will increasingly link your aliases together with one prompt. Expect "stylometric anonymizer" to become a category before the year is out.</p>
+      <div class="pull-quote">I can never talk to an AI anonymously again. Neither can you.</div>
+      <a class="story-link" href="https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47951295" target="_blank">HN Discussion</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STORY 03 — Shai-Hulud PyTorch Lightning
+═══════════════════════════════ -->
+<section class="story story-03" id="s3">
+  <span class="story-num">03</span>
+  <div class="inner">
+    <span class="cat-badge">AI Supply Chain · Security</span>
+    <h1 class="story-headline">Shai-Hulud burrowed into PyTorch Lightning — and dumped 2,200 sets of stolen creds on GitHub.</h1>
+    <div class="meta-row">
+      <span>semgrep.dev</span>
+      <span>299 points</span>
+      <span>97 comments</span>
+    </div>
+    <div class="story-body">
+      <p>Versions 2.6.2 and 2.6.3 of <span class="accent">pytorch-lightning</span> on PyPI were published with malicious payload code by an attacker who had compromised the maintainer's PyPI credentials. The GitHub repo was clean; the poison was injected post-build, directly to the index. Anyone who ran <code>pip install lightning</code> in the affected window had tokens, env vars, and cloud secrets exfiltrated.</p>
+      <p>The signature move is the Shai-Hulud one: the malware then publishes the stolen credentials into thousands of attacker-created GitHub repos, naming them after Dune characters and lightly obfuscating the secrets with double base64. The convention abuses the fact that everyone — security researchers, secret scanners, attackers — is already polling GitHub for leaked tokens. Exfiltration via the global commons. A repo search returned 2,200+ matching repos created in the last 24 hours.</p>
+      <p>If you're on the AI side: pin your training-stack deps, audit anything that ran <code>pip install -U</code> this week, and rotate any cloud creds that were resident in a dev machine that touched Lightning. The official fix is to stay on 2.6.1 until 2.6.4 ships. The deeper signal: as AI tooling becomes the most active package surface on the internet, it is also the juiciest supply-chain target.</p>
+      <div class="pull-quote">Bless the Maker — and pin your dependencies.</div>
+      <a class="story-link" href="https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47964617" target="_blank">HN Discussion</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STORY 04 — Mozilla vs Chrome Prompt API
+═══════════════════════════════ -->
+<section class="story story-04" id="s4">
+  <span class="story-num">04</span>
+  <div class="inner">
+    <span class="cat-badge">Browsers · LLM APIs</span>
+    <h1 class="story-headline">Mozilla draws a hard line on Chrome's plan to expose a built-in LLM to every web page.</h1>
+    <div class="meta-row">
+      <span>github.com/mozilla</span>
+      <span>564 points</span>
+      <span>207 comments</span>
+    </div>
+    <div class="story-body">
+      <p>Google has been quietly shipping the <span class="accent">Prompt API</span> in Chrome — a JavaScript surface that lets any web page call an on-device Gemini Nano model. Mozilla's standards-positions team has now formally objected. Their argument: a web standard that exposes a non-deterministic, vendor-controlled language model to every script in the browser isn't a web feature, it's a vendor moat dressed in standards clothing.</p>
+      <p>The technical critique is real. Different browsers shipping different models means web apps will quietly behave differently — sometimes catastrophically so — depending on the user's browser. Outputs aren't testable, security boundaries against prompt injection are undefined, and there's no interop story when the underlying model changes weekly. Mozilla's position is a useful brake on a feature that, in Chrome's framing, was being treated as inevitable.</p>
+      <p>The strategic subtext is more interesting: Chrome wants in-browser AI to be a first-class web platform primitive, owned by browsers. Mozilla, with no frontier model and a tiny share, is arguing that MCP-style external connections (under user control) are the right substrate. Both can be right — but only one is going to win the default position in the next major Chrome release.</p>
+      <div class="pull-quote">A standards body should not enshrine the output of a single company's frontier lab.</div>
+      <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47959463" target="_blank">HN Discussion</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STORY 05 — Pu.sh agent harness
+═══════════════════════════════ -->
+<section class="story story-05" id="s5">
+  <span class="story-num">05</span>
+  <div class="inner">
+    <span class="story-flag"></span>
+    <span class="cat-badge">Agentic AI · DX</span>
+    <h1 class="story-headline">A full coding agent — Anthropic + OpenAI, seven tools, REPL — in <span class="accent">400 lines of shell.</span></h1>
+    <div class="meta-row">
+      <span>pu.dev · Show HN</span>
+      <span>75 points</span>
+      <span>21 comments</span>
+    </div>
+    <div class="story-body">
+      <p><code>pu.sh</code> is one POSIX shell file. <code>sh + curl + awk</code>, nothing else. It implements an interactive coding-agent loop with seven tools (bash, read, write, edit, grep, find, ls), supports both Anthropic's and OpenAI's tool-use surfaces, carries reasoning items across turns, does auto-compaction and checkpoint/resume, and ships 90 no-API tests. The author confesses up front: most of the awk was written by Claude and Codex; he can't read large parts of his own code.</p>
+      <p>That admission is the actual story. A year ago, "build a Claude Code clone in one shell file" was a joke. Now it's a weekend project — and the result is dependency-free, vendor-agnostic, and small enough to audit in an afternoon. The community pushback (the minification makes it unreadable; that's vibe-coded spaghetti) is fair, but it misses the macro point: the floor for "good enough to replace Claude Code as a scaffold" has cratered.</p>
+      <p>For anyone running automation pipelines on top of frontier APIs, this is the new ambient baseline. The agent harness is no longer a moat — the model and the eval loop are. Expect to see this pattern repeat across every "agent CLI" startup in the next 12 months.</p>
+      <div class="pull-quote">The agent loop is tiny. Everything else is DX and hardening.</div>
+      <a class="story-link" href="https://pu.dev/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47968112" target="_blank">HN Discussion</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STORY 06 — Honker / SQLite primitives
+═══════════════════════════════ -->
+<section class="story story-06" id="s6">
+  <span class="story-num">06</span>
+  <div class="inner">
+    <span class="cat-badge">Developer Tools</span>
+    <h1 class="story-headline">Honker stuffs queues, pub/sub, streams and a cron into one SQLite file.</h1>
+    <div class="meta-row">
+      <span>honker.dev</span>
+      <span>158 points</span>
+      <span>49 comments</span>
+    </div>
+    <div class="story-body">
+      <p>The pitch is local-first heresy: when your app needs background jobs and a message bus, you don't reach for Redis and Celery — you point everything at a single SQLite file. Honker provides durable queues, fan-out streams, pub/sub, and a cron scheduler, all using <span class="accent">SQLite's PRAGMA data_version</span> as the wake signal. Workers poll the version counter every millisecond, a roughly 3µs read; when it ticks, they know something committed somewhere and they wake up to scan the queue.</p>
+      <p>HN's reception was sharp. tptacek pointed out the giveaway clue — busy-polling a SELECT every millisecond does not, in fact, sound better than a kernel file watcher, regardless of how the marketing copy frames it. Several commenters noted that for the kind of small-to-medium app that picks SQLite as a substrate, a couple of percent of CPU spent on a polling thread per worker is probably fine. Others muttered that Oban already supports SQLite and is battle-tested.</p>
+      <p>The interesting principle isn't this library specifically — it's the larger trend of treating SQLite as a serious production substrate, not just an embedded toy. Litestream, Litestack, Turso, and now Honker are all variations on the same bet: "Postgres + Redis + a queue" is overkill for 90% of apps that ship.</p>
+      <div class="pull-quote">No Redis, no broker — just the file on disk you already have.</div>
+      <a class="story-link" href="https://honker.dev/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47963316" target="_blank">HN Discussion</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STORY 07 — LinkedIn extension scanning
+═══════════════════════════════ -->
 <section class="story story-07" id="s7">
-  <div class="story-num">07</div>
+  <span class="story-num">07</span>
   <div class="inner">
-    <div>
-      <div class="story-flag"></div>
-      <p class="story-source">Anthropic · SiliconANGLE · InfoWorld</p>
-      <span class="cat-badge">Product · Agents</span>
-      <h2 class="story-headline">Claude Managed Agents makes Anthropic the hosting layer, not just the model.</h2>
-      <div class="story-body" style="margin-top: 1.5rem;">
-        <p>The April 8 public-beta launch of Claude Managed Agents is the quietest move with the loudest implication in this issue. For the first time, you can define an agent's task, tools, and guardrails, then hand it off to Anthropic to run — sandboxed containers, built-in tools, streaming events — with Anthropic handling the second job entirely. Pricing starts at $0.08 per runtime hour on top of standard token costs, which is about $58 a month for a 24/7 agent before inference.</p>
-        <p>Combined with the public Agent Skills specification — the same packaged-skill format you are already using in Cowork — Managed Agents closes the loop: specialize with a Skill, deploy as a Managed Agent, observe through the Claude Platform. It is not an accident that this shipped two weeks before Opus 4.7 turned xhigh on by default. The ambition is the full agent stack on Anthropic's rails, with AWS underneath.</p>
-      </div>
-      <p class="pull-quote">The model is the easy part. Running it reliably for months on end is what Anthropic just took off your plate.</p>
-      <a class="story-link" href="https://www.infoworld.com/article/4156852/anthropic-rolls-out-claude-managed-agents.html" target="_blank" rel="noopener">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/from?site=anthropic.com" target="_blank" rel="noopener">HN discussion</a>
+    <span class="cat-badge">Privacy · Web Tracking</span>
+    <h1 class="story-headline">LinkedIn is silently fingerprinting your browser for 6,278 extensions.</h1>
+    <div class="big-stat">6,278</div>
+    <div class="stat-label">Extensions Probed Per Page Load</div>
+    <div class="meta-row" style="margin-top:1.5rem;">
+      <span>404privacy.com</span>
+      <span>299 points</span>
+      <span>121 comments</span>
     </div>
-    <aside class="panel">
-      <h4>What ships in the beta</h4>
-      <ul>
-        <li><strong>01</strong>Composable APIs — create agents, configure containers, run sessions end-to-end.</li>
-        <li><strong>02</strong>Sandboxed execution with secure tool access and SSE streaming.</li>
-        <li><strong>03</strong>Packaged Agent Skills: pre-built for Word, Excel, PPT, PDF; bring your own.</li>
-        <li><strong>04</strong>Task budgets on the API — cap token spend per long-running session.</li>
-        <li><strong>05</strong>$0.08 / runtime hour · roughly $58 / month for a 24-7 agent before tokens.</li>
-      </ul>
-    </aside>
+    <div class="story-body">
+      <p>404privacy.com pulled apart LinkedIn's page scripts and found the company is checking, on every load, whether 6,278 specific browser extensions are installed — by attempting to fetch their web-accessible resources. The result vector is encrypted and embedded into every subsequent request. The list isn't security-focused; it's a wholesale fingerprint and behavioral classifier.</p>
+      <p>This is the kind of tracking that's been theoretically possible for a decade and rarely deployed at this scale. The encrypted payload is the giveaway — they're not just using it for one feature; they're funneling it into the broader analytics pipeline, and the encryption is there to make it harder for third parties (or regulators) to audit. The technique would never survive a German or French DPA filing if it were named honestly.</p>
+      <p>For anyone working on AI products, the implication is unflattering: as AI agents become the new browser-side actors, this kind of side-channel will be one of the first defenses platforms reach for. Expect "agent vs. site" fingerprinting wars to ramp up in 2026.</p>
+      <div class="pull-quote">If you can detect it, you can sell it.</div>
+      <a class="story-link" href="https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47967262" target="_blank">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ════════════════════ STORY 08 ════════════════════ -->
+<!-- ════════════════════════════════
+     STORY 08 — Belgium nuclear
+═══════════════════════════════ -->
 <section class="story story-08" id="s8">
-  <div class="story-num">08</div>
+  <span class="story-num">08</span>
   <div class="inner">
-    <p class="story-source">Bloomberg · The Information · PYMNTS</p>
-    <p class="kicker">Alibaba and Tencent are reportedly first in.</p>
-    <span class="cat-badge">Funding · China</span>
-    <h2 class="story-headline">DeepSeek opens its first-ever fundraise at a $20B valuation.</h2>
-    <div class="story-body" style="margin-top: 1.5rem;">
-      <p>DeepSeek, which spent two years operating as the world's most famous self-funded frontier lab, has finally broken and is raising outside capital. Bloomberg and <em>The Information</em> report the round is targeting a valuation north of $20B, with both Alibaba and Tencent circling. For context: that is about one-nineteenth of Anthropic's current mark and roughly one-fortieth of OpenAI's last print, despite DeepSeek's models landing inside 2–3 points of the frontier on most public evals.</p>
-      <p>The twist is political. A Chinese lab accepting strategic capital from China's two largest internet platforms — right as the U.S. tightens Trainium export controls and as the Linux Foundation's Agentic AI Foundation tries to keep MCP politically neutral — reshapes how Western clouds treat DeepSeek's open weights. V4 is expected in Q2. Whether it ships before or after Beijing has formal equity in the company is now the question that matters.</p>
+    <span class="cat-badge">Energy · AI Infrastructure</span>
+    <h1 class="story-headline">Belgium reverses course — the nuclear plants stay on.</h1>
+    <div class="meta-row">
+      <span>dpa-international.com</span>
+      <span>712 points</span>
+      <span>656 comments</span>
     </div>
-    <p class="pull-quote">The only frontier lab still operating cheap. That stops today.</p>
-    <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-22/deepseek-in-talks-to-raise-at-20-billion-value-the-information" target="_blank" rel="noopener">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/from?site=bloomberg.com" target="_blank" rel="noopener">HN discussion</a>
+    <div class="story-body">
+      <p>Belgium has formally suspended its nuclear decommissioning program. Plants that were scheduled to be wound down through the late 2020s will instead be kept running — and in several cases relicensed for further life-extension. The proximate driver is the same one tipping every European energy decision in 2026: industrial baseload demand is climbing faster than renewables can pencil, and the marginal customer is now AI data centers.</p>
+      <p>It's worth pausing on the shift. Belgium's nuclear phase-out was, until 2023, the European green movement's flagship policy commitment. The fact that it has now been reversed — under center-left coalition cover — tells you exactly how much the political math has changed. Bringing Anthropic and OpenAI to Europe means promising them grid capacity, and there is no path to that capacity by 2027 without nuclear.</p>
+      <p>For the broader AI story: every major US hyperscaler now has direct power-purchase agreements with nuclear operators (Microsoft / Three Mile Island, Amazon / Talen, Google / Kairos). Europe's version of this is now visible in policy. The next AI bottleneck isn't compute — it's electrons.</p>
+      <div class="pull-quote">No nuclear, no data centers. No data centers, no European AI.</div>
+      <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47961319" target="_blank">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ════════════════════ STORY 09 ════════════════════ -->
+<!-- ════════════════════════════════
+     STORY 09 — Mark Klein / Room 641A
+═══════════════════════════════ -->
 <section class="story story-09" id="s9">
-  <div class="story-num">09</div>
+  <span class="story-num">09</span>
   <div class="inner">
-    <p class="story-source">SiliconANGLE · Google Cloud Next 2026</p>
-    <span class="cat-badge">Enterprise · Agentic</span>
-    <h2 class="story-headline">Google puts Gemini Enterprise at the center of an agentic taskforce.</h2>
-    <div class="story-body" style="margin-top: 1.5rem;">
-      <p>At Cloud Next 2026 on Wednesday, Google reframed its agent story around a single product: Gemini Enterprise. The pitch is explicit about the pain: corporate AI agents today are siloed, hard to monitor, and lose context across long tasks. Google's answer is a shared agent plane that spans Workspace, Vertex, and now third-party connectors via MCP and A2A, with persistence designed to survive multi-day workflows — monthly reconciliations, multi-week sales cycles, SOX testing.</p>
-      <p>The architecturally interesting part is that Google is explicitly adopting MCP and A2A as the interop standard rather than pushing its own competing protocol. Six months ago that would have been a surprise. Today, with the Linux Foundation sitting at the center, it is a cost-of-entry. The real bet is that the observability, identity, and compliance layers around agents are where Google out-executes Anthropic and OpenAI on enterprise.</p>
+    <span class="cat-badge">Surveillance · History</span>
+    <h1 class="story-headline">The book excerpt: how a quiet AT&amp;T technician walked into the EFF and uncovered Room 641A.</h1>
+    <div class="meta-row">
+      <span>mitpress.mit.edu</span>
+      <span>379 points</span>
+      <span>108 comments</span>
     </div>
-    <p class="pull-quote">Persistence across days, not just turns, is the quiet feature everyone will copy.</p>
-    <a class="story-link" href="https://siliconangle.com/2026/04/22/google-puts-gemini-enterprise-heart-new-agentic-taskforce-enterprise-automation/" target="_blank" rel="noopener">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/from?site=siliconangle.com" target="_blank" rel="noopener">HN discussion</a>
+    <div class="story-body">
+      <p>MIT Press's <span class="accent">The Reader</span> ran a long excerpt from a forthcoming book on Mark Klein, the AT&amp;T technician who in 2006 told the Electronic Frontier Foundation about a secret room at 611 Folsom Street in San Francisco where the NSA was splitting every fiber-optic line passing through the facility. The piece is part history, part memoir — a careful look at what it costs to blow that particular whistle.</p>
+      <p>Two decades on, Room 641A reads differently. The "is the NSA reading all email?" debate has been replaced by "is your model provider training on your prompts?" — and the answer is, in many cases, yes by default unless you explicitly opt out. The technical machinery is the same: a fiber splitter, a couple of beam-splitting prisms, an analyst on the other end. What's changed is who the analyst is, and that the analyst is now a model.</p>
+      <p>For an industry that has spent five years arguing about model safety and three months arguing about agent permissions, this is the kind of grounding read that gets the proportions right. The privacy story doesn't start in 2022. It started in a switching closet in San Francisco — and the people who told us about it paid for it.</p>
+      <div class="pull-quote">Every bit. Splitting every fiber. Every day.</div>
+      <a class="story-link" href="https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47965060" target="_blank">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ════════════════════ STORY 10 ════════════════════ -->
+<!-- ════════════════════════════════
+     STORY 10 — Beating binary search
+═══════════════════════════════ -->
 <section class="story story-10" id="s10">
-  <div class="story-num">10</div>
+  <span class="story-num">10</span>
   <div class="inner">
-    <div>
-      <p class="story-source">Engadget · Bloomberg · Euronews</p>
-      <span class="cat-badge">Incident · Governance</span>
-      <h2 class="story-headline">A Discord-linked group found its way into Claude Mythos.</h2>
-      <div class="story-body" style="margin-top: 1rem;">
-        <p>Anthropic confirmed on Tuesday that it is investigating unauthorized access to Claude Mythos Preview — the same not-yet-GA model discussed two spreads up. According to Bloomberg, the intruders were not a nation-state team. They were a private online community who made an <em>educated guess</em> about the model's hosting URL based on Anthropic's naming conventions, then pivoted through a third-party contractor portal to reach it.</p>
-        <p>Nothing about the intrusion path is sophisticated. That is exactly why it matters. A model Anthropic has spent the last two weeks warning governments is capable of industrial-scale cyber offense was reached through URL guessing plus a vendor's single-factor login. The breach will make it harder for Anthropic to argue against external red-team mandates the next time Congress asks, and it is already reshaping the contractor-access checklist every frontier lab is quietly updating this week.</p>
-      </div>
-      <p class="pull-quote">The model that finds zero-days was reached through a guessed URL.</p>
-      <a class="story-link" href="https://www.engadget.com/ai/anthropic-is-investigating-unauthorized-access-of-its-mythos-cybersecurity-tool-091017168.html" target="_blank" rel="noopener">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/from?site=engadget.com" target="_blank" rel="noopener">HN discussion</a>
+    <span class="cat-badge">Algorithms · Developer Culture</span>
+    <h1 class="story-headline">Daniel Lemire: you can, in fact, beat the binary search.</h1>
+    <div class="meta-row">
+      <span>lemire.me · Daniel Lemire</span>
+      <span>226 points</span>
+      <span>110 comments</span>
     </div>
-    <aside class="timeline">
-      <div class="t-item">
-        <div class="t-date">April 7</div>
-        <div class="t-label">Mythos Preview announced · 50 partner orgs receive access.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-date">April 15</div>
-        <div class="t-label">OX Security discloses MCP supply-chain flaw (see Story 03).</div>
-      </div>
-      <div class="t-item">
-        <div class="t-date">April 20</div>
-        <div class="t-label">Anthropic notifies partners of anomalous access patterns.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-date">April 21–22</div>
-        <div class="t-label">Bloomberg reports Discord-linked group reached Mythos via vendor portal.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-date">Today</div>
-        <div class="t-label">Investigation ongoing · no confirmed weights exfiltration.</div>
-      </div>
-    </aside>
+    <div class="story-body">
+      <p>Lemire's blog post takes the textbook claim — binary search is asymptotically optimal for comparison search on sorted arrays — and demolishes the practical version of it. Through branchless implementations, cache-aware layouts (think Eytzinger order), and a careful read of modern CPU branch predictors, his variants run several times faster than the canonical loop, even though they perform the same number of comparisons in the worst case.</p>
+      <p>It's a small reminder that "asymptotically optimal" and "fast on a 2026 CPU" have been different categories for at least a decade. Memory hierarchy, branch prediction, and SIMD have done more for real-world search performance than any genuinely new algorithm in years. The interesting work is in lining your data up so the chip can see it; the binary search itself is almost incidental.</p>
+      <p>The HN thread is a delightful nerd-snipe: at least a dozen commenters posted alternative implementations with benchmarks, and the consensus is that nobody should ever <em>type out</em> a binary search in 2026 — you should pull in <code>std::lower_bound</code> or whatever your runtime ships, and trust it to be branchless. Reach for handwritten loops only when you've measured a real bottleneck.</p>
+      <div class="pull-quote">Asymptotically optimal is not what the cache thinks.</div>
+      <a class="story-link" href="https://lemire.me/blog/2026/04/27/you-can-beat-the-binary-search/" target="_blank">Read article</a>
+      <a class="story-link" href="https://news.ycombinator.com/item?id=47924912" target="_blank">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ════════════════════ BACK PAGE ════════════════════ -->
-<section class="back-page">
-  <h2>That's a wrap.</h2>
-  <p class="back-sub">Three of this week's ten stories flagged specifically for you — Opus 4.7, Managed Agents, and the MCP supply-chain advisory. The rest of the lineup tracks the infrastructure and capital shifts that set the context around them.</p>
-  <div class="back-summary">
-    <p>The throughline of the week is consolidation. Amazon's $25B into Anthropic and the ten-year Trainium commitment put Claude on the same long-duration footing that Azure gave OpenAI. Claude Managed Agents turns the Anthropic platform into a full hosting layer, not just a model. Opus 4.7 at xhigh by default inside Claude Code quietly raises the baseline for every coding agent shipping this year. On the other side of the Pacific, DeepSeek is for the first time taking outside capital, and Alibaba and Tencent are the likely first-movers.</p>
-    <p>The darker throughline is that agentic infrastructure is starting to surface the classical security problems that SaaS took fifteen years to learn. The MCP STDIO exposure, the Claude Mythos contractor-portal breach, and Anthropic's own warnings about frontier models in offensive cyber are three faces of the same realization: agents deployed at scale look a lot like an operating system, and nobody has written that operating system's hardening guide yet.</p>
-    <p>Next week: Spud's benchmark dust settling, any live post-mortem from Anthropic on the Mythos breach, and — fingers crossed — a public timeline on when Agent Skills moves from beta to GA. See you Thursday.</p>
-  </div>
-  <div class="back-colophon">
-    <span class="issue-no">Issue No. 03 · Vol. I</span>
-    Morning Edition AI Weekly<br>
-    Curated by Claude · Published Thursdays at 07:00<br>
-    For Jani Teerioja · teeris@gmail.com
-  </div>
+<!-- ════════════════════════════════
+     BACK PAGE
+═══════════════════════════════ -->
+<section class="backpage">
+  <h2>That's a <span>wrap.</span></h2>
+  <p>Issue 005 closes on a week where the supply chain bit AI's most popular training library, Mozilla declared war on Chrome's in-browser model story, and Anthropic apparently decided that a regex on commit messages was a load-shedding strategy. Belgium kept its reactors warm so that someone else's GPUs could too.</p>
+  <p>Three of this week's ten directly involve Claude, Anthropic, or agent harnesses you use daily. Read those first. Pin your Python deps before the next coffee.</p>
+  <div class="footer-rule"></div>
+  <div class="footer-meta">Morning Edition · AI Weekly · No. 005 · May 19, 2026</div>
 </section>
 
 </body>
