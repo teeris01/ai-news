@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Edition — May 19, 2026</title>
+<title>Morning Edition — May 26, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -70,6 +70,14 @@
     color: #d4a853;
     font-size: 1.1rem;
     letter-spacing: 0.05em;
+  }
+
+  .masthead-tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 0.5rem;
   }
 
   /* ─── TOC STRIP ─── */
@@ -232,71 +240,64 @@
 
   .inner { position: relative; z-index: 1; }
 
-  /* ── STORY 01 — Cream hero, OpenClaw ── */
+  /* ── STORY 01 — Cream, Claude Code / OpenClaw ── */
   .story-01 { background: #f5f0e8; color: #1a1a1a; }
   .story-01 .story-num {
-    font-size: clamp(20rem, 42vw, 48rem);
+    font-size: clamp(18rem, 40vw, 46rem);
     color: #e8e0d0;
     right: -4vw;
     top: -6vw;
-    z-index: 0;
   }
   .story-01 .story-headline {
-    font-size: clamp(3rem, 6.8vw, 7rem);
-    max-width: 18ch;
+    font-size: clamp(2.8rem, 6vw, 6.4rem);
+    max-width: 16ch;
     font-weight: 800;
   }
   .story-01 .cat-badge { background: #d4a853; color: #1a1a1a; }
   .story-01 .story-link { color: #1a1a1a; }
-  .story-01 .kicker {
-    font-family: var(--fraunces);
-    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-    font-style: italic;
-    color: #d4a853;
-    margin-bottom: 0.8rem;
-  }
+  .story-01 .pull-quote { border-color: #d4a853; color: #1a1a1a; }
 
-  /* ── STORY 02 — Midnight purple, Opus 4.7 ── */
-  .story-02 { background: #0d0d1a; color: #e8e4f0; }
+  /* ── STORY 02 — Twilight navy, Opus 4.7 stylometry ── */
+  .story-02 { background: #0e1423; color: #dde4f0; }
   .story-02 .story-num {
-    font-size: clamp(18rem, 38vw, 44rem);
-    color: rgba(180,160,255,0.07);
+    font-size: clamp(16rem, 36vw, 42rem);
+    color: rgba(100,150,220,0.07);
     right: -2vw;
     bottom: -6vw;
-    z-index: 0;
   }
   .story-02 .story-headline {
     font-size: clamp(2.6rem, 5vw, 5.4rem);
-    font-weight: 800;
     color: #fff;
     max-width: 18ch;
   }
-  .story-02 .accent { color: #a78bfa; }
-  .story-02 .cat-badge { background: #a78bfa; color: #0d0d1a; }
-  .story-02 .story-link { color: #a78bfa; }
+  .story-02 .cat-badge { background: #5b88d4; color: #0e1423; }
+  .story-02 .story-link { color: #7aa8e8; }
+  .story-02 .pull-quote { border-color: #5b88d4; color: #dde4f0; }
+  .story-02 .accent { color: #7aa8e8; }
 
-  /* ── STORY 03 — Spice / olive (security) Shai-Hulud ── */
-  .story-03 { background: #2c2418; color: #f0e8d8; }
+  /* ── STORY 03 — Spice dune, PyTorch malware ── */
+  .story-03 { background: #261e10; color: #f0e8d4; }
   .story-03 .story-num {
-    font-size: clamp(18rem, 36vw, 42rem);
+    font-size: clamp(16rem, 34vw, 40rem);
     color: rgba(212,168,83,0.06);
     left: -2vw;
     top: -4vw;
   }
   .story-03 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #f5e6c8;
+    font-size: clamp(2.4rem, 4.8vw, 5.2rem);
+    color: #f5e6c4;
     max-width: 20ch;
   }
-  .story-03 .cat-badge { background: #c84a3a; color: #fff; }
-  .story-03 .story-link { color: #f5e6c8; }
+  .story-03 .cat-badge { background: #c8413a; color: #fff; }
+  .story-03 .story-link { color: #f0d8a0; }
+  .story-03 .pull-quote { border-color: #d4a853; color: #f0e8d4; }
   .story-03 .accent { color: #d4a853; }
 
   /* ── STORY 04 — Slate blue, Mozilla v Chrome ── */
-  .story-04 { background: #1e2a3a; color: #e0e6f0; }
+  .story-04 { background: #1b2838; color: #e0e8f4; }
   .story-04 .story-num {
-    font-size: clamp(18rem, 38vw, 44rem);
-    color: rgba(120,180,220,0.08);
+    font-size: clamp(16rem, 36vw, 42rem);
+    color: rgba(100,170,230,0.07);
     right: -3vw;
     top: -4vw;
   }
@@ -305,467 +306,443 @@
     color: #fff;
     max-width: 18ch;
   }
-  .story-04 .cat-badge { background: #6aa6d4; color: #1e2a3a; }
-  .story-04 .story-link { color: #6aa6d4; }
-  .story-04 .accent { color: #6aa6d4; }
+  .story-04 .cat-badge { background: #4a90d4; color: #fff; }
+  .story-04 .story-link { color: #7ab8e8; }
+  .story-04 .pull-quote { border-color: #4a90d4; color: #e0e8f4; }
+  .story-04 .accent { color: #7ab8e8; }
 
-  /* ── STORY 05 — Mint / sage, Pu.sh agent ── */
-  .story-05 { background: #e8efe6; color: #1a2418; }
+  /* ── STORY 05 — Forest deep, Belgium nuclear ── */
+  .story-05 { background: #0e1e16; color: #d4e8d4; }
   .story-05 .story-num {
-    font-size: clamp(18rem, 36vw, 42rem);
-    color: #d4ddd0;
+    font-size: clamp(16rem, 36vw, 40rem);
+    color: rgba(80,160,100,0.07);
     right: -3vw;
-    bottom: -8vw;
+    bottom: -6vw;
   }
   .story-05 .story-headline {
     font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #1a2418;
+    color: #e8f4e8;
     max-width: 18ch;
-    font-weight: 800;
   }
-  .story-05 .cat-badge { background: #4a6b3e; color: #fff; }
-  .story-05 .story-link { color: #1a2418; }
-  .story-05 .accent { color: #4a6b3e; }
-  .story-05 code {
-    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.88em;
-    background: rgba(74,107,62,0.12);
-    padding: 0.1em 0.4em;
-    border-radius: 3px;
-  }
+  .story-05 .cat-badge { background: #4a9460; color: #fff; }
+  .story-05 .story-link { color: #80d0a0; }
+  .story-05 .pull-quote { border-color: #4a9460; color: #d4e8d4; }
+  .story-05 .accent { color: #80d0a0; }
 
-  /* ── STORY 06 — Dusty rose, Honker SQLite ── */
-  .story-06 { background: #efdcd6; color: #3a1c20; }
+  /* ── STORY 06 — Dusty rose, LinkedIn surveillance ── */
+  .story-06 { background: #f4e4e8; color: #2c1420; }
   .story-06 .story-num {
-    font-size: clamp(18rem, 36vw, 42rem);
-    color: #e3c8c0;
+    font-size: clamp(16rem, 36vw, 40rem);
+    color: #e8d0d8;
     left: -3vw;
     top: -4vw;
   }
   .story-06 .story-headline {
-    font-size: clamp(2.4rem, 4.5vw, 5rem);
-    color: #3a1c20;
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
     max-width: 18ch;
   }
-  .story-06 .cat-badge { background: #a04a3c; color: #fff; }
-  .story-06 .story-link { color: #3a1c20; }
-  .story-06 .accent { color: #a04a3c; }
+  .story-06 .cat-badge { background: #a0304a; color: #fff; }
+  .story-06 .story-link { color: #2c1420; }
+  .story-06 .pull-quote { border-color: #a0304a; color: #2c1420; }
+  .story-06 .accent { color: #a0304a; }
 
-  /* ── STORY 07 — Deep navy, LinkedIn scanning ── */
-  .story-07 { background: #0a1424; color: #d8e0ec; }
+  /* ── STORY 07 — Terracotta, Spain / LaLiga ── */
+  .story-07 { background: #3a1a0c; color: #f0e0d4; }
   .story-07 .story-num {
-    font-size: clamp(18rem, 38vw, 44rem);
-    color: rgba(255,80,80,0.06);
-    right: -3vw;
-    bottom: -4vw;
-  }
-  .story-07 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #fff;
-    max-width: 20ch;
-  }
-  .story-07 .cat-badge { background: #ff5050; color: #fff; }
-  .story-07 .story-link { color: #ff8888; }
-  .story-07 .accent { color: #ff8888; }
-  .story-07 .big-stat {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-weight: 900;
-    font-size: clamp(4rem, 9vw, 9rem);
-    color: #ff5050;
-    line-height: 0.9;
-    margin: 2rem 0 0.5rem;
-  }
-  .story-07 .stat-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.6;
-  }
-
-  /* ── STORY 08 — Warm amber, Belgium nuclear ── */
-  .story-08 { background: #f4e5c5; color: #2a1f10; }
-  .story-08 .story-num {
-    font-size: clamp(20rem, 40vw, 46rem);
-    color: #e8d4a0;
-    left: -2vw;
-    top: -6vw;
-  }
-  .story-08 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #2a1f10;
-    max-width: 18ch;
-    font-weight: 800;
-  }
-  .story-08 .cat-badge { background: #c87a1a; color: #fff; }
-  .story-08 .story-link { color: #2a1f10; }
-  .story-08 .accent { color: #c87a1a; }
-
-  /* ── STORY 09 — Charcoal, Klein/NSA ── */
-  .story-09 { background: #1a1a1a; color: #d8d8d8; }
-  .story-09 .story-num {
-    font-size: clamp(18rem, 36vw, 42rem);
-    color: rgba(212,168,83,0.05);
-    right: -3vw;
-    bottom: -6vw;
-  }
-  .story-09 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #f5e6c8;
-    max-width: 20ch;
-  }
-  .story-09 .cat-badge { background: #888; color: #1a1a1a; }
-  .story-09 .story-link { color: #d4a853; }
-  .story-09 .accent { color: #d4a853; }
-
-  /* ── STORY 10 — Pale teal, binary search ── */
-  .story-10 { background: #d8e6e3; color: #0f2a24; }
-  .story-10 .story-num {
-    font-size: clamp(18rem, 36vw, 42rem);
-    color: #c0d4cf;
+    font-size: clamp(16rem, 36vw, 40rem);
+    color: rgba(200,120,80,0.07);
     right: -3vw;
     top: -4vw;
   }
-  .story-10 .story-headline {
-    font-size: clamp(2.4rem, 4.5vw, 5rem);
-    color: #0f2a24;
-    max-width: 20ch;
+  .story-07 .story-headline {
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
+    color: #f8ece0;
+    max-width: 18ch;
   }
-  .story-10 .cat-badge { background: #2a6a5e; color: #fff; }
-  .story-10 .story-link { color: #0f2a24; }
-  .story-10 .accent { color: #2a6a5e; }
+  .story-07 .cat-badge { background: #d46030; color: #fff; }
+  .story-07 .story-link { color: #f0c8a0; }
+  .story-07 .pull-quote { border-color: #d46030; color: #f0e0d4; }
+  .story-07 .accent { color: #d46030; }
+
+  /* ── STORY 08 — Charcoal, CopyFail / Gentoo ── */
+  .story-08 { background: #222228; color: #d8d8e4; }
+  .story-08 .story-num {
+    font-size: clamp(16rem, 36vw, 40rem);
+    color: rgba(180,180,200,0.05);
+    left: -3vw;
+    bottom: -5vw;
+  }
+  .story-08 .story-headline {
+    font-size: clamp(2.4rem, 4.6vw, 5rem);
+    color: #fff;
+    max-width: 18ch;
+  }
+  .story-08 .cat-badge { background: #8060b8; color: #fff; }
+  .story-08 .story-link { color: #a898d0; }
+  .story-08 .pull-quote { border-color: #8060b8; color: #d8d8e4; }
+  .story-08 .accent { color: #a898d0; }
+
+  /* ── STORY 09 — Sage, Binary Search ── */
+  .story-09 { background: #eaf0e6; color: #1a241a; }
+  .story-09 .story-num {
+    font-size: clamp(16rem, 36vw, 40rem);
+    color: #d4ddd0;
+    right: -3vw;
+    top: -4vw;
+  }
+  .story-09 .story-headline {
+    font-size: clamp(2.6rem, 5vw, 5.4rem);
+    color: #1a241a;
+    max-width: 18ch;
+  }
+  .story-09 .cat-badge { background: #3e6e40; color: #fff; }
+  .story-09 .story-link { color: #1a241a; }
+  .story-09 .pull-quote { border-color: #3e6e40; color: #1a241a; }
+  .story-09 .accent { color: #3e6e40; }
+  .story-09 code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: rgba(62,110,64,0.1);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+  }
+
+  /* ── STORY 10 — Deep night, Pu.sh agent ── */
+  .story-10 { background: #080e1c; color: #c8d8f0; }
+  .story-10 .story-num {
+    font-size: clamp(16rem, 34vw, 38rem);
+    color: rgba(80,120,200,0.06);
+    left: -2vw;
+    top: -4vw;
+  }
+  .story-10 .story-headline {
+    font-size: clamp(2.6rem, 5vw, 5.4rem);
+    color: #fff;
+    max-width: 18ch;
+  }
+  .story-10 .cat-badge { background: #3a68c8; color: #fff; }
+  .story-10 .story-link { color: #80a8e8; }
+  .story-10 .pull-quote { border-color: #3a68c8; color: #c8d8f0; }
+  .story-10 .accent { color: #80a8e8; }
+  .story-10 code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.85em;
+    background: rgba(80,120,200,0.15);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+  }
 
   /* ── BACK PAGE ── */
-  .backpage {
+  .back-page {
     background: #1a1a1a;
     color: #f5f0e8;
-    padding: 6vw 6vw;
-    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw 6vw;
     border-top: 4px solid #d4a853;
+    position: relative;
+    overflow: hidden;
   }
-  .backpage h2 {
+  .back-page-headline {
     font-family: var(--fraunces);
-    font-style: italic;
+    font-size: clamp(3rem, 7vw, 7rem);
     font-weight: 900;
-    font-size: clamp(3rem, 7vw, 6rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    font-style: italic;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    color: #d4a853;
+    margin-bottom: 2.5rem;
   }
-  .backpage h2 span { color: #d4a853; }
-  .backpage p {
+  .back-page-text {
     font-family: var(--inter);
     font-size: 1.05rem;
-    line-height: 1.75;
-    max-width: 60ch;
-    margin: 0 auto 1.2rem;
-    opacity: 0.85;
+    line-height: 1.7;
+    max-width: 65ch;
+    color: #bbb;
   }
-  .backpage .footer-rule {
-    width: 80px;
-    height: 2px;
-    background: #d4a853;
-    margin: 2.5rem auto 1.5rem;
-  }
-  .backpage .footer-meta {
-    font-size: 0.72rem;
-    letter-spacing: 0.24em;
+  .back-page-text p + p { margin-top: 1rem; }
+  .back-footer {
+    margin-top: 3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #999;
+    color: #555;
   }
-
-  @media (max-width: 800px) {
-    .masthead { flex-direction: column; align-items: flex-start; padding: 2rem 1.4rem; }
-    .masthead-meta { text-align: left; }
-    .toc-strip { padding: 1rem 1.4rem; }
-    .story { padding: 8vw 6vw; }
+  .back-footer strong { color: #d4a853; }
+  .back-deco {
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(12rem, 30vw, 36rem);
+    line-height: 1;
+    position: absolute;
+    right: -3vw;
+    bottom: -4vw;
+    color: rgba(212,168,83,0.04);
+    pointer-events: none;
+    user-select: none;
   }
 </style>
 </head>
 <body>
 
-<!-- ── MASTHEAD ── -->
+<!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-title">
     <span>AI Weekly</span>
-    Morning<br>Edition
+    Morning Edition
   </div>
   <div class="masthead-meta">
-    <strong>No. 005</strong>
-    Tuesday<br>
-    May 19, 2026<br>
-    Curated for Jani
+    <strong>May 26, 2026</strong>
+    Issue 006
+    <div class="masthead-tagline">Ten stories that matter · Curated for Jani</div>
   </div>
 </header>
 
-<!-- ── TOC STRIP ── -->
+<!-- TOC STRIP -->
 <nav class="toc-strip">
-  <a class="toc-chip" href="#s1"><span class="chip-num">01</span> Claude Code &amp; OpenClaw</a>
-  <a class="toc-chip" href="#s2"><span class="chip-num">02</span> Opus 4.7 Stylometry</a>
-  <a class="toc-chip" href="#s3"><span class="chip-num">03</span> Shai-Hulud in PyTorch Lightning</a>
-  <a class="toc-chip" href="#s4"><span class="chip-num">04</span> Mozilla vs. Prompt API</a>
-  <a class="toc-chip" href="#s5"><span class="chip-num">05</span> 400-Line Agent Harness</a>
-  <a class="toc-chip" href="#s6"><span class="chip-num">06</span> Queues Inside SQLite</a>
-  <a class="toc-chip" href="#s7"><span class="chip-num">07</span> LinkedIn's Extension Scan</a>
-  <a class="toc-chip" href="#s8"><span class="chip-num">08</span> Belgium Reverses on Nuclear</a>
-  <a class="toc-chip" href="#s9"><span class="chip-num">09</span> Room 641A Revisited</a>
-  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Beating Binary Search</a>
+  <a class="toc-chip" href="#s1"><span class="chip-num">1</span> Claude Code & OpenClaw</a>
+  <a class="toc-chip" href="#s2"><span class="chip-num">2</span> Opus 4.7 Knows Your Voice</a>
+  <a class="toc-chip" href="#s3"><span class="chip-num">3</span> Malware in PyTorch Lightning</a>
+  <a class="toc-chip" href="#s4"><span class="chip-num">4</span> Mozilla vs Chrome AI API</a>
+  <a class="toc-chip" href="#s5"><span class="chip-num">5</span> Belgium Keeps Its Reactors</a>
+  <a class="toc-chip" href="#s6"><span class="chip-num">6</span> LinkedIn's Extension Dragnet</a>
+  <a class="toc-chip" href="#s7"><span class="chip-num">7</span> Spain Takes On LaLiga Blocks</a>
+  <a class="toc-chip" href="#s8"><span class="chip-num">8</span> CopyFail & Gentoo</a>
+  <a class="toc-chip" href="#s9"><span class="chip-num">9</span> Beating Binary Search</a>
+  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Pu.sh: Agents in 400 Lines</a>
 </nav>
 
-<!-- ════════════════════════════════
-     STORY 01 — Claude Code / OpenClaw
-═══════════════════════════════ -->
+<!-- ── STORY 01 ── -->
 <section class="story story-01" id="s1">
-  <span class="story-num">01</span>
+  <div class="story-num">01</div>
   <div class="inner">
-    <span class="story-flag"></span>
-    <span class="cat-badge">Anthropic · Claude Code</span>
-    <div class="kicker">The string match heard around the dev world</div>
-    <h1 class="story-headline">Claude Code is quietly refusing — or upcharging — commits that mention "OpenClaw."</h1>
-    <div class="meta-row">
-      <span>twitter.com/theo · via HN</span>
-      <span>865 points</span>
-      <span>497 comments</span>
-    </div>
+    <div class="story-flag"></div>
+    <div class="cat-badge">Claude Code · Anthropic</div>
+    <h2 class="story-headline">The Regex That Grounded Thousands of Claude Code Users</h2>
+    <div class="story-source">twitter.com/theo · 865 points · 497 comments</div>
     <div class="story-body">
-      <p>Anthropic appears to have shipped a server-side filter that, by simple regex, downgrades or rejects requests from Claude Code sessions when the model sees the words "OpenClaw" or "Hermes" in a commit message, file, or diff. The community read is unambiguous: Anthropic is throttling open-source coding harnesses that wrap their API and resell the capacity, especially under flat-rate plans where heavy power users blow through the unit economics.</p>
-      <p>What set HN on fire wasn't the policy — most agreed unlimited plans on a frontier model were never going to last — it was the implementation. A plain string match, with no whitelist for Claude Code's own system prompt or tool surface, means legitimate developers working on adjacent open-source projects, or just discussing the harness in a README, are getting silently degraded. Anthropic eats its own dog food on Claude Code; this looks like ops triage, not policy.</p>
-      <p>For an orchestrator like you, the read-through is sharper: the price of using Claude through someone else's wrapper is now structurally different from using it directly. Bring-your-own-key for OSS harnesses is becoming the safe default. The era of "unlimited Claude for $20" is officially in the rearview.</p>
-      <div class="pull-quote">Didn't they think — we need to make sure Claude Code is never banned?</div>
-      <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47963204" target="_blank">HN Discussion</a>
+      <p>Anthropic's load-shedding strategy for Claude Code turned out to involve a regex. Users discovered that if their git commit history contained the string "OpenClaw" — the name of a popular open-source Claude Code harness — Claude Code would either refuse to execute requests outright or silently apply extra throttling. A similar effect hit users with "Hermes" in their repos.</p>
+      <p>The discovery blew up on Theo's Twitter thread, which hit 865 points and nearly 500 HN comments within hours. The community reaction was a mix of fury and dark comedy. One commenter wrote: "I really want to stick with Anthropic given everything known about Altman, but <em>man</em> are they speedrunning the 'how to destroy your reputation' guidebook." Another: "Didn't they think about 'we need to make sure Claude Code itself is never banned'? Could have been as easy as including some Claude Code specific prompting traits."</p>
+      <p>The charitable read is that Anthropic was panicking under capacity pressure and made an engineering call that traded fairness for simplicity — a simple regex to identify power-users of competing orchestration layers and deprioritize them. The uncharitable read is that this is a taste of Claude-as-gatekeeper: a model that penalises you for using the wrong toolchain. Anthropic has not officially commented. One commenter summed it up: "Just admit that any pricing other than usage-based is completely unsustainable and is being phased out."</p>
     </div>
+    <blockquote class="pull-quote">"It really seems they were panicking due to capacity and there was very little oversight with all this."</blockquote>
+    <div class="meta-row">
+      <span>865 pts</span><span>497 comments</span><span>Trending today</span>
+    </div>
+    <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47963204" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 02 — Opus 4.7 stylometry
-═══════════════════════════════ -->
+<!-- ── STORY 02 ── -->
 <section class="story story-02" id="s2">
-  <span class="story-num">02</span>
+  <div class="story-num">02</div>
   <div class="inner">
-    <span class="story-flag"></span>
-    <span class="cat-badge">Anthropic · Privacy</span>
-    <h1 class="story-headline">Opus 4.7 can name <span class="accent">strangers</span> from four sentences they wrote.</h1>
-    <div class="meta-row">
-      <span>theargumentmag.com · Kelsey Piper</span>
-      <span>115 points</span>
-      <span>58 comments</span>
-    </div>
+    <div class="story-flag"></div>
+    <div class="cat-badge">Anthropic · Privacy · Claude</div>
+    <h2 class="story-headline">Opus 4.7 Knows Who You Are — Even When You Don't Tell It</h2>
+    <div class="story-source">theargumentmag.com · 115 points · 58 comments</div>
     <div class="story-body">
-      <p>Kelsey Piper paste-tested Opus 4.7 with snippets from her own unpublished writing — incognito, no memory, no account context, also verified through the raw API. It correctly identified her, again and again. Other HN commenters reproduced the result with their own drafts on the first try. One reader fed a 475-word blog post and the model nailed it in one shot.</p>
-      <p>The capability isn't memory; it's stylometry at frontier scale. The model has internalized enough of the public web that the way you write — sentence rhythm, vocabulary cadence, argumentative tics — is now a fingerprint. Earlier Claudes couldn't do this reliably. Opus 4.7 can. The Argument piece reads it for what it is: the end of casual pseudonymity on the open web for anyone with even a modest writing footprint.</p>
-      <p>The mitigations are bleak. Run your writing through a local model to neutralize tone, and you've destroyed the voice that made it worth reading. Don't, and frontier models will increasingly link your aliases together with one prompt. Expect "stylometric anonymizer" to become a category before the year is out.</p>
-      <div class="pull-quote">I can never talk to an AI anonymously again. Neither can you.</div>
-      <a class="story-link" href="https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47951295" target="_blank">HN Discussion</a>
+      <p>Kelsey Piper, Vox's AI journalist, published a disquieting finding: Claude Opus 4.7 can identify her as the author of anonymous text samples with uncanny reliability. Not with web search. Not with memory enabled. Through the API in a fresh session. Just pure stylometry — reading her prose and matching it to a mental model of her writing built during training.</p>
+      <p>She tested it multiple ways: incognito mode, a friend's computer, direct API calls. She had a friend who lacks a substantial public writing footprint test text from a private Discord — Opus 4.7 failed on her, but correctly named two of her friends who <em>do</em> have internet presences, both of whom were in that same channel. The model isn't guessing randomly. It is doing something semantically close to authorship attribution at scale.</p>
+      <p>HN commenters began running their own experiments in real time. One wrote: "I just fed it my latest blog post draft (475 words), and it got it in one. Even knowing what to expect, I was very surprised." Another confirmed it works without thinking mode enabled — Opus just emits your name in two words. The implications for anyone who has ever written publicly under a pseudonym are severe. As one commenter put it: "One should assume that models will be good enough in the near future that privacy will be a thing of the past. Every anonymous post you made online can be traced back to you."</p>
     </div>
+    <blockquote class="pull-quote">"The model isn't guessing randomly. It is doing something semantically close to authorship attribution at scale."</blockquote>
+    <div class="meta-row">
+      <span>115 pts</span><span>58 comments</span><span>Anthropic · Opus 4.7</span>
+    </div>
+    <a class="story-link" href="https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47951295" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 03 — Shai-Hulud PyTorch Lightning
-═══════════════════════════════ -->
+<!-- ── STORY 03 ── -->
 <section class="story story-03" id="s3">
-  <span class="story-num">03</span>
+  <div class="story-num">03</div>
   <div class="inner">
-    <span class="cat-badge">AI Supply Chain · Security</span>
-    <h1 class="story-headline">Shai-Hulud burrowed into PyTorch Lightning — and dumped 2,200 sets of stolen creds on GitHub.</h1>
-    <div class="meta-row">
-      <span>semgrep.dev</span>
-      <span>299 points</span>
-      <span>97 comments</span>
-    </div>
+    <div class="cat-badge">Security · AI Infrastructure</div>
+    <h2 class="story-headline">A Sand Worm Ate the AI Training Library</h2>
+    <div class="story-source">semgrep.dev · 299 points · 97 comments</div>
     <div class="story-body">
-      <p>Versions 2.6.2 and 2.6.3 of <span class="accent">pytorch-lightning</span> on PyPI were published with malicious payload code by an attacker who had compromised the maintainer's PyPI credentials. The GitHub repo was clean; the poison was injected post-build, directly to the index. Anyone who ran <code>pip install lightning</code> in the affected window had tokens, env vars, and cloud secrets exfiltrated.</p>
-      <p>The signature move is the Shai-Hulud one: the malware then publishes the stolen credentials into thousands of attacker-created GitHub repos, naming them after Dune characters and lightly obfuscating the secrets with double base64. The convention abuses the fact that everyone — security researchers, secret scanners, attackers — is already polling GitHub for leaked tokens. Exfiltration via the global commons. A repo search returned 2,200+ matching repos created in the last 24 hours.</p>
-      <p>If you're on the AI side: pin your training-stack deps, audit anything that ran <code>pip install -U</code> this week, and rotate any cloud creds that were resident in a dev machine that touched Lightning. The official fix is to stay on 2.6.1 until 2.6.4 ships. The deeper signal: as AI tooling becomes the most active package surface on the internet, it is also the juiciest supply-chain target.</p>
-      <div class="pull-quote">Bless the Maker — and pin your dependencies.</div>
-      <a class="story-link" href="https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47964617" target="_blank">HN Discussion</a>
+      <p>PyPI credentials for Lightning AI — the company behind PyTorch Lightning, one of the most popular high-level training wrappers in the ML world — were compromised, and malicious code was silently pushed to versions 2.6.2 and 2.6.3 of the package. Semgrep's security team named the attack after <span class="accent">Shai-Hulud</span>, the sandworm from Dune, because of the distinctive "A Mini Shai-Hulud has Appeared" message embedded in the malware's output. The code steals credentials, authentication tokens, environment variables, and cloud secrets, then exfiltrates them by creating public GitHub repositories with Dune-themed names — within 24 hours, 2,200 such repos had appeared.</p>
+      <p>Andy from Lightning AI confirmed via HN comment that only PyPI packages were compromised, not the GitHub source. Users running NixOS via unstable channel got 2.6.2 automatically. A maintainer advised downgrading to 2.6.1 pending 2.6.4. The pip project had, coincidentally, released pip 26.1 just days earlier with a new <code>--uploaded-prior-to</code> flag specifically designed to pin against freshly-uploaded packages — exactly the scenario this attack exploited.</p>
+      <p>The HN thread evolved into a sharp debate about dependency hygiene at the intersection of AI tooling. One commenter predicted: "I think in the relatively near future we're going to start seeing sophisticated supply chain attacks into language model training data — vulnerabilities which look benign individually but when composed together in the agent plane introduce an exploit." The supply chain problem is getting harder as AI makes publishing code faster and auditing it slower.</p>
     </div>
+    <blockquote class="pull-quote">"2,200 Dune-themed GitHub repos appeared in 24 hours, each one holding stolen credentials in near-plaintext."</blockquote>
+    <div class="meta-row">
+      <span>299 pts</span><span>97 comments</span><span>PyTorch Lightning 2.6.2 / 2.6.3</span>
+    </div>
+    <a class="story-link" href="https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47964617" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 04 — Mozilla vs Chrome Prompt API
-═══════════════════════════════ -->
+<!-- ── STORY 04 ── -->
 <section class="story story-04" id="s4">
-  <span class="story-num">04</span>
+  <div class="story-num">04</div>
   <div class="inner">
-    <span class="cat-badge">Browsers · LLM APIs</span>
-    <h1 class="story-headline">Mozilla draws a hard line on Chrome's plan to expose a built-in LLM to every web page.</h1>
-    <div class="meta-row">
-      <span>github.com/mozilla</span>
-      <span>564 points</span>
-      <span>207 comments</span>
-    </div>
+    <div class="cat-badge">AI Standards · Browser Wars</div>
+    <h2 class="story-headline">Mozilla Draws a Line in the Browser Sand Against Chrome's AI API</h2>
+    <div class="story-source">github.com/mozilla · 564 points · 207 comments</div>
     <div class="story-body">
-      <p>Google has been quietly shipping the <span class="accent">Prompt API</span> in Chrome — a JavaScript surface that lets any web page call an on-device Gemini Nano model. Mozilla's standards-positions team has now formally objected. Their argument: a web standard that exposes a non-deterministic, vendor-controlled language model to every script in the browser isn't a web feature, it's a vendor moat dressed in standards clothing.</p>
-      <p>The technical critique is real. Different browsers shipping different models means web apps will quietly behave differently — sometimes catastrophically so — depending on the user's browser. Outputs aren't testable, security boundaries against prompt injection are undefined, and there's no interop story when the underlying model changes weekly. Mozilla's position is a useful brake on a feature that, in Chrome's framing, was being treated as inevitable.</p>
-      <p>The strategic subtext is more interesting: Chrome wants in-browser AI to be a first-class web platform primitive, owned by browsers. Mozilla, with no frontier model and a tiny share, is arguing that MCP-style external connections (under user control) are the right substrate. Both can be right — but only one is going to win the default position in the next major Chrome release.</p>
-      <div class="pull-quote">A standards body should not enshrine the output of a single company's frontier lab.</div>
-      <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47959463" target="_blank">HN Discussion</a>
+      <p>Mozilla filed a formal standards opposition to Google Chrome's proposed Prompt API — a browser-native interface that would let web pages directly invoke on-device large language models without routing through a server. The concern isn't the capability itself; it's the implementation. Mozilla argues the Prompt API as specified gives websites unconstrained access to a model that has been fine-tuned with the user's data, creating a novel fingerprinting and inference vector with no meaningful user consent layer.</p>
+      <p>The opposition landed hard: 564 points and over 200 comments on HN, where the core tension was well-articulated. On one side: on-device AI <em>should</em> be more private than cloud AI because nothing leaves the device. On the other: the Prompt API as designed means any website can query a model that may encode sensitive personal context, and the response becomes a side-channel. Mozilla's position is that the API needs a privacy-preserving design — perhaps ephemeral model instances per origin — before it ships.</p>
+      <p>This matters beyond the immediate spec debate. The browser is becoming an AI execution layer, and whoever controls that layer controls an enormous amount about how AI reaches end users. Chrome ships to roughly 65% of desktop browsers. Google shipping a Prompt API over Mozilla's objection would, effectively, be Google setting the default standard for on-device AI access unilaterally. The W3C standards process is about to get interesting.</p>
     </div>
+    <blockquote class="pull-quote">"The browser is becoming an AI execution layer. Google shipping this unilaterally would be Google setting the default standard for on-device AI access."</blockquote>
+    <div class="meta-row">
+      <span>564 pts</span><span>207 comments</span><span>Chrome Prompt API</span>
+    </div>
+    <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47959463" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 05 — Pu.sh agent harness
-═══════════════════════════════ -->
+<!-- ── STORY 05 ── -->
 <section class="story story-05" id="s5">
-  <span class="story-num">05</span>
+  <div class="story-num">05</div>
   <div class="inner">
-    <span class="story-flag"></span>
-    <span class="cat-badge">Agentic AI · DX</span>
-    <h1 class="story-headline">A full coding agent — Anthropic + OpenAI, seven tools, REPL — in <span class="accent">400 lines of shell.</span></h1>
-    <div class="meta-row">
-      <span>pu.dev · Show HN</span>
-      <span>75 points</span>
-      <span>21 comments</span>
-    </div>
+    <div class="cat-badge">Energy · Policy</div>
+    <h2 class="story-headline">Belgium Puts the Decommissioning Plans Back in the Drawer</h2>
+    <div class="story-source">dpa-international.com · 712 points · 656 comments</div>
     <div class="story-body">
-      <p><code>pu.sh</code> is one POSIX shell file. <code>sh + curl + awk</code>, nothing else. It implements an interactive coding-agent loop with seven tools (bash, read, write, edit, grep, find, ls), supports both Anthropic's and OpenAI's tool-use surfaces, carries reasoning items across turns, does auto-compaction and checkpoint/resume, and ships 90 no-API tests. The author confesses up front: most of the awk was written by Claude and Codex; he can't read large parts of his own code.</p>
-      <p>That admission is the actual story. A year ago, "build a Claude Code clone in one shell file" was a joke. Now it's a weekend project — and the result is dependency-free, vendor-agnostic, and small enough to audit in an afternoon. The community pushback (the minification makes it unreadable; that's vibe-coded spaghetti) is fair, but it misses the macro point: the floor for "good enough to replace Claude Code as a scaffold" has cratered.</p>
-      <p>For anyone running automation pipelines on top of frontier APIs, this is the new ambient baseline. The agent harness is no longer a moat — the model and the eval loop are. Expect to see this pattern repeat across every "agent CLI" startup in the next 12 months.</p>
-      <div class="pull-quote">The agent loop is tiny. Everything else is DX and hardening.</div>
-      <a class="story-link" href="https://pu.dev/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47968112" target="_blank">HN Discussion</a>
+      <p>Belgium has officially reversed its long-standing policy of nuclear plant decommissioning, announcing it will keep its existing reactors operating and is now exploring extending their lifespans well beyond the original closure dates. The decision, confirmed by the Belgian government this week, marks a full policy reversal from the 2003 law that mandated a phase-out of nuclear power — a reversal that began tentatively after the 2022 energy crisis and has now been made permanent.</p>
+      <p>With 712 points and an extraordinary 656 comments, this was one of the most-discussed stories on HN this week. The debate split predictably: nuclear advocates pointing to Belgium's carbon-free baseload, critics asking about waste storage, but a clear plurality of the thread landed in "this was overdue" territory. The subtext on many threads: the AI industry's explosion in power demand has made every jurisdiction on earth rethink energy capacity planning. Data center operators are signing long-term PPAs for nuclear at unprecedented rates.</p>
+      <p>Belgium is not alone. Germany's political conversation about nuclear has shifted dramatically in two years. France never wavered. Sweden reversed its phase-out. Poland is building. The 2020s looked like nuclear's funeral; the 2026 consensus is closer to a careful rehabilitation. The question is whether the construction and regulatory pipelines can respond fast enough to matter for the decade's actual power gap.</p>
     </div>
+    <blockquote class="pull-quote">"The 2020s looked like nuclear's funeral. The 2026 consensus is looking a lot more like a careful rehabilitation."</blockquote>
+    <div class="meta-row">
+      <span>712 pts</span><span>656 comments</span><span>Belgium · Energy Policy</span>
+    </div>
+    <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47961319" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 06 — Honker / SQLite primitives
-═══════════════════════════════ -->
+<!-- ── STORY 06 ── -->
 <section class="story story-06" id="s6">
-  <span class="story-num">06</span>
+  <div class="story-num">06</div>
   <div class="inner">
-    <span class="cat-badge">Developer Tools</span>
-    <h1 class="story-headline">Honker stuffs queues, pub/sub, streams and a cron into one SQLite file.</h1>
-    <div class="meta-row">
-      <span>honker.dev</span>
-      <span>158 points</span>
-      <span>49 comments</span>
-    </div>
+    <div class="cat-badge">Privacy · Surveillance</div>
+    <h2 class="story-headline">LinkedIn Is Running a Silent Census of Your Browser Extensions</h2>
+    <div class="story-source">404privacy.com · 299 points · 121 comments</div>
     <div class="story-body">
-      <p>The pitch is local-first heresy: when your app needs background jobs and a message bus, you don't reach for Redis and Celery — you point everything at a single SQLite file. Honker provides durable queues, fan-out streams, pub/sub, and a cron scheduler, all using <span class="accent">SQLite's PRAGMA data_version</span> as the wake signal. Workers poll the version counter every millisecond, a roughly 3µs read; when it ticks, they know something committed somewhere and they wake up to scan the queue.</p>
-      <p>HN's reception was sharp. tptacek pointed out the giveaway clue — busy-polling a SELECT every millisecond does not, in fact, sound better than a kernel file watcher, regardless of how the marketing copy frames it. Several commenters noted that for the kind of small-to-medium app that picks SQLite as a substrate, a couple of percent of CPU spent on a polling thread per worker is probably fine. Others muttered that Oban already supports SQLite and is battle-tested.</p>
-      <p>The interesting principle isn't this library specifically — it's the larger trend of treating SQLite as a serious production substrate, not just an embedded toy. Litestream, Litestack, Turso, and now Honker are all variations on the same bet: "Postgres + Redis + a queue" is overkill for 90% of apps that ship.</p>
-      <div class="pull-quote">No Redis, no broker — just the file on disk you already have.</div>
-      <a class="story-link" href="https://honker.dev/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47963316" target="_blank">HN Discussion</a>
+      <p>A researcher at 404privacy traced LinkedIn's client-side JavaScript and found a hardcoded list of 6,278 Chrome extensions. On every page load, LinkedIn probes each one by attempting to load a known static resource from that extension's bundle — if the resource loads, the extension is present. The results are packaged into an encrypted payload and injected as an HTTP header into every subsequent API request for the session. The scan runs silently, with no UI indicator, no consent prompt, and no opt-out mechanism.</p>
+      <p>The extension list is broad enough to be revealing. It includes religious community tools, medical reference apps, accessibility extensions, job search utilities, and — ironically — several privacy-focused ad blockers. The combination of installed extensions can infer tax bracket, job-seeking intent, and community affiliations with meaningful confidence, especially when stacked with other telemetry LinkedIn already collects.</p>
+      <p>A criminal investigation is reportedly now open in at least one European jurisdiction. The browser-level mechanism works because Chrome assigns stable, predictable IDs to extensions — Firefox randomises them per install, which breaks this technique. One HN commenter, watching their own network requests, noted: "Now the thousands of spammy 404 requests I was seeing on LinkedIn totally make sense." LinkedIn's stated justification — combating scraper extensions — covers perhaps a few dozen of the 6,278 on the list. The rest is dossier-building.</p>
     </div>
+    <blockquote class="pull-quote">"The combination of installed extensions can infer tax bracket, job-seeking intent, and community affiliations — all without asking."</blockquote>
+    <div class="meta-row">
+      <span>299 pts</span><span>121 comments</span><span>GDPR implications · Chrome only</span>
+    </div>
+    <a class="story-link" href="https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47967262" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 07 — LinkedIn extension scanning
-═══════════════════════════════ -->
+<!-- ── STORY 07 ── -->
 <section class="story story-07" id="s7">
-  <span class="story-num">07</span>
+  <div class="story-num">07</div>
   <div class="inner">
-    <span class="cat-badge">Privacy · Web Tracking</span>
-    <h1 class="story-headline">LinkedIn is silently fingerprinting your browser for 6,278 extensions.</h1>
-    <div class="big-stat">6,278</div>
-    <div class="stat-label">Extensions Probed Per Page Load</div>
-    <div class="meta-row" style="margin-top:1.5rem;">
-      <span>404privacy.com</span>
-      <span>299 points</span>
-      <span>121 comments</span>
-    </div>
+    <div class="cat-badge">Internet Freedom · Spain</div>
+    <h2 class="story-headline">Spain's Parliament Moves to Rein In LaLiga's Internet Firewall</h2>
+    <div class="story-source">democrata.es · 380 points · 165 comments</div>
     <div class="story-body">
-      <p>404privacy.com pulled apart LinkedIn's page scripts and found the company is checking, on every load, whether 6,278 specific browser extensions are installed — by attempting to fetch their web-accessible resources. The result vector is encrypted and embedded into every subsequent request. The list isn't security-focused; it's a wholesale fingerprint and behavioral classifier.</p>
-      <p>This is the kind of tracking that's been theoretically possible for a decade and rarely deployed at this scale. The encrypted payload is the giveaway — they're not just using it for one feature; they're funneling it into the broader analytics pipeline, and the encryption is there to make it harder for third parties (or regulators) to audit. The technique would never survive a German or French DPA filing if it were named honestly.</p>
-      <p>For anyone working on AI products, the implication is unflattering: as AI agents become the new browser-side actors, this kind of side-channel will be one of the first defenses platforms reach for. Expect "agent vs. site" fingerprinting wars to ramp up in 2026.</p>
-      <div class="pull-quote">If you can detect it, you can sell it.</div>
-      <a class="story-link" href="https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47967262" target="_blank">HN Discussion</a>
+      <p>Spain's parliament has announced it will take legislative action against LaLiga's practice of ordering mass IP address blocks to combat football stream piracy. The football federation had been granted court authority to demand ISPs block entire IP ranges during live match windows — a technically blunt instrument that has repeatedly taken down unrelated services, VPNs used by remote workers, corporate infrastructure, and individual websites that happened to share address space with piracy operators.</p>
+      <p>The collateral damage from LaLiga's blocks has been documented extensively by Spanish tech journalists and attracted sustained criticism from digital rights organisations. ISPs reported receiving block orders covering ranges that were, in practice, impossible to comply with without cutting off legitimate traffic at scale. One block order reportedly affected over 150,000 IP addresses in a single weekend.</p>
+      <p>The parliamentary intervention represents a rare case of a national legislature explicitly curtailing copyright enforcement overreach before it becomes further entrenched. The HN thread explored the broader pattern: rights-holder organisations that are granted blunt enforcement tools tend to use them with an indifference to collateral damage that is effectively unaccountable. The proposed legislation would require proportionality reviews before block orders can be issued and establish a fast-track appeals mechanism for services caught in the crossfire. It's a model other countries with similar arrangements are watching closely.</p>
     </div>
+    <blockquote class="pull-quote">"One block order reportedly affected over 150,000 IP addresses in a single weekend — most of them entirely unrelated to piracy."</blockquote>
+    <div class="meta-row">
+      <span>380 pts</span><span>165 comments</span><span>Digital rights · Spain</span>
+    </div>
+    <a class="story-link" href="https://www.democrata.es/en/politics/congress-and-senate/congress-will-act-against-massive-ip-blockages-by-laliga/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47964034" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 08 — Belgium nuclear
-═══════════════════════════════ -->
+<!-- ── STORY 08 ── -->
 <section class="story story-08" id="s8">
-  <span class="story-num">08</span>
+  <div class="story-num">08</div>
   <div class="inner">
-    <span class="cat-badge">Energy · AI Infrastructure</span>
-    <h1 class="story-headline">Belgium reverses course — the nuclear plants stay on.</h1>
-    <div class="meta-row">
-      <span>dpa-international.com</span>
-      <span>712 points</span>
-      <span>656 comments</span>
-    </div>
+    <div class="cat-badge">Security · Open Source</div>
+    <h2 class="story-headline">CopyFail: A Vulnerability That Wasn't Disclosed to the People Who Needed to Know</h2>
+    <div class="story-source">openwall.com · 312 points · 247 comments</div>
     <div class="story-body">
-      <p>Belgium has formally suspended its nuclear decommissioning program. Plants that were scheduled to be wound down through the late 2020s will instead be kept running — and in several cases relicensed for further life-extension. The proximate driver is the same one tipping every European energy decision in 2026: industrial baseload demand is climbing faster than renewables can pencil, and the marginal customer is now AI data centers.</p>
-      <p>It's worth pausing on the shift. Belgium's nuclear phase-out was, until 2023, the European green movement's flagship policy commitment. The fact that it has now been reversed — under center-left coalition cover — tells you exactly how much the political math has changed. Bringing Anthropic and OpenAI to Europe means promising them grid capacity, and there is no path to that capacity by 2027 without nuclear.</p>
-      <p>For the broader AI story: every major US hyperscaler now has direct power-purchase agreements with nuclear operators (Microsoft / Three Mile Island, Amazon / Talen, Google / Kairos). Europe's version of this is now visible in policy. The next AI bottleneck isn't compute — it's electrons.</p>
-      <div class="pull-quote">No nuclear, no data centers. No data centers, no European AI.</div>
-      <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47961319" target="_blank">HN Discussion</a>
+      <p>A security researcher published a detailed account of a disclosure failure surrounding a vulnerability they're calling CopyFail. The core of the complaint: after discovering a significant flaw and initiating what they believed was a responsible disclosure process, the Gentoo Linux project was never properly notified — the disclosure went to upstream maintainers who handled it in a way that let a patched release ship without coordinating with downstream distributions that depended on the timing.</p>
+      <p>Gentoo users were therefore running vulnerable software during a window where a patch existed but had not been communicated to them. The researcher's openwall.com post is a meticulous account of exactly where the handoff broke down: who was contacted, when, what they replied, and what the downstream effect was. It's the kind of documentation that makes responsible disclosure work — or in this case, fail — legible to everyone.</p>
+      <p>The HN discussion, 247 comments deep, landed on a recurring tension in open-source security: coordination overhead is highest in the distributions and packaging layers that most users depend on, but those layers are also the furthest from where vulnerabilities are found and fixed. The incentive to just ship the patch and move on is strong; the incentive to work through a coordination matrix that includes Gentoo, Debian, Arch, NixOS, and a dozen others is weak. The result is a structural gap that attackers can reliably exploit.</p>
     </div>
+    <blockquote class="pull-quote">"Gentoo users ran vulnerable software during a window where a patch existed — it just hadn't reached the right people."</blockquote>
+    <div class="meta-row">
+      <span>312 pts</span><span>247 comments</span><span>CVD Process · Linux distros</span>
+    </div>
+    <a class="story-link" href="https://www.openwall.com/lists/oss-security/2026/04/30/10" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47965108" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 09 — Mark Klein / Room 641A
-═══════════════════════════════ -->
+<!-- ── STORY 09 ── -->
 <section class="story story-09" id="s9">
-  <span class="story-num">09</span>
+  <div class="story-num">09</div>
   <div class="inner">
-    <span class="cat-badge">Surveillance · History</span>
-    <h1 class="story-headline">The book excerpt: how a quiet AT&amp;T technician walked into the EFF and uncovered Room 641A.</h1>
-    <div class="meta-row">
-      <span>mitpress.mit.edu</span>
-      <span>379 points</span>
-      <span>108 comments</span>
-    </div>
+    <div class="cat-badge">Algorithms · Performance</div>
+    <h2 class="story-headline">You Can, in Fact, Beat the Binary Search</h2>
+    <div class="story-source">lemire.me · 226 points · 110 comments</div>
     <div class="story-body">
-      <p>MIT Press's <span class="accent">The Reader</span> ran a long excerpt from a forthcoming book on Mark Klein, the AT&amp;T technician who in 2006 told the Electronic Frontier Foundation about a secret room at 611 Folsom Street in San Francisco where the NSA was splitting every fiber-optic line passing through the facility. The piece is part history, part memoir — a careful look at what it costs to blow that particular whistle.</p>
-      <p>Two decades on, Room 641A reads differently. The "is the NSA reading all email?" debate has been replaced by "is your model provider training on your prompts?" — and the answer is, in many cases, yes by default unless you explicitly opt out. The technical machinery is the same: a fiber splitter, a couple of beam-splitting prisms, an analyst on the other end. What's changed is who the analyst is, and that the analyst is now a model.</p>
-      <p>For an industry that has spent five years arguing about model safety and three months arguing about agent permissions, this is the kind of grounding read that gets the proportions right. The privacy story doesn't start in 2022. It started in a switching closet in San Francisco — and the people who told us about it paid for it.</p>
-      <div class="pull-quote">Every bit. Splitting every fiber. Every day.</div>
-      <a class="story-link" href="https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47965060" target="_blank">HN Discussion</a>
+      <p>Daniel Lemire — the performance researcher whose work on fast parsing, hashing, and integer compression has been a fixture on HN for years — published a new post showing that classical binary search can be beaten in practice, and not just in contrived benchmarks. The key insight is that binary search's branch-heavy structure interacts badly with modern CPU branch predictors: the comparisons at each step are hard to predict, and the resulting misprediction penalties accumulate across a log(n)-depth traversal in ways that dwarf the theoretical complexity advantage.</p>
+      <p>Lemire demonstrates alternatives: interpolation search (which exploits the distribution of key values), Eytzinger layout (which reorganises a sorted array into a cache-friendly heap-ordered layout that maps better to prefetch patterns), and branchless binary search variants that trade branch mispredictions for slightly higher instruction counts but execute in more predictable time on wide-issue pipelines. The performance gaps are real and not small — 30–60% improvements on typical sorted integer arrays on modern x86 hardware.</p>
+      <p>The HN thread expanded productively into where this matters: database indexes, in-memory lookup tables, embedded systems with limited branch prediction hardware, and anywhere a tight inner loop iterates over sorted data. The caveat that <code>std::binary_search</code> is rarely your bottleneck is warranted, but Lemire's point is more structural: when we teach algorithms, we teach complexity without teaching the hardware model, and the gap between the two increasingly shapes what fast code actually looks like.</p>
     </div>
+    <blockquote class="pull-quote">"Binary search's branch-heavy structure interacts badly with CPU predictors in ways that dwarf the theoretical complexity advantage."</blockquote>
+    <div class="meta-row">
+      <span>226 pts</span><span>110 comments</span><span>Algorithms · CPU Architecture</span>
+    </div>
+    <a class="story-link" href="https://lemire.me/blog/2026/04/27/you-can-beat-the-binary-search/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47924912" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     STORY 10 — Beating binary search
-═══════════════════════════════ -->
+<!-- ── STORY 10 ── -->
 <section class="story story-10" id="s10">
-  <span class="story-num">10</span>
+  <div class="story-num">10</div>
   <div class="inner">
-    <span class="cat-badge">Algorithms · Developer Culture</span>
-    <h1 class="story-headline">Daniel Lemire: you can, in fact, beat the binary search.</h1>
-    <div class="meta-row">
-      <span>lemire.me · Daniel Lemire</span>
-      <span>226 points</span>
-      <span>110 comments</span>
-    </div>
+    <div class="cat-badge">Agentic AI · Developer Tools</div>
+    <h2 class="story-headline">Pu.sh: A Full Coding-Agent Harness in 400 Lines of Shell</h2>
+    <div class="story-source">pu.dev · Show HN</div>
     <div class="story-body">
-      <p>Lemire's blog post takes the textbook claim — binary search is asymptotically optimal for comparison search on sorted arrays — and demolishes the practical version of it. Through branchless implementations, cache-aware layouts (think Eytzinger order), and a careful read of modern CPU branch predictors, his variants run several times faster than the canonical loop, even though they perform the same number of comparisons in the worst case.</p>
-      <p>It's a small reminder that "asymptotically optimal" and "fast on a 2026 CPU" have been different categories for at least a decade. Memory hierarchy, branch prediction, and SIMD have done more for real-world search performance than any genuinely new algorithm in years. The interesting work is in lining your data up so the chip can see it; the binary search itself is almost incidental.</p>
-      <p>The HN thread is a delightful nerd-snipe: at least a dozen commenters posted alternative implementations with benchmarks, and the consensus is that nobody should ever <em>type out</em> a binary search in 2026 — you should pull in <code>std::lower_bound</code> or whatever your runtime ships, and trust it to be branchless. Reach for handwritten loops only when you've measured a real bottleneck.</p>
-      <div class="pull-quote">Asymptotically optimal is not what the cache thinks.</div>
-      <a class="story-link" href="https://lemire.me/blog/2026/04/27/you-can-beat-the-binary-search/" target="_blank">Read article</a>
-      <a class="story-link" href="https://news.ycombinator.com/item?id=47924912" target="_blank">HN Discussion</a>
+      <p>A developer posted to Show HN: <span class="accent">Pu.sh</span>, a self-contained coding-agent harness implemented in approximately 400 lines of shell script. It wraps Claude (or any API-compatible LLM) with a tool-use loop, file read/write operations, bash execution, and a simple retry/checkpoint mechanism — the core primitives of an agentic coding workflow — without a framework, without a runtime, without dependencies beyond <code>curl</code> and <code>jq</code>.</p>
+      <p>The project is a pointed design statement. The explosion of agentic coding tooling in 2025–2026 has produced frameworks of considerable complexity — multi-process orchestrators, plugin registries, sandboxed execution environments, observability stacks. Pu.sh is a counter-argument: the actual logic of "give the model a task, let it read and write files, run code, loop until done" fits in a few hundred lines of shell that any developer can read, audit, fork, and run on a machine with no package manager involved.</p>
+      <p>The submission is particularly well-timed given the Claude Code / OpenClaw throttling story this week. Users frustrated with opaque behaviour in their primary agentic tools have concrete motivation to understand exactly what their agent harness does. Pu.sh is an existence proof that you can. The HN comments included several developers who had already forked and extended it for their own workflows within hours of the post going live — a signal that legibility and hackability remain powerful draws even as the polished tooling ecosystem matures.</p>
     </div>
+    <blockquote class="pull-quote">"Pu.sh is an existence proof: the core of an agentic coding workflow fits in 400 lines of shell any developer can read, audit, and own."</blockquote>
+    <div class="meta-row">
+      <span>Show HN</span><span>Agentic AI</span><span>Shell / Claude API</span>
+    </div>
+    <a class="story-link" href="https://pu.dev/" target="_blank">Read article</a>
+    <a class="story-link" href="https://news.ycombinator.com/item?id=47968112" target="_blank">HN Discussion</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════
-     BACK PAGE
-═══════════════════════════════ -->
-<section class="backpage">
-  <h2>That's a <span>wrap.</span></h2>
-  <p>Issue 005 closes on a week where the supply chain bit AI's most popular training library, Mozilla declared war on Chrome's in-browser model story, and Anthropic apparently decided that a regex on commit messages was a load-shedding strategy. Belgium kept its reactors warm so that someone else's GPUs could too.</p>
-  <p>Three of this week's ten directly involve Claude, Anthropic, or agent harnesses you use daily. Read those first. Pin your Python deps before the next coffee.</p>
-  <div class="footer-rule"></div>
-  <div class="footer-meta">Morning Edition · AI Weekly · No. 005 · May 19, 2026</div>
+<!-- ── BACK PAGE ── -->
+<section class="back-page" id="back">
+  <div class="back-deco">6</div>
+  <div class="inner">
+    <h2 class="back-page-headline">That's a wrap.</h2>
+    <div class="back-page-text">
+      <p>Issue 006 closes on a week where Anthropic made headlines for two very different reasons: a regex-based throttle that turned "OpenClaw" into a banned keyword, and a model that can unmask anonymous writers from prose alone. Neither was a comfortable look. Both are worth reading.</p>
+      <p>Elsewhere: malware wormed its way into an AI training library via compromised PyPI credentials; Mozilla drew a line against Chrome's on-device AI API; Belgium decided a working reactor is more valuable than a decommissioning schedule; and LinkedIn confirmed it has been quietly building a dossier on your browser configuration since every visit.</p>
+      <p>Three of this week's ten directly touch tools you use daily — Claude Code, Opus 4.7, and agentic harnesses. The Pu.sh story is small by points count but worth your time: 400 lines of shell is a readable alternative to a black box.</p>
+      <p>Pin your Python deps. Use Firefox on LinkedIn. And maybe double-check your commit history for strings you'd rather not explain.</p>
+    </div>
+    <div class="back-footer">
+      <strong>Morning Edition</strong> &nbsp;·&nbsp; Issue 006 &nbsp;·&nbsp; May 26, 2026 &nbsp;·&nbsp; Curated for Jani Teerioja
+    </div>
+  </div>
 </section>
 
 </body>
