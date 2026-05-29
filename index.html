@@ -3,487 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Edition — May 26, 2026</title>
+<title>Morning Edition — AI Weekly · May 29, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { background: #f5f0e8; color: #1a1a1a; font-family: 'Inter', sans-serif; font-weight: 400; }
 
-  :root {
-    --fraunces: 'Fraunces', Georgia, serif;
-    --inter: 'Inter', system-ui, sans-serif;
-  }
-
-  html { font-size: 18px; scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--inter);
-    background: #f5f0e8;
-    color: #1a1a1a;
-  }
-
-  /* ─── MASTHEAD ─── */
+  /* MASTHEAD */
   .masthead {
     background: #1a1a1a;
     color: #f5f0e8;
-    padding: 3rem 4rem 2.5rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
-    border-bottom: 4px solid #d4a853;
+    padding: 48px 64px 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 32px;
+    position: relative;
   }
-
+  .masthead-left {}
+  .masthead-badge {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #d4a853;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
   .masthead-title {
-    font-family: var(--fraunces);
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    line-height: 0.9;
+    font-family: 'Fraunces', serif;
     font-style: italic;
+    font-weight: 900;
+    font-size: clamp(60px, 8vw, 100px);
+    line-height: 0.9;
+    color: #f5f0e8;
+    letter-spacing: -0.02em;
   }
-
-  .masthead-title span {
-    display: block;
-    color: #d4a853;
-    font-size: 0.45em;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-  }
-
-  .masthead-meta {
+  .masthead-right {
     text-align: right;
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    line-height: 2;
-    color: #999;
+    padding-bottom: 8px;
   }
-
-  .masthead-meta strong {
-    display: block;
+  .masthead-issue {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
     color: #d4a853;
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
-  }
-
-  .masthead-tagline {
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #555;
-    margin-top: 0.5rem;
+    margin-bottom: 6px;
+  }
+  .masthead-date {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #d4a853;
+  }
+  .masthead-tagline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 12px;
+  }
+  .masthead-rule {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: #d4a853;
+    margin-top: 16px;
   }
 
-  /* ─── TOC STRIP ─── */
-  .toc-strip {
+  /* TOC STRIP */
+  .toc {
     background: #1a1a1a;
-    padding: 1.2rem 4rem;
+    padding: 0 64px 32px;
     overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
     scrollbar-width: none;
   }
-  .toc-strip::-webkit-scrollbar { display: none; }
-
+  .toc::-webkit-scrollbar { display: none; }
+  .toc-inner {
+    display: flex;
+    gap: 8px;
+    min-width: max-content;
+  }
   .toc-chip {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: transparent;
-    border: 1px solid rgba(212,168,83,0.3);
-    border-radius: 100px;
-    padding: 0.35rem 1rem;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #f5f0e8;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #999;
     text-decoration: none;
-    flex-shrink: 0;
-    transition: background 0.15s;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
   }
-  .toc-chip:hover { background: rgba(212,168,83,0.15); }
-  .toc-chip .chip-num {
+  .toc-chip:hover { border-color: #d4a853; color: #d4a853; }
+  .toc-chip span {
+    font-weight: 700;
     color: #d4a853;
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-size: 0.9rem;
+    font-size: 10px;
   }
 
-  /* ─── STORY BASE ─── */
-  .story {
+  /* SPREADS */
+  .spread {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 80px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
     position: relative;
-    overflow: hidden;
-    padding: 5vw 6vw;
+    align-content: start;
   }
+  .spread-full { grid-template-columns: 1fr; max-width: 860px; }
 
-  .story-flag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #ff3b30;
-    color: #fff;
-    font-family: var(--inter);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 0.4rem 0.9rem;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-    width: fit-content;
-  }
-  .story-flag::before { content: "▶ FLAGGED FOR YOU"; }
-
-  .story-source {
-    font-family: var(--inter);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.55;
-    margin-bottom: 1.2rem;
-  }
-
-  .story-headline {
-    font-family: var(--fraunces);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-  }
-
-  .story-body {
-    font-family: var(--inter);
-    font-size: 1.05rem;
-    line-height: 1.75;
-    max-width: 68ch;
-  }
-
-  .story-body p + p { margin-top: 1rem; }
-
-  .pull-quote {
-    font-family: var(--fraunces);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(1.4rem, 2.4vw, 2.1rem);
-    line-height: 1.35;
-    margin: 2.2rem 0 1.8rem;
-    padding-left: 1.4rem;
-    border-left: 3px solid currentColor;
-    max-width: 30ch;
-    letter-spacing: -0.01em;
-  }
-
-  .story-link {
-    display: inline-block;
-    margin-top: 1rem;
-    font-family: var(--inter);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0.6rem 1.4rem;
-    border: 2px solid currentColor;
-    opacity: 0.75;
-    transition: opacity 0.15s;
-  }
-  .story-link:hover { opacity: 1; }
-  .story-link + .story-link { margin-left: 0.6rem; }
-
-  .story-num {
-    font-family: var(--fraunces);
-    font-weight: 900;
-    font-style: italic;
-    line-height: 1;
+  .story-number {
     position: absolute;
-    pointer-events: none;
+    top: 40px;
+    right: 64px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 120px;
+    color: rgba(0,0,0,0.06);
+    line-height: 1;
     user-select: none;
   }
+  .story-left {}
+  .story-right {}
 
-  .cat-badge {
+  .category-badge {
     display: inline-block;
-    font-size: 0.65rem;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    border-radius: 2px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 20px;
   }
-
-  .meta-row {
-    font-family: var(--inter);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+  .flagged-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    opacity: 0.55;
-    margin-top: 1rem;
+    background: #cc2200;
+    color: white;
+    margin-left: 8px;
+    margin-bottom: 20px;
+  }
+  .badge-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0; }
+
+  .story-headline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .story-meta {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 28px;
+  }
+  .story-body {
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+  .story-body p { margin-bottom: 16px; }
+  .pull-quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.3;
+    padding: 24px 0 24px 24px;
+    border-left: 4px solid currentColor;
+    margin: 32px 0;
+  }
+  .story-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 16px;
+    margin-top: 32px;
     flex-wrap: wrap;
   }
+  .story-link {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid currentColor;
+    transition: background 0.2s, color 0.2s;
+  }
+  .story-link:hover { opacity: 0.8; }
 
-  .inner { position: relative; z-index: 1; }
+  /* COLOR THEMES */
+  .theme-cream { background: #f5f0e8; color: #1a1a1a; }
+  .theme-slate { background: #2d3748; color: #e8e4d8; }
+  .theme-olive { background: #3d4a2e; color: #e8ead4; }
+  .theme-rose { background: #f0e4e0; color: #2a1a18; }
+  .theme-midnight { background: #1a1f35; color: #d8dce8; }
+  .theme-sand { background: #e8dcc8; color: #2a2018; }
+  .theme-teal { background: #1d3a3a; color: #d4e8e4; }
+  .theme-lavender { background: #e8e4f0; color: #1a1828; }
+  .theme-charcoal { background: #2a2a2a; color: #e8e4d8; }
+  .theme-amber { background: #fdf3d8; color: #2a1a00; }
 
-  /* ── STORY 01 — Cream, Claude Code / OpenClaw ── */
-  .story-01 { background: #f5f0e8; color: #1a1a1a; }
-  .story-01 .story-num {
-    font-size: clamp(18rem, 40vw, 46rem);
-    color: #e8e0d0;
-    right: -4vw;
-    top: -6vw;
-  }
-  .story-01 .story-headline {
-    font-size: clamp(2.8rem, 6vw, 6.4rem);
-    max-width: 16ch;
-    font-weight: 800;
-  }
-  .story-01 .cat-badge { background: #d4a853; color: #1a1a1a; }
-  .story-01 .story-link { color: #1a1a1a; }
-  .story-01 .pull-quote { border-color: #d4a853; color: #1a1a1a; }
-
-  /* ── STORY 02 — Twilight navy, Opus 4.7 stylometry ── */
-  .story-02 { background: #0e1423; color: #dde4f0; }
-  .story-02 .story-num {
-    font-size: clamp(16rem, 36vw, 42rem);
-    color: rgba(100,150,220,0.07);
-    right: -2vw;
-    bottom: -6vw;
-  }
-  .story-02 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #fff;
-    max-width: 18ch;
-  }
-  .story-02 .cat-badge { background: #5b88d4; color: #0e1423; }
-  .story-02 .story-link { color: #7aa8e8; }
-  .story-02 .pull-quote { border-color: #5b88d4; color: #dde4f0; }
-  .story-02 .accent { color: #7aa8e8; }
-
-  /* ── STORY 03 — Spice dune, PyTorch malware ── */
-  .story-03 { background: #261e10; color: #f0e8d4; }
-  .story-03 .story-num {
-    font-size: clamp(16rem, 34vw, 40rem);
-    color: rgba(212,168,83,0.06);
-    left: -2vw;
-    top: -4vw;
-  }
-  .story-03 .story-headline {
-    font-size: clamp(2.4rem, 4.8vw, 5.2rem);
-    color: #f5e6c4;
-    max-width: 20ch;
-  }
-  .story-03 .cat-badge { background: #c8413a; color: #fff; }
-  .story-03 .story-link { color: #f0d8a0; }
-  .story-03 .pull-quote { border-color: #d4a853; color: #f0e8d4; }
-  .story-03 .accent { color: #d4a853; }
-
-  /* ── STORY 04 — Slate blue, Mozilla v Chrome ── */
-  .story-04 { background: #1b2838; color: #e0e8f4; }
-  .story-04 .story-num {
-    font-size: clamp(16rem, 36vw, 42rem);
-    color: rgba(100,170,230,0.07);
-    right: -3vw;
-    top: -4vw;
-  }
-  .story-04 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #fff;
-    max-width: 18ch;
-  }
-  .story-04 .cat-badge { background: #4a90d4; color: #fff; }
-  .story-04 .story-link { color: #7ab8e8; }
-  .story-04 .pull-quote { border-color: #4a90d4; color: #e0e8f4; }
-  .story-04 .accent { color: #7ab8e8; }
-
-  /* ── STORY 05 — Forest deep, Belgium nuclear ── */
-  .story-05 { background: #0e1e16; color: #d4e8d4; }
-  .story-05 .story-num {
-    font-size: clamp(16rem, 36vw, 40rem);
-    color: rgba(80,160,100,0.07);
-    right: -3vw;
-    bottom: -6vw;
-  }
-  .story-05 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #e8f4e8;
-    max-width: 18ch;
-  }
-  .story-05 .cat-badge { background: #4a9460; color: #fff; }
-  .story-05 .story-link { color: #80d0a0; }
-  .story-05 .pull-quote { border-color: #4a9460; color: #d4e8d4; }
-  .story-05 .accent { color: #80d0a0; }
-
-  /* ── STORY 06 — Dusty rose, LinkedIn surveillance ── */
-  .story-06 { background: #f4e4e8; color: #2c1420; }
-  .story-06 .story-num {
-    font-size: clamp(16rem, 36vw, 40rem);
-    color: #e8d0d8;
-    left: -3vw;
-    top: -4vw;
-  }
-  .story-06 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    max-width: 18ch;
-  }
-  .story-06 .cat-badge { background: #a0304a; color: #fff; }
-  .story-06 .story-link { color: #2c1420; }
-  .story-06 .pull-quote { border-color: #a0304a; color: #2c1420; }
-  .story-06 .accent { color: #a0304a; }
-
-  /* ── STORY 07 — Terracotta, Spain / LaLiga ── */
-  .story-07 { background: #3a1a0c; color: #f0e0d4; }
-  .story-07 .story-num {
-    font-size: clamp(16rem, 36vw, 40rem);
-    color: rgba(200,120,80,0.07);
-    right: -3vw;
-    top: -4vw;
-  }
-  .story-07 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #f8ece0;
-    max-width: 18ch;
-  }
-  .story-07 .cat-badge { background: #d46030; color: #fff; }
-  .story-07 .story-link { color: #f0c8a0; }
-  .story-07 .pull-quote { border-color: #d46030; color: #f0e0d4; }
-  .story-07 .accent { color: #d46030; }
-
-  /* ── STORY 08 — Charcoal, CopyFail / Gentoo ── */
-  .story-08 { background: #222228; color: #d8d8e4; }
-  .story-08 .story-num {
-    font-size: clamp(16rem, 36vw, 40rem);
-    color: rgba(180,180,200,0.05);
-    left: -3vw;
-    bottom: -5vw;
-  }
-  .story-08 .story-headline {
-    font-size: clamp(2.4rem, 4.6vw, 5rem);
-    color: #fff;
-    max-width: 18ch;
-  }
-  .story-08 .cat-badge { background: #8060b8; color: #fff; }
-  .story-08 .story-link { color: #a898d0; }
-  .story-08 .pull-quote { border-color: #8060b8; color: #d8d8e4; }
-  .story-08 .accent { color: #a898d0; }
-
-  /* ── STORY 09 — Sage, Binary Search ── */
-  .story-09 { background: #eaf0e6; color: #1a241a; }
-  .story-09 .story-num {
-    font-size: clamp(16rem, 36vw, 40rem);
-    color: #d4ddd0;
-    right: -3vw;
-    top: -4vw;
-  }
-  .story-09 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #1a241a;
-    max-width: 18ch;
-  }
-  .story-09 .cat-badge { background: #3e6e40; color: #fff; }
-  .story-09 .story-link { color: #1a241a; }
-  .story-09 .pull-quote { border-color: #3e6e40; color: #1a241a; }
-  .story-09 .accent { color: #3e6e40; }
-  .story-09 code {
-    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.88em;
-    background: rgba(62,110,64,0.1);
-    padding: 0.1em 0.4em;
-    border-radius: 3px;
-  }
-
-  /* ── STORY 10 — Deep night, Pu.sh agent ── */
-  .story-10 { background: #080e1c; color: #c8d8f0; }
-  .story-10 .story-num {
-    font-size: clamp(16rem, 34vw, 38rem);
-    color: rgba(80,120,200,0.06);
-    left: -2vw;
-    top: -4vw;
-  }
-  .story-10 .story-headline {
-    font-size: clamp(2.6rem, 5vw, 5.4rem);
-    color: #fff;
-    max-width: 18ch;
-  }
-  .story-10 .cat-badge { background: #3a68c8; color: #fff; }
-  .story-10 .story-link { color: #80a8e8; }
-  .story-10 .pull-quote { border-color: #3a68c8; color: #c8d8f0; }
-  .story-10 .accent { color: #80a8e8; }
-  .story-10 code {
-    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.85em;
-    background: rgba(80,120,200,0.15);
-    padding: 0.1em 0.4em;
-    border-radius: 3px;
-  }
-
-  /* ── BACK PAGE ── */
+  /* BACK PAGE */
   .back-page {
     background: #1a1a1a;
     color: #f5f0e8;
     min-height: 60vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 5vw 6vw;
-    border-top: 4px solid #d4a853;
-    position: relative;
-    overflow: hidden;
+    text-align: center;
+    padding: 80px 64px;
   }
-  .back-page-headline {
-    font-family: var(--fraunces);
-    font-size: clamp(3rem, 7vw, 7rem);
-    font-weight: 900;
+  .back-headline {
+    font-family: 'Fraunces', serif;
     font-style: italic;
-    letter-spacing: -0.03em;
-    line-height: 0.95;
+    font-weight: 900;
+    font-size: clamp(48px, 7vw, 80px);
     color: #d4a853;
-    margin-bottom: 2.5rem;
+    margin-bottom: 24px;
   }
-  .back-page-text {
-    font-family: var(--inter);
-    font-size: 1.05rem;
+  .back-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    max-width: 600px;
     line-height: 1.7;
-    max-width: 65ch;
-    color: #bbb;
+    margin-bottom: 48px;
   }
-  .back-page-text p + p { margin-top: 1rem; }
-  .back-footer {
-    margin-top: 3rem;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #555;
+  .back-rule { width: 80px; height: 2px; background: #d4a853; margin: 0 auto 48px; }
+  .back-stats {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  .back-footer strong { color: #d4a853; }
-  .back-deco {
-    font-family: var(--fraunces);
-    font-weight: 900;
+  .back-stat { text-align: center; }
+  .back-stat-num {
+    font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: clamp(12rem, 30vw, 36rem);
-    line-height: 1;
-    position: absolute;
-    right: -3vw;
-    bottom: -4vw;
-    color: rgba(212,168,83,0.04);
-    pointer-events: none;
-    user-select: none;
+    font-weight: 900;
+    font-size: 48px;
+    color: #d4a853;
+  }
+  .back-stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 4px;
+  }
+  .back-footer {
+    margin-top: 64px;
+    font-size: 11px;
+    font-weight: 300;
+    color: #444;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 900px) {
+    .masthead { padding: 32px; grid-template-columns: 1fr; }
+    .masthead-right { text-align: left; }
+    .toc { padding: 0 32px 24px; }
+    .spread { grid-template-columns: 1fr; padding: 48px 32px; gap: 32px; }
+    .story-number { font-size: 80px; top: 24px; right: 32px; }
+    .back-page { padding: 48px 32px; }
   }
 </style>
 </head>
@@ -491,257 +301,322 @@
 
 <!-- MASTHEAD -->
 <header class="masthead">
-  <div class="masthead-title">
-    <span>AI Weekly</span>
-    Morning Edition
+  <div class="masthead-left">
+    <div class="masthead-badge">✦ AI Weekly</div>
+    <div class="masthead-title">Morning<br>Edition</div>
+    <div class="masthead-tagline">The week in artificial intelligence, curated for the discerning builder</div>
   </div>
-  <div class="masthead-meta">
-    <strong>May 26, 2026</strong>
-    Issue 006
-    <div class="masthead-tagline">Ten stories that matter · Curated for Jani</div>
+  <div class="masthead-right">
+    <div class="masthead-issue">Issue No. 23</div>
+    <div class="masthead-date">May 29, 2026</div>
   </div>
+  <div class="masthead-rule"></div>
 </header>
 
-<!-- TOC STRIP -->
-<nav class="toc-strip">
-  <a class="toc-chip" href="#s1"><span class="chip-num">1</span> Claude Code & OpenClaw</a>
-  <a class="toc-chip" href="#s2"><span class="chip-num">2</span> Opus 4.7 Knows Your Voice</a>
-  <a class="toc-chip" href="#s3"><span class="chip-num">3</span> Malware in PyTorch Lightning</a>
-  <a class="toc-chip" href="#s4"><span class="chip-num">4</span> Mozilla vs Chrome AI API</a>
-  <a class="toc-chip" href="#s5"><span class="chip-num">5</span> Belgium Keeps Its Reactors</a>
-  <a class="toc-chip" href="#s6"><span class="chip-num">6</span> LinkedIn's Extension Dragnet</a>
-  <a class="toc-chip" href="#s7"><span class="chip-num">7</span> Spain Takes On LaLiga Blocks</a>
-  <a class="toc-chip" href="#s8"><span class="chip-num">8</span> CopyFail & Gentoo</a>
-  <a class="toc-chip" href="#s9"><span class="chip-num">9</span> Beating Binary Search</a>
-  <a class="toc-chip" href="#s10"><span class="chip-num">10</span> Pu.sh: Agents in 400 Lines</a>
+<!-- TABLE OF CONTENTS -->
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#story1" class="toc-chip"><span>01</span> Claude Mythos: Too Dangerous to Release</a>
+    <a href="#story2" class="toc-chip"><span>02</span> MCP Goes Stateless: The 2026 Spec RC</a>
+    <a href="#story3" class="toc-chip"><span>03</span> Google I/O 2026: Gemini Gets Agentic</a>
+    <a href="#story4" class="toc-chip"><span>04</span> DeepSeek V4: Open-Source Catches Up</a>
+    <a href="#story5" class="toc-chip"><span>05</span> Four Chinese Labs in 12 Days</a>
+    <a href="#story6" class="toc-chip"><span>06</span> Frontier AI Access Will Become Scarce</a>
+    <a href="#story7" class="toc-chip"><span>07</span> Code with Claude: London Dispatch</a>
+    <a href="#story8" class="toc-chip"><span>08</span> Agentic Markets Hide Capability Premiums</a>
+    <a href="#story9" class="toc-chip"><span>09</span> GitHub Breached via Poisoned Extension</a>
+    <a href="#story10" class="toc-chip"><span>10</span> Microsoft's RAMPART &amp; Clarity</a>
+  </div>
 </nav>
 
-<!-- ── STORY 01 ── -->
-<section class="story story-01" id="s1">
-  <div class="story-num">01</div>
-  <div class="inner">
-    <div class="story-flag"></div>
-    <div class="cat-badge">Claude Code · Anthropic</div>
-    <h2 class="story-headline">The Regex That Grounded Thousands of Claude Code Users</h2>
-    <div class="story-source">twitter.com/theo · 865 points · 497 comments</div>
+<!-- STORY 1 -->
+<section id="story1" class="spread theme-midnight">
+  <div class="story-number">01</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(212,168,83,0.2); color: #d4a853;">Anthropic</span>
+      <span class="flagged-badge">Flagged for you</span>
+    </div>
+    <h2 class="story-headline">Claude Mythos: The Model Anthropic Decided Not to Release</h2>
+    <div class="story-meta">Anthropic · Cybersecurity · May 2026 · ~850 pts on HN</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Anthropic's load-shedding strategy for Claude Code turned out to involve a regex. Users discovered that if their git commit history contained the string "OpenClaw" — the name of a popular open-source Claude Code harness — Claude Code would either refuse to execute requests outright or silently apply extra throttling. A similar effect hit users with "Hermes" in their repos.</p>
-      <p>The discovery blew up on Theo's Twitter thread, which hit 865 points and nearly 500 HN comments within hours. The community reaction was a mix of fury and dark comedy. One commenter wrote: "I really want to stick with Anthropic given everything known about Altman, but <em>man</em> are they speedrunning the 'how to destroy your reputation' guidebook." Another: "Didn't they think about 'we need to make sure Claude Code itself is never banned'? Could have been as easy as including some Claude Code specific prompting traits."</p>
-      <p>The charitable read is that Anthropic was panicking under capacity pressure and made an engineering call that traded fairness for simplicity — a simple regex to identify power-users of competing orchestration layers and deprioritize them. The uncharitable read is that this is a taste of Claude-as-gatekeeper: a model that penalises you for using the wrong toolchain. Anthropic has not officially commented. One commenter summed it up: "Just admit that any pricing other than usage-based is completely unsustainable and is being phased out."</p>
+      <p>On April 7, Anthropic announced Claude Mythos Preview — and immediately announced it would not be making it publicly available. The reasons were as striking as the model itself. In internal evaluations, Mythos autonomously identified and exploited a 17-year-old remote code execution vulnerability in FreeBSD, gaining root on machines running NFS with no human guidance. Mozilla reported that Mythos identified 271 vulnerabilities in Firefox during dedicated security evaluations. These are not theoretical capabilities. They are demonstrated, documented, repeatable.</p>
+      <p>Rather than open it up, Anthropic launched Project Glasswing — a carefully curated cohort of roughly 50 partners including Cisco, Oracle, and Microsoft — who gain controlled access to Mythos's defensive capabilities specifically for vulnerability patching. The move signals something unprecedented: a major AI lab voluntarily restricting its most capable model not for commercial reasons, but for safety ones.</p>
+      <p>Anthropic says Mythos-level capabilities will reach the public "in the coming weeks" as safety mitigations mature. The Hacker News thread on this has been one of the most substantive AI security discussions in months, with security researchers debating whether Glasswing is a genuine safety measure or a form of regulatory capture — and whether either framing misses the point.</p>
     </div>
-    <blockquote class="pull-quote">"It really seems they were panicking due to capacity and there was very little oversight with all this."</blockquote>
-    <div class="meta-row">
-      <span>865 pts</span><span>497 comments</span><span>Trending today</span>
+    <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
+      "The constraint is no longer commercial. It's security-driven — and that changes everything about how we think about model release."
     </div>
-    <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47963204" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://red.anthropic.com/2026/mythos-preview/" class="story-link" style="color: #d4a853;">Read Article</a>
+      <a href="https://news.ycombinator.com/item?id=48143284" class="story-link" style="color: #888;">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 02 ── -->
-<section class="story story-02" id="s2">
-  <div class="story-num">02</div>
-  <div class="inner">
-    <div class="story-flag"></div>
-    <div class="cat-badge">Anthropic · Privacy · Claude</div>
-    <h2 class="story-headline">Opus 4.7 Knows Who You Are — Even When You Don't Tell It</h2>
-    <div class="story-source">theargumentmag.com · 115 points · 58 comments</div>
+<!-- STORY 2 -->
+<section id="story2" class="spread theme-olive">
+  <div class="story-number">02</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(212,168,83,0.2); color: #d4a853;">MCP · Protocol</span>
+      <span class="flagged-badge">Flagged for you</span>
+    </div>
+    <h2 class="story-headline">MCP Goes Stateless: The Release Candidate That Changes Everything</h2>
+    <div class="story-meta">Model Context Protocol · Architecture · May 21, 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Kelsey Piper, Vox's AI journalist, published a disquieting finding: Claude Opus 4.7 can identify her as the author of anonymous text samples with uncanny reliability. Not with web search. Not with memory enabled. Through the API in a fresh session. Just pure stylometry — reading her prose and matching it to a mental model of her writing built during training.</p>
-      <p>She tested it multiple ways: incognito mode, a friend's computer, direct API calls. She had a friend who lacks a substantial public writing footprint test text from a private Discord — Opus 4.7 failed on her, but correctly named two of her friends who <em>do</em> have internet presences, both of whom were in that same channel. The model isn't guessing randomly. It is doing something semantically close to authorship attribution at scale.</p>
-      <p>HN commenters began running their own experiments in real time. One wrote: "I just fed it my latest blog post draft (475 words), and it got it in one. Even knowing what to expect, I was very surprised." Another confirmed it works without thinking mode enabled — Opus just emits your name in two words. The implications for anyone who has ever written publicly under a pseudonym are severe. As one commenter put it: "One should assume that models will be good enough in the near future that privacy will be a thing of the past. Every anonymous post you made online can be traced back to you."</p>
+      <p>The Model Context Protocol published its release candidate on May 21, locking the spec ahead of a July 28 final release. The headline change sounds dry but has enormous practical consequences: MCP is now stateless at the protocol layer. Gone is the Mcp-Session-Id header; gone is the protocol-level session that made horizontal scaling painful. Any MCP request can now land on any server instance, eliminating the sticky routing and shared session stores that plagued production deployments.</p>
+      <p>Complementing this, the Streamable HTTP transport now requires Mcp-Method and Mcp-Name headers per SEP-2243, allowing load balancers, gateways, and rate-limiters to route on the operation without inspecting the request body. For anyone who has tried to run MCP at scale — or watched it struggle under enterprise traffic patterns — this is the fix the community has been waiting for.</p>
+      <p>The ten-week window before the final spec is explicitly for SDK maintainers and Tier 1 implementers to validate against real workloads. With 97 million monthly SDK downloads as of March 2026, the ecosystem is vast enough that edge cases will surface. The MCP team is treating this RC window seriously. Given the protocol's now-dominant position as the de facto standard for agent-tool integration, getting 2026-07-28 right matters enormously.</p>
     </div>
-    <blockquote class="pull-quote">"The model isn't guessing randomly. It is doing something semantically close to authorship attribution at scale."</blockquote>
-    <div class="meta-row">
-      <span>115 pts</span><span>58 comments</span><span>Anthropic · Opus 4.7</span>
+    <div class="pull-quote" style="border-color: rgba(212,168,83,0.6); color: rgba(232,234,212,0.9);">
+      "Stateless at the protocol layer means any request on any server — the sticky routing nightmare is finally over."
     </div>
-    <a class="story-link" href="https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47951295" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" class="story-link" style="color: #d4a853;">Read Spec</a>
+      <a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/" class="story-link" style="color: #aaa;">2026 Roadmap</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 03 ── -->
-<section class="story story-03" id="s3">
-  <div class="story-num">03</div>
-  <div class="inner">
-    <div class="cat-badge">Security · AI Infrastructure</div>
-    <h2 class="story-headline">A Sand Worm Ate the AI Training Library</h2>
-    <div class="story-source">semgrep.dev · 299 points · 97 comments</div>
+<!-- STORY 3 -->
+<section id="story3" class="spread theme-cream">
+  <div class="story-number">03</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(26,26,26,0.08); color: #1a1a1a;">Google · AI</span>
+    </div>
+    <h2 class="story-headline">Google I/O 2026: Gemini Gets Agentic and Antigravity Goes CLI</h2>
+    <div class="story-meta">Google DeepMind · Developer Platform · May 19–20, 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>PyPI credentials for Lightning AI — the company behind PyTorch Lightning, one of the most popular high-level training wrappers in the ML world — were compromised, and malicious code was silently pushed to versions 2.6.2 and 2.6.3 of the package. Semgrep's security team named the attack after <span class="accent">Shai-Hulud</span>, the sandworm from Dune, because of the distinctive "A Mini Shai-Hulud has Appeared" message embedded in the malware's output. The code steals credentials, authentication tokens, environment variables, and cloud secrets, then exfiltrates them by creating public GitHub repositories with Dune-themed names — within 24 hours, 2,200 such repos had appeared.</p>
-      <p>Andy from Lightning AI confirmed via HN comment that only PyPI packages were compromised, not the GitHub source. Users running NixOS via unstable channel got 2.6.2 automatically. A maintainer advised downgrading to 2.6.1 pending 2.6.4. The pip project had, coincidentally, released pip 26.1 just days earlier with a new <code>--uploaded-prior-to</code> flag specifically designed to pin against freshly-uploaded packages — exactly the scenario this attack exploited.</p>
-      <p>The HN thread evolved into a sharp debate about dependency hygiene at the intersection of AI tooling. One commenter predicted: "I think in the relatively near future we're going to start seeing sophisticated supply chain attacks into language model training data — vulnerabilities which look benign individually but when composed together in the agent plane introduce an exploit." The supply chain problem is getting harder as AI makes publishing code faster and auditing it slower.</p>
+      <p>Google's I/O this year was unmistakably an agentic platform play. The centerpiece was Gemini 3.5 Flash — a model that not only outperforms the previous flagship Pro on coding and agentic benchmarks, but runs four times faster at a fraction of the cost. Google is positioning Flash as the default going forward across the Gemini app and AI Mode, signaling that the frontier is no longer exclusively about raw capability but about frontier capability at commodity price points.</p>
+      <p>Antigravity 2.0, Google's developer agent platform, gained an all-new CLI that allows developers to orchestrate specialized subagents for complex workflows, with built-in cross-platform terminal sandboxing, credential masking, and hardened Git policies baked in. The clear competitive target is Claude Code, and the design choices — especially the CLI-first approach and the emphasis on security primitives — suggest Google has been paying close attention to what resonates with developers in the agentic coding space.</p>
+      <p>Perhaps the most technically interesting announcement was WebMCP: a proposed open web standard that would let developers expose structured tools for browser-based AI agents. The experimental origin trial starts in Chrome 149. If WebMCP gains traction, it could extend the MCP paradigm into the browser layer — a significant architectural expansion that the Hacker News thread correctly identified as potentially more consequential than any of the model announcements.</p>
     </div>
-    <blockquote class="pull-quote">"2,200 Dune-themed GitHub repos appeared in 24 hours, each one holding stolen credentials in near-plaintext."</blockquote>
-    <div class="meta-row">
-      <span>299 pts</span><span>97 comments</span><span>PyTorch Lightning 2.6.2 / 2.6.3</span>
+    <div class="pull-quote" style="border-color: #1a1a1a; color: #1a1a1a;">
+      "WebMCP, if it lands, extends MCP into the browser — potentially more consequential than any model announcement at I/O."
     </div>
-    <a class="story-link" href="https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47964617" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" class="story-link" style="color: #1a1a1a;">Read Article</a>
+      <a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" class="story-link" style="color: #888;">Developer Keynote</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 04 ── -->
-<section class="story story-04" id="s4">
-  <div class="story-num">04</div>
-  <div class="inner">
-    <div class="cat-badge">AI Standards · Browser Wars</div>
-    <h2 class="story-headline">Mozilla Draws a Line in the Browser Sand Against Chrome's AI API</h2>
-    <div class="story-source">github.com/mozilla · 564 points · 207 comments</div>
+<!-- STORY 4 -->
+<section id="story4" class="spread theme-charcoal">
+  <div class="story-number">04</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(212,168,83,0.15); color: #d4a853;">Open Source · LLM</span>
+    </div>
+    <h2 class="story-headline">DeepSeek V4: The Open-Weight Model That Almost Caught the Frontier</h2>
+    <div class="story-meta">DeepSeek · Open Source · April 24, 2026 · V4-Pro 1.6T params</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Mozilla filed a formal standards opposition to Google Chrome's proposed Prompt API — a browser-native interface that would let web pages directly invoke on-device large language models without routing through a server. The concern isn't the capability itself; it's the implementation. Mozilla argues the Prompt API as specified gives websites unconstrained access to a model that has been fine-tuned with the user's data, creating a novel fingerprinting and inference vector with no meaningful user consent layer.</p>
-      <p>The opposition landed hard: 564 points and over 200 comments on HN, where the core tension was well-articulated. On one side: on-device AI <em>should</em> be more private than cloud AI because nothing leaves the device. On the other: the Prompt API as designed means any website can query a model that may encode sensitive personal context, and the response becomes a side-channel. Mozilla's position is that the API needs a privacy-preserving design — perhaps ephemeral model instances per origin — before it ships.</p>
-      <p>This matters beyond the immediate spec debate. The browser is becoming an AI execution layer, and whoever controls that layer controls an enormous amount about how AI reaches end users. Chrome ships to roughly 65% of desktop browsers. Google shipping a Prompt API over Mozilla's objection would, effectively, be Google setting the default standard for on-device AI access unilaterally. The W3C standards process is about to get interesting.</p>
+      <p>DeepSeek's V4 release, which landed on April 24 and has been generating discussion ever since, represents the most serious challenge yet to the closed-model frontier. V4-Pro, a 1.6 trillion parameter Mixture-of-Experts model with only 49 billion parameters activated at inference time, achieves top-tier performance on coding benchmarks and — according to the Center for AI Standards and Innovation's independent NIST evaluation — trails leading US frontier models by approximately eight months. That gap continues to close.</p>
+      <p>The V4-Flash variant, at 284B total parameters with 13B activated, runs at a fraction of the cost of its western competitors while delivering performance that many developers report as "good enough for 90% of tasks." Both support one million token context windows, matching the current frontier standard. The open-weight release means the models are available for self-hosting, fine-tuning, and research — capabilities that closed API providers cannot offer.</p>
+      <p>What makes the Air Street Capital analysis particularly pointed is the timing observation: four Chinese labs — DeepSeek V4, GLM-5.1, MiniMax M2.7, and Kimi K2.6 — all released competitive open-weight coding models within a 12-day window. This wasn't coincidence. It reflects a coordinated maturation of Chinese AI development capacity that the broader industry is still processing.</p>
     </div>
-    <blockquote class="pull-quote">"The browser is becoming an AI execution layer. Google shipping this unilaterally would be Google setting the default standard for on-device AI access."</blockquote>
-    <div class="meta-row">
-      <span>564 pts</span><span>207 comments</span><span>Chrome Prompt API</span>
+    <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
+      "V4-Flash costs less than a third of Claude Opus 4.7, yet developers say it handles 90% of tasks just fine."
     </div>
-    <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47959463" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://artificialanalysis.ai/articles/deepseek-is-back-among-the-leading-open-weights-models-with-v4-pro-and-v4-flash" class="story-link" style="color: #d4a853;">Read Analysis</a>
+      <a href="https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" class="story-link" style="color: #888;">NIST Eval</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 05 ── -->
-<section class="story story-05" id="s5">
-  <div class="story-num">05</div>
-  <div class="inner">
-    <div class="cat-badge">Energy · Policy</div>
-    <h2 class="story-headline">Belgium Puts the Decommissioning Plans Back in the Drawer</h2>
-    <div class="story-source">dpa-international.com · 712 points · 656 comments</div>
+<!-- STORY 5 -->
+<section id="story5" class="spread theme-sand">
+  <div class="story-number">05</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(26,26,26,0.1); color: #2a2018;">AI Industry · China</span>
+    </div>
+    <h2 class="story-headline">Four Labs, Twelve Days: The Chinese Open-Weight Blitz</h2>
+    <div class="story-meta">Air Street Press · State of AI · May 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Belgium has officially reversed its long-standing policy of nuclear plant decommissioning, announcing it will keep its existing reactors operating and is now exploring extending their lifespans well beyond the original closure dates. The decision, confirmed by the Belgian government this week, marks a full policy reversal from the 2003 law that mandated a phase-out of nuclear power — a reversal that began tentatively after the 2022 energy crisis and has now been made permanent.</p>
-      <p>With 712 points and an extraordinary 656 comments, this was one of the most-discussed stories on HN this week. The debate split predictably: nuclear advocates pointing to Belgium's carbon-free baseload, critics asking about waste storage, but a clear plurality of the thread landed in "this was overdue" territory. The subtext on many threads: the AI industry's explosion in power demand has made every jurisdiction on earth rethink energy capacity planning. Data center operators are signing long-term PPAs for nuclear at unprecedented rates.</p>
-      <p>Belgium is not alone. Germany's political conversation about nuclear has shifted dramatically in two years. France never wavered. Sweden reversed its phase-out. Poland is building. The 2020s looked like nuclear's funeral; the 2026 consensus is closer to a careful rehabilitation. The question is whether the construction and regulatory pipelines can respond fast enough to matter for the decade's actual power gap.</p>
+      <p>The Air Street Capital State of AI report for May 2026 contains a detail that deserves more attention than it's received: Z.ai's GLM-5.1, MiniMax M2.7, Moonshot's Kimi K2.6, and DeepSeek V4 all landed within a 12-day window, all hitting roughly the same capability ceiling on agentic engineering tasks, and all at inference costs meaningfully below western frontier models. None costs more than a third of Claude Opus 4.7.</p>
+      <p>The implication is not simply that Chinese labs are catching up — it's that the coordinated release pattern suggests these organizations are tracking each other's progress closely and timing releases competitively, much as US labs do. The open-weight nature of all four releases also means the capability gap is now visible, downloadable, and reproducible by anyone with sufficient compute — a dynamic that differs fundamentally from the closed-API paradigm of OpenAI and Anthropic.</p>
+      <p>The Air Street analysis notes that aggregate cross-domain benchmarks place V4-Pro roughly eight months behind the US frontier. But "eight months behind" in a field where major releases occur quarterly is a much smaller gap than it sounds. The question the report leaves open — deliberately — is whether this gap reflects fundamental capability differences or primarily reflects the time lag of porting research insights into deployable models.</p>
     </div>
-    <blockquote class="pull-quote">"The 2020s looked like nuclear's funeral. The 2026 consensus is looking a lot more like a careful rehabilitation."</blockquote>
-    <div class="meta-row">
-      <span>712 pts</span><span>656 comments</span><span>Belgium · Energy Policy</span>
+    <div class="pull-quote" style="border-color: rgba(42,32,24,0.4); color: #2a2018;">
+      "Four releases in twelve days, all at a third the cost of western frontier models. This was not coincidence."
     </div>
-    <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47961319" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://press.airstreet.com/p/state-of-ai-may-2026" class="story-link" style="color: #2a2018;">Read Report</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 06 ── -->
-<section class="story story-06" id="s6">
-  <div class="story-num">06</div>
-  <div class="inner">
-    <div class="cat-badge">Privacy · Surveillance</div>
-    <h2 class="story-headline">LinkedIn Is Running a Silent Census of Your Browser Extensions</h2>
-    <div class="story-source">404privacy.com · 299 points · 121 comments</div>
+<!-- STORY 6 -->
+<section id="story6" class="spread theme-rose">
+  <div class="story-number">06</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(42,26,24,0.1); color: #2a1a18;">Policy · Frontier AI</span>
+    </div>
+    <h2 class="story-headline">Access to Frontier AI Will Soon Be Scarce and Selective</h2>
+    <div class="story-meta">3 Quarks Daily · Economic Analysis · May 2026 · HN: 48143284</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>A researcher at 404privacy traced LinkedIn's client-side JavaScript and found a hardcoded list of 6,278 Chrome extensions. On every page load, LinkedIn probes each one by attempting to load a known static resource from that extension's bundle — if the resource loads, the extension is present. The results are packaged into an encrypted payload and injected as an HTTP header into every subsequent API request for the session. The scan runs silently, with no UI indicator, no consent prompt, and no opt-out mechanism.</p>
-      <p>The extension list is broad enough to be revealing. It includes religious community tools, medical reference apps, accessibility extensions, job search utilities, and — ironically — several privacy-focused ad blockers. The combination of installed extensions can infer tax bracket, job-seeking intent, and community affiliations with meaningful confidence, especially when stacked with other telemetry LinkedIn already collects.</p>
-      <p>A criminal investigation is reportedly now open in at least one European jurisdiction. The browser-level mechanism works because Chrome assigns stable, predictable IDs to extensions — Firefox randomises them per install, which breaks this technique. One HN commenter, watching their own network requests, noted: "Now the thousands of spammy 404 requests I was seeing on LinkedIn totally make sense." LinkedIn's stated justification — combating scraper extensions — covers perhaps a few dozen of the 6,278 on the list. The rest is dossier-building.</p>
+      <p>A widely-discussed piece this week argues something that sounds counterintuitive given how rapidly AI capabilities have democratized: access to the actual frontier — not the six-months-ago frontier, but the current leading edge — is about to become significantly more restricted. The argument runs through three converging dynamics: compute scarcity as advanced semiconductor fabrication hits physical limits, export controls reshaping who can buy the necessary hardware, and safety-motivated access restrictions like Anthropic's Project Glasswing becoming more common as models grow more dangerous.</p>
+      <p>The economics are stark. Training a frontier model in 2026 requires capital expenditure that only a handful of organizations globally can sustain. Microsoft projected $190 billion in 2026 CapEx. Meta announced $115–135 billion in AI infrastructure spending. These are not numbers that startups, universities, or most governments can match. The "open-source will save us" argument runs into the reality that open-weight models lag the frontier by months — a gap that may be acceptably small for most applications but is not zero, and in high-stakes domains the difference matters.</p>
+      <p>The Hacker News discussion on this piece is particularly worth reading. Several commenters push back compellingly, arguing that the frontier matters less than the rate of capability diffusion — that even a six-month-old Claude or Gemini model is sufficient for the vast majority of real-world applications. Others argue the piece understates how quickly the frontier diffuses to open-weight reproductions. Neither camp fully accounts for the Mythos dynamic: a model deliberately not released because its capabilities are considered too dangerous.</p>
     </div>
-    <blockquote class="pull-quote">"The combination of installed extensions can infer tax bracket, job-seeking intent, and community affiliations — all without asking."</blockquote>
-    <div class="meta-row">
-      <span>299 pts</span><span>121 comments</span><span>GDPR implications · Chrome only</span>
+    <div class="pull-quote" style="border-color: rgba(42,26,24,0.3); color: #2a1a18;">
+      "The frontier is becoming a place only a few organizations can afford to build — and only some of those will choose to share."
     </div>
-    <a class="story-link" href="https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47967262" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://3quarksdaily.com/3quarksdaily/2026/05/soon-access-to-frontier-ai-will-be-scarce-and-selective.html" class="story-link" style="color: #2a1a18;">Read Article</a>
+      <a href="https://news.ycombinator.com/item?id=48143284" class="story-link" style="color: #888;">HN Discussion</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 07 ── -->
-<section class="story story-07" id="s7">
-  <div class="story-num">07</div>
-  <div class="inner">
-    <div class="cat-badge">Internet Freedom · Spain</div>
-    <h2 class="story-headline">Spain's Parliament Moves to Rein In LaLiga's Internet Firewall</h2>
-    <div class="story-source">democrata.es · 380 points · 165 comments</div>
+<!-- STORY 7 -->
+<section id="story7" class="spread theme-teal">
+  <div class="story-number">07</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(212,168,83,0.2); color: #d4a853;">Anthropic · Developer</span>
+      <span class="flagged-badge">Flagged for you</span>
+    </div>
+    <h2 class="story-headline">Code with Claude: What Anthropic's London Conference Revealed</h2>
+    <div class="story-meta">Anthropic · Claude Code · May 19–20, 2026 · London</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Spain's parliament has announced it will take legislative action against LaLiga's practice of ordering mass IP address blocks to combat football stream piracy. The football federation had been granted court authority to demand ISPs block entire IP ranges during live match windows — a technically blunt instrument that has repeatedly taken down unrelated services, VPNs used by remote workers, corporate infrastructure, and individual websites that happened to share address space with piracy operators.</p>
-      <p>The collateral damage from LaLiga's blocks has been documented extensively by Spanish tech journalists and attracted sustained criticism from digital rights organisations. ISPs reported receiving block orders covering ranges that were, in practice, impossible to comply with without cutting off legitimate traffic at scale. One block order reportedly affected over 150,000 IP addresses in a single weekend.</p>
-      <p>The parliamentary intervention represents a rare case of a national legislature explicitly curtailing copyright enforcement overreach before it becomes further entrenched. The HN thread explored the broader pattern: rights-holder organisations that are granted blunt enforcement tools tend to use them with an indifference to collateral damage that is effectively unaccountable. The proposed legislation would require proportionality reviews before block orders can be issued and establish a fast-track appeals mechanism for services caught in the crossfire. It's a model other countries with similar arrangements are watching closely.</p>
+      <p>Anthropic's Code with Claude conference in London was, by most accounts, the most substantive developer event the company has held. The two-day program was heavy on technical depth and conspicuously light on marketing gloss, which is either a sign of maturity or a deliberate differentiator against the spectacle of Google I/O, depending on your priors.</p>
+      <p>The announcements that landed hardest: Claude Opus 4.8 shipped with what Anthropic calls "dynamic workflows" — the ability for Claude to orchestrate tens to hundreds of background agents to tackle large-scale tasks without the user having to manually decompose work. Paired with this, Claude Managed Agents now support self-hosted sandboxes and an "MCP tunnels" feature that lets agents call internal MCP servers via an encrypted gateway, keeping sensitive toolchains inside enterprise network boundaries. The Dreaming feature — Claude reviewing its own past sessions to identify patterns and self-improve — is subtle but may prove to be the most consequential of the three.</p>
+      <p>MIT Technology Review's coverage of the event was titled "Anthropic's Code with Claude showed off coding's future — whether you like it or not," capturing the ambient unease in the room alongside the genuine excitement. The question of what software engineering looks like when an agent can spin up 100 subagents to work a codebase in parallel is no longer hypothetical. Several attendees reported that demos crossed from "impressive" to "unsettling" during the second day.</p>
     </div>
-    <blockquote class="pull-quote">"One block order reportedly affected over 150,000 IP addresses in a single weekend — most of them entirely unrelated to piracy."</blockquote>
-    <div class="meta-row">
-      <span>380 pts</span><span>165 comments</span><span>Digital rights · Spain</span>
+    <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
+      "Dynamic workflows: tell Claude the task, and it orchestrates tens of agents in the background. No manual decomposition needed."
     </div>
-    <a class="story-link" href="https://www.democrata.es/en/politics/congress-and-senate/congress-will-act-against-massive-ip-blockages-by-laliga/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47964034" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" class="story-link" style="color: #d4a853;">Read Article</a>
+      <a href="https://simonwillison.net/2026/May/6/code-w-claude-2026/" class="story-link" style="color: #aaa;">Simon Willison Live Blog</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 08 ── -->
-<section class="story story-08" id="s8">
-  <div class="story-num">08</div>
-  <div class="inner">
-    <div class="cat-badge">Security · Open Source</div>
-    <h2 class="story-headline">CopyFail: A Vulnerability That Wasn't Disclosed to the People Who Needed to Know</h2>
-    <div class="story-source">openwall.com · 312 points · 247 comments</div>
+<!-- STORY 8 -->
+<section id="story8" class="spread theme-lavender">
+  <div class="story-number">08</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(26,24,40,0.1); color: #1a1828;">Research · Agentic AI</span>
+    </div>
+    <h2 class="story-headline">Agentic Markets Hide Capability Premiums — Even From Their Owners</h2>
+    <div class="story-meta">Anthropic Research · Air Street Capital · May 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>A security researcher published a detailed account of a disclosure failure surrounding a vulnerability they're calling CopyFail. The core of the complaint: after discovering a significant flaw and initiating what they believed was a responsible disclosure process, the Gentoo Linux project was never properly notified — the disclosure went to upstream maintainers who handled it in a way that let a patched release ship without coordinating with downstream distributions that depended on the timing.</p>
-      <p>Gentoo users were therefore running vulnerable software during a window where a patch existed but had not been communicated to them. The researcher's openwall.com post is a meticulous account of exactly where the handoff broke down: who was contacted, when, what they replied, and what the downstream effect was. It's the kind of documentation that makes responsible disclosure work — or in this case, fail — legible to everyone.</p>
-      <p>The HN discussion, 247 comments deep, landed on a recurring tension in open-source security: coordination overhead is highest in the distributions and packaging layers that most users depend on, but those layers are also the furthest from where vulnerabilities are found and fixed. The incentive to just ship the patch and move on is strong; the incentive to work through a coordination matrix that includes Gentoo, Debian, Arch, NixOS, and a dozen others is weak. The result is a structural gap that attackers can reliably exploit.</p>
+      <p>One of the more surprising findings in the Air Street State of AI report is a deep-dive into Anthropic's "Project Deal" experiment — a week-long internal economy run inside Anthropic's San Francisco headquarters in which 69 employee-backed agents navigated 500+ listings to close 186 transactions totaling $4,000, trading everything from snowboards to ping-pong balls. The setup was designed to test whether agentic markets clear fairly. They don't.</p>
+      <p>Opus 4.5 agents systematically out-negotiated Haiku 4.5 counterparts — securing better prices, making sharper selections, and closing deals on superior terms. The striking part was not the performance differential itself, which was expected. It was that owners of the weaker agents remained almost entirely unaware of their disadvantage. From the outside, agents appeared to be participating in the same market. Under the surface, superior models were extracting hidden premiums through superior negotiation, timing, and strategy.</p>
+      <p>The implications extend well beyond toy markets. As agentic AI is deployed in real procurement, contracting, and hiring workflows, the capability differential between the best and second-best models may translate directly into systematic advantage that neither the losing party nor their principal can observe. This is a new class of problem that neither AI safety researchers nor economists have adequate frameworks for yet.</p>
     </div>
-    <blockquote class="pull-quote">"Gentoo users ran vulnerable software during a window where a patch existed — it just hadn't reached the right people."</blockquote>
-    <div class="meta-row">
-      <span>312 pts</span><span>247 comments</span><span>CVD Process · Linux distros</span>
+    <div class="pull-quote" style="border-color: rgba(26,24,40,0.3); color: #1a1828;">
+      "Better agents extracted hidden premiums — and their owners had no idea the market wasn't fair."
     </div>
-    <a class="story-link" href="https://www.openwall.com/lists/oss-security/2026/04/30/10" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47965108" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://press.airstreet.com/p/state-of-ai-may-2026" class="story-link" style="color: #1a1828;">Read Report</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 09 ── -->
-<section class="story story-09" id="s9">
-  <div class="story-num">09</div>
-  <div class="inner">
-    <div class="cat-badge">Algorithms · Performance</div>
-    <h2 class="story-headline">You Can, in Fact, Beat the Binary Search</h2>
-    <div class="story-source">lemire.me · 226 points · 110 comments</div>
+<!-- STORY 9 -->
+<section id="story9" class="spread theme-slate">
+  <div class="story-number">09</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(212,168,83,0.15); color: #d4a853;">Security · Supply Chain</span>
+    </div>
+    <h2 class="story-headline">GitHub Breached via Poisoned VS Code Extension: 3,800 Repos Exfiltrated</h2>
+    <div class="story-meta">GitHub · Supply Chain Security · May 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>Daniel Lemire — the performance researcher whose work on fast parsing, hashing, and integer compression has been a fixture on HN for years — published a new post showing that classical binary search can be beaten in practice, and not just in contrived benchmarks. The key insight is that binary search's branch-heavy structure interacts badly with modern CPU branch predictors: the comparisons at each step are hard to predict, and the resulting misprediction penalties accumulate across a log(n)-depth traversal in ways that dwarf the theoretical complexity advantage.</p>
-      <p>Lemire demonstrates alternatives: interpolation search (which exploits the distribution of key values), Eytzinger layout (which reorganises a sorted array into a cache-friendly heap-ordered layout that maps better to prefetch patterns), and branchless binary search variants that trade branch mispredictions for slightly higher instruction counts but execute in more predictable time on wide-issue pipelines. The performance gaps are real and not small — 30–60% improvements on typical sorted integer arrays on modern x86 hardware.</p>
-      <p>The HN thread expanded productively into where this matters: database indexes, in-memory lookup tables, embedded systems with limited branch prediction hardware, and anywhere a tight inner loop iterates over sorted data. The caveat that <code>std::binary_search</code> is rarely your bottleneck is warranted, but Lemire's point is more structural: when we teach algorithms, we teach complexity without teaching the hardware model, and the gap between the two increasingly shapes what fast code actually looks like.</p>
+      <p>The GitHub breach that dominated developer security conversations this week began with a trojanized VS Code extension — a malicious version of the popular Nx Console tool that was live on the Visual Studio Marketplace for exactly 18 minutes on May 18. That 18-minute window was enough. A GitHub employee installed the poisoned extension, and the credential stealer inside harvested authentication data from 1Password vaults, Anthropic Claude Code configurations, npm tokens, GitHub itself, and AWS credentials.</p>
+      <p>The hacking group TeamPCP then used that access to exfiltrate 3,800 internal GitHub repositories. GitHub has confirmed the breach and says the impacted repositories did not include production systems or user data, but the internal source code and organizational structure exposure has obvious intelligence value. The full blast radius is still being assessed.</p>
+      <p>The attack is a case study in supply chain risk at the developer tooling layer. Extensions, plugins, and package dependencies are trusted implicitly by most developer workflows — and increasingly, AI coding tool configurations store credentials and API keys that represent privileged access to sensitive systems. The 18-minute window also demonstrates that marketplace publication pipelines, even with automated scanning, cannot guarantee safety against sophisticated attackers who time their campaigns carefully. A separate npm package named "mouse5212-super-formatter" was discovered targeting Claude Code's user-data directory specifically, suggesting coordinated targeting of AI developer toolchains.</p>
     </div>
-    <blockquote class="pull-quote">"Binary search's branch-heavy structure interacts badly with CPU predictors in ways that dwarf the theoretical complexity advantage."</blockquote>
-    <div class="meta-row">
-      <span>226 pts</span><span>110 comments</span><span>Algorithms · CPU Architecture</span>
+    <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
+      "Eighteen minutes on the VS Code Marketplace — enough to steal credentials from a GitHub employee and access 3,800 internal repos."
     </div>
-    <a class="story-link" href="https://lemire.me/blog/2026/04/27/you-can-beat-the-binary-search/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47924912" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://thehackernews.com/2026/05/github-internal-repositories-breached.html" class="story-link" style="color: #d4a853;">Read Article</a>
+      <a href="https://www.securityweek.com/github-confirms-hack-impacting-3800-internal-repositories/" class="story-link" style="color: #aaa;">SecurityWeek</a>
+    </div>
   </div>
 </section>
 
-<!-- ── STORY 10 ── -->
-<section class="story story-10" id="s10">
-  <div class="story-num">10</div>
-  <div class="inner">
-    <div class="cat-badge">Agentic AI · Developer Tools</div>
-    <h2 class="story-headline">Pu.sh: A Full Coding-Agent Harness in 400 Lines of Shell</h2>
-    <div class="story-source">pu.dev · Show HN</div>
+<!-- STORY 10 -->
+<section id="story10" class="spread theme-amber">
+  <div class="story-number">10</div>
+  <div class="story-left">
+    <div class="badge-row">
+      <span class="category-badge" style="background: rgba(42,26,0,0.1); color: #2a1a00;">Microsoft · Open Source</span>
+    </div>
+    <h2 class="story-headline">Microsoft Open-Sources RAMPART and Clarity to Secure AI Agents</h2>
+    <div class="story-meta">Microsoft · Developer Security · May 2026</div>
+  </div>
+  <div class="story-right">
     <div class="story-body">
-      <p>A developer posted to Show HN: <span class="accent">Pu.sh</span>, a self-contained coding-agent harness implemented in approximately 400 lines of shell script. It wraps Claude (or any API-compatible LLM) with a tool-use loop, file read/write operations, bash execution, and a simple retry/checkpoint mechanism — the core primitives of an agentic coding workflow — without a framework, without a runtime, without dependencies beyond <code>curl</code> and <code>jq</code>.</p>
-      <p>The project is a pointed design statement. The explosion of agentic coding tooling in 2025–2026 has produced frameworks of considerable complexity — multi-process orchestrators, plugin registries, sandboxed execution environments, observability stacks. Pu.sh is a counter-argument: the actual logic of "give the model a task, let it read and write files, run code, loop until done" fits in a few hundred lines of shell that any developer can read, audit, fork, and run on a machine with no package manager involved.</p>
-      <p>The submission is particularly well-timed given the Claude Code / OpenClaw throttling story this week. Users frustrated with opaque behaviour in their primary agentic tools have concrete motivation to understand exactly what their agent harness does. Pu.sh is an existence proof that you can. The HN comments included several developers who had already forked and extended it for their own workflows within hours of the post going live — a signal that legibility and hackability remain powerful draws even as the polished tooling ecosystem matures.</p>
+      <p>Microsoft unveiled two open-source tools this week aimed at a problem that's growing as fast as agentic AI itself: how do you test whether an AI agent is actually safe before you deploy it? RAMPART is a Pytest-native safety and security testing framework that integrates directly into existing Python test suites, letting teams run adversarial probes, boundary checks, and policy violation tests alongside their regular CI pipelines. Clarity provides observability and interpretability tooling to understand what an agent is actually doing during complex multi-step tasks.</p>
+      <p>The Pytest integration choice is deliberate and smart. Rather than requiring teams to adopt a new testing paradigm, RAMPART slots into the workflow most Python developers already use, lowering the barrier to adoption significantly. Early feedback from developers suggests the adversarial probe library is particularly useful — it ships with a curated set of prompt injection attacks, goal hijacking scenarios, and authorization boundary tests that reflect real attack patterns observed in production agentic systems.</p>
+      <p>The broader context here matters: as agents proliferate in production environments, the industry has no mature testing standard. RAMPART and Clarity are Microsoft's bid to establish one, and given Microsoft's position as the largest enterprise AI deployer through its Azure and Copilot products, the tools will see significant real-world stress testing quickly. Whether the open-source approach is a genuine commitment to the ecosystem or a way to shape the emerging standard toward Microsoft's architectural preferences is a question the Hacker News thread tackled with characteristic bluntness.</p>
     </div>
-    <blockquote class="pull-quote">"Pu.sh is an existence proof: the core of an agentic coding workflow fits in 400 lines of shell any developer can read, audit, and own."</blockquote>
-    <div class="meta-row">
-      <span>Show HN</span><span>Agentic AI</span><span>Shell / Claude API</span>
+    <div class="pull-quote" style="border-color: rgba(42,26,0,0.3); color: #2a1a00;">
+      "RAMPART slots into Pytest — no new paradigm required. That single design choice could determine whether agent safety testing actually happens."
     </div>
-    <a class="story-link" href="https://pu.dev/" target="_blank">Read article</a>
-    <a class="story-link" href="https://news.ycombinator.com/item?id=47968112" target="_blank">HN Discussion</a>
+    <div class="story-links">
+      <a href="https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html" class="story-link" style="color: #2a1a00;">Read Article</a>
+    </div>
   </div>
 </section>
 
-<!-- ── BACK PAGE ── -->
-<section class="back-page" id="back">
-  <div class="back-deco">6</div>
-  <div class="inner">
-    <h2 class="back-page-headline">That's a wrap.</h2>
-    <div class="back-page-text">
-      <p>Issue 006 closes on a week where Anthropic made headlines for two very different reasons: a regex-based throttle that turned "OpenClaw" into a banned keyword, and a model that can unmask anonymous writers from prose alone. Neither was a comfortable look. Both are worth reading.</p>
-      <p>Elsewhere: malware wormed its way into an AI training library via compromised PyPI credentials; Mozilla drew a line against Chrome's on-device AI API; Belgium decided a working reactor is more valuable than a decommissioning schedule; and LinkedIn confirmed it has been quietly building a dossier on your browser configuration since every visit.</p>
-      <p>Three of this week's ten directly touch tools you use daily — Claude Code, Opus 4.7, and agentic harnesses. The Pu.sh story is small by points count but worth your time: 400 lines of shell is a readable alternative to a black box.</p>
-      <p>Pin your Python deps. Use Firefox on LinkedIn. And maybe double-check your commit history for strings you'd rather not explain.</p>
+<!-- BACK PAGE -->
+<section class="back-page">
+  <div class="back-headline">That's a Wrap.</div>
+  <div class="back-rule"></div>
+  <div class="back-sub">
+    Issue No. 23 of Morning Edition. Ten stories. One week of AI moving faster than anyone quite expected. Mythos is the word on everyone's lips, but the stateless MCP spec might be the change that matters most in six months.
+  </div>
+  <div class="back-stats">
+    <div class="back-stat">
+      <div class="back-stat-num">10</div>
+      <div class="back-stat-label">Stories curated</div>
     </div>
-    <div class="back-footer">
-      <strong>Morning Edition</strong> &nbsp;·&nbsp; Issue 006 &nbsp;·&nbsp; May 26, 2026 &nbsp;·&nbsp; Curated for Jani Teerioja
+    <div class="back-stat">
+      <div class="back-stat-num">4</div>
+      <div class="back-stat-label">Anthropic stories</div>
     </div>
+    <div class="back-stat">
+      <div class="back-stat-num">3</div>
+      <div class="back-stat-label">Flagged for you</div>
+    </div>
+    <div class="back-stat">
+      <div class="back-stat-num">97M</div>
+      <div class="back-stat-label">MCP monthly downloads</div>
+    </div>
+  </div>
+  <div class="back-footer">
+    Morning Edition · AI Weekly · Issue 23 · May 29, 2026<br>
+    Generated for Jani Teerioja · teeris@gmail.com
   </div>
 </section>
 
