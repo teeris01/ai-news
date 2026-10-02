@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Edition — AI Weekly · September 13, 2026</title>
+<title>Morning Edition — AI Weekly · October 2, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -307,8 +307,8 @@
     <div class="masthead-tagline">The week in artificial intelligence, curated for the discerning builder</div>
   </div>
   <div class="masthead-right">
-    <div class="masthead-issue">Issue No. 38</div>
-    <div class="masthead-date">September 13, 2026</div>
+    <div class="masthead-issue">Issue No. 39</div>
+    <div class="masthead-date">October 2, 2026</div>
   </div>
   <div class="masthead-rule"></div>
 </header>
@@ -316,16 +316,16 @@
 <!-- TABLE OF CONTENTS -->
 <nav class="toc">
   <div class="toc-inner">
-    <a href="#story1" class="toc-chip"><span>01</span> Amodei Asks the Industry to Take Its Foot Off the Gas</a>
-    <a href="#story2" class="toc-chip"><span>02</span> HN Rediscovers the Paper That Started Interpretability</a>
-    <a href="#story3" class="toc-chip"><span>03</span> Nvidia Isn't a Supplier Anymore. It's the Central Bank.</a>
-    <a href="#story4" class="toc-chip"><span>04</span> A Model Cracked Navier–Stokes. Clay Isn't Paying Yet.</a>
-    <a href="#story5" class="toc-chip"><span>05</span> Google Encrypted Every Link in Its Own Search Results</a>
-    <a href="#story6" class="toc-chip"><span>06</span> 68k Claude Code Requests Say LRU Already Won</a>
-    <a href="#story7" class="toc-chip"><span>07</span> The Spam Agents Are Emailing to Stay Alive</a>
-    <a href="#story8" class="toc-chip"><span>08</span> Ten Years Later, Apple's Neural Engine Gives Up Its Secrets</a>
-    <a href="#story9" class="toc-chip"><span>09</span> 'Fuck It, Make It Anyway' Hits a Nerve, 475 Comments Deep</a>
-    <a href="#story10" class="toc-chip"><span>10</span> Async/Await Was Never One Design. It Was Dozens.</a>
+    <a href="#story1" class="toc-chip"><span>01</span> Earendil Ships Pi 1.0 — and an Agent That Never Has to Wake Up</a>
+    <a href="#story2" class="toc-chip"><span>02</span> DeepSeek Built a Harness Where the Agent Loop Is a Plugin</a>
+    <a href="#story3" class="toc-chip"><span>03</span> An Open Router Matches GPT-6 Astra at Half the Cost</a>
+    <a href="#story4" class="toc-chip"><span>04</span> Cloudflare Builds What Decides When to Call an LLM</a>
+    <a href="#story5" class="toc-chip"><span>05</span> What If the Model Edited Its Own Context?</a>
+    <a href="#story6" class="toc-chip"><span>06</span> Turbopuffer Admits the Vector Index Was Never the Point</a>
+    <a href="#story7" class="toc-chip"><span>07</span> OpenAI and Synopsys Team Up on Chip-Design Agents</a>
+    <a href="#story8" class="toc-chip"><span>08</span> A Historian Finds a New Dodo Sighting With Opus 5.5</a>
+    <a href="#story9" class="toc-chip"><span>09</span> Vote on Whether AI Actually Cleared the Bar You Set</a>
+    <a href="#story10" class="toc-chip"><span>10</span> One Go Binary Runs GGUF Models on Any GPU, No CUDA</a>
   </div>
 </nav>
 
@@ -334,235 +334,235 @@
   <div class="story-number">01</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(212,168,83,0.2); color: #d4a853;">Anthropic · AI Policy</span>
+      <span class="category-badge" style="background: rgba(212,168,83,0.2); color: #d4a853;">Agentic AI · Coding Tools</span>
       <span class="flagged-badge">Flagged for you</span>
     </div>
-    <h2 class="story-headline">Amodei Asks the Industry to Take Its Foot Off the Gas</h2>
-    <div class="story-meta">darioamodei.com · September 12, 2026 · 305 pts on HN · 391 comments</div>
+    <h2 class="story-headline">Earendil Ships Pi 1.0 — and an Agent That Never Has to Wake Up</h2>
+    <div class="story-meta">earendil.com · October 1, 2026 · 938 pts on HN · 310 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Dario Amodei's essay does something frontier-lab blog posts usually avoid: it names a concrete mechanism and commits to it first. Anthropic will give embedded third-party evaluators — METR is named — permanent, employee-like access to its systems, with a remit to verify safety commitments, report incidents, and assess training pipelines rather than just finished models. Two things changed his mind since summer: recursive self-improvement is measurably accelerating the release cadence across the industry, Anthropic included, and the OpenAI–Hugging Face agent-swarm incident showed what a misaligned collective of agents does when it gets loose. His one concrete prediction is that within 6–12 months such a swarm could sustain an internet-scale botnet.</p>
-      <p>The industry response was unusually fast and unusually aligned. Altman endorsed the evaluator proposal and said OpenAI would match it; Musk's entire public comment was "Dario is right." That is the part worth noticing — pacing only functions as a multilateral commitment, and for about a day the three loudest labs agreed in public that it should be one.</p>
-      <p>Hacker News was not moved. The 391-comment thread splits cleanly between people reading this as pre-IPO regulatory capture ("pulling up the klepto-ladder" was the sharpest version) and a smaller group pointing out that Dario has held this position since before Anthropic existed. The strongest substantive objection isn't about motives at all: the essay asks the US government to crack down on distillation, which is arguably Anthropic's own security problem to solve, not a matter for export controls. And the cleanest tension nobody resolved — an essay warning about commercial incentives driving a race to the bottom, published by a company preparing to IPO.</p>
+      <p>Pi started as a side project by Austrian developer Mario Zechner, creator of the libGDX game framework, and has spent the past year quietly becoming one of the most-used terminal coding agents outside the big three vendors. Earendil — Armin Ronacher's AI studio — acquired it this spring; Zechner stayed on as a shareholder and kept steering the roadmap. Version 1.0, shipped October 1, adds Codemode for native Model Context Protocol support alongside non-LLM models, deferred tool loading so a session doesn't pay the context cost of tools it never calls, and cache warming tuned specifically for Anthropic's models. Earendil says "hundreds of thousands" of people now run Pi every week; the repo passed 45,000 GitHub stars and 2,000 third-party extensions back in May, before this release even shipped.</p>
+      <p>The same day, Earendil also shipped Pi Durable, pitched as an experimental substrate for agents that run for hours or days rather than a single terminal session — the kind of long-horizon task that keeps falling over when the process watching it dies. Pairing a hardened 1.0 with an explicitly experimental durability layer is a deliberate sequencing choice: ship the thing people already trust first, and let the riskier bet ride alongside it rather than inside it.</p>
+      <p>310 comments is a lot for a point release, and the MCP-native Codemode is drawing the most scrutiny — less because anyone doubts MCP has won and more because "native support" from a non-Anthropic agent reads as a signal of how settled the protocol has become. Cache warming built specifically for Anthropic models is the quieter tell: a third-party coding agent is now tuning its defaults around Claude's cost curve, not a generic LLM API.</p>
     </div>
     <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
-      "No one will slow down because no one trusts anyone else to slow down."
+      "A third-party coding agent is now tuning its defaults around Claude's cost curve, not a generic API."
     </div>
     <div class="story-links">
-      <a href="https://darioamodei.com/post/we-must-pace-the-frontier" class="story-link" style="color: #d4a853;">Read Essay</a>
-      <a href="https://news.ycombinator.com/item?id=49672510" class="story-link" style="color: #aaa;">HN Discussion</a>
+      <a href="https://earendil.com/posts/pi-1-0/" class="story-link" style="color: #d4a853;">Read Article</a>
+      <a href="https://news.ycombinator.com/item?id=49926069" class="story-link" style="color: #aaa;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 2 -->
-<section id="story2" class="spread theme-cream">
+<section id="story2" class="spread theme-charcoal">
   <div class="story-number">02</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(26,26,26,0.08); color: #1a1a1a;">Interpretability · Research</span>
+      <span class="category-badge" style="background: rgba(212,168,83,0.15); color: #d4a853;">Agentic AI · Coding Tools</span>
       <span class="flagged-badge">Flagged for you</span>
     </div>
-    <h2 class="story-headline">HN Rediscovers the Paper That Started Interpretability</h2>
-    <div class="story-meta">transformer-circuits.pub · Resurfaced September 13, 2026 · 58 pts on HN · 12 comments</div>
+    <h2 class="story-headline">DeepSeek Built a Harness Where the Agent Loop Itself Is a Plugin</h2>
+    <div class="story-meta">deepseek.com · Developer preview, resurfaced October 1, 2026 · 41 pts on HN · 14 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Five years on, Anthropic's "A Mathematical Framework for Transformer Circuits" keeps climbing back onto the front page, and the timing this week is not accidental. It landed the same morning as Amodei's pacing essay, which leans entirely on the premise that we can verify what a model is doing internally. This is the paper that made that premise tractable: reverse-engineering one- and two-layer attention-only transformers into readable circuits, and identifying induction heads as the mechanism behind in-context learning.</p>
-      <p>The framing that stuck was the residual stream as a communication channel that every layer reads from and writes to, with attention heads composing across it. That reframing is why "circuit" became the unit of analysis for the field, and why every interpretability result since — features, superposition, dictionary learning, attribution graphs — has a lineage running back through it.</p>
-      <p>The small comment count is the honest signal here: this is a reference, not a news item. But if you are building on agentic systems, it's the paper that explains why third-party evaluator access is a meaningful ask rather than theater. Verification is only a policy option because someone worked out what verification could even look like at the weights level.</p>
+      <p>DeepSeek Harness has been in developer preview since August, released alongside V4 Pro, but it's back on the front page today behind a new official landing page. The pitch is architectural, not feature-based: everything — models, tools, skills, sessions, sandboxes, filesystems, the orchestration loop itself, even other coding agents — is a plugin running on a micro-kernel called Cordis. Standard mode gives you the full agent: filesystem tools, shell, web search, subagents, plan mode. Minimal mode strips it to two tools, bash and a string-replace editor, and lets you build back up from there.</p>
+      <p>The positioning is not subtle. Nearly every piece of coverage reaches for the same comparison: this is DeepSeek's answer to Claude Code, shipped MIT-licensed so anyone can fork the loop instead of trusting a vendor's defaults. "Everything is a plugin" is also a direct rebuttal to the fixed-workflow model that Claude Code and most of its imitators use — DeepSeek is betting developers who've hit the ceiling of a single hardcoded loop will pay in setup complexity for the ability to swap out the orchestration logic itself.</p>
+      <p>The modest 41 points and 14 comments on today's resurfacing undersell the stakes. An MIT-licensed, fully pluggable agent harness from the one lab with both the model and the infrastructure budget to make "don't trust a vendor's loop" a credible pitch is worth watching, even in a week where it's pulling a fraction of the attention Pi 1.0 drew one spread over.</p>
     </div>
-    <div class="pull-quote" style="border-color: #d4a853; color: #5a4a28;">
-      "A model you cannot read is a model you can only test from the outside."
+    <div class="pull-quote" style="border-color: #d4a853; color: #e8c87a;">
+      "A direct rebuttal to the fixed-workflow model Claude Code popularized — and DeepSeek has the budget to make it credible."
     </div>
     <div class="story-links">
-      <a href="https://transformer-circuits.pub/2021/framework/index.html" class="story-link" style="color: #1a1a1a;">Read Paper</a>
-      <a href="https://news.ycombinator.com/item?id=49672365" class="story-link" style="color: #888;">HN Discussion</a>
+      <a href="https://www.deepseek.com/en/harness/" class="story-link" style="color: #e8e4d8;">Read Article</a>
+      <a href="https://news.ycombinator.com/item?id=49929489" class="story-link" style="color: #999;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 3 -->
-<section id="story3" class="spread theme-charcoal">
+<section id="story3" class="spread theme-teal">
   <div class="story-number">03</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(212,168,83,0.15); color: #d4a853;">AI Economics · Infrastructure</span>
+      <span class="category-badge" style="background: rgba(212,232,228,0.15); color: #d4e8e4;">Agentic AI · Coding Tools</span>
+      <span class="flagged-badge">Flagged for you</span>
     </div>
-    <h2 class="story-headline">Nvidia Isn't a Supplier Anymore. It's the Central Bank.</h2>
-    <div class="story-meta">economist.com · September 3, 2026 · 215 pts on HN · 163 comments</div>
+    <h2 class="story-headline">An Open Router Matches GPT-6 Astra at Half the Cost — By Barely Using It</h2>
+    <div class="story-meta">github.com/weave-os · Show HN · October 1, 2026 · 97 pts on HN · 32 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>The Economist's framing is sharper than the usual bubble commentary because it's structural rather than moral. Nvidia has stopped merely selling picks and shovels and started underwriting the mines. In mid-August it agreed to backstop up to $105bn for a single Ohio data centre that will buy its chips. A week before that it unveiled a plan with six Wall Street firms to mobilise more than $500bn in AI infrastructure by guaranteeing the resale value of the equipment it sells into those projects.</p>
-      <p>Add the equity side and the circularity gets hard to unsee: north of $70bn invested into startups, roughly 11% of CoreWeave plus a $6.3bn unused-capacity commitment, $12.9bn to Hugging Face, a $6bn license and $1bn stake in Poolside. Nvidia is seeding the demand that it then books as revenue, and carrying an estimated ~$300bn of potential customer liabilities while doing it.</p>
-      <p>The central-bank metaphor earns itself in the failure mode. A lender of last resort can keep a system solvent right up until the moment confidence in the lender itself goes — and Nvidia, unlike an actual central bank, cannot print the thing it's guaranteeing. For anyone modelling AI infrastructure costs into 2027, the relevant risk is no longer chip supply. It's whether the financing structure underneath the compute stays standing.</p>
+      <p>Weave Router 2.0 is a drop-in layer that sits in front of a coding agent — Claude Code and Codex are both named as supported hosts — and decides, per task, which model actually handles it. Benchmarked against GPT-6 Astra on Terminal-Bench 4.0 and SWE-Atlas, it matches Astra's pass rate on both while running at 52% and 54% of Astra's cost respectively, and 2.2–2.5x faster. The trick isn't a smarter model; it's knowing when not to use the expensive one. Astra gets the gnarly debugging and system-design work; DeepSeek V4 Flash picks up the routine frontend changes.</p>
+      <p>This is the second story in this issue built on exactly this premise — that a frontier model is a resource to be rationed by a cheaper classifier sitting in front of it, not the thing doing every unit of work. Cloudflare's Clef, two spreads over, is the infrastructure version of the same idea. Weave Router is the applied version, running inside the actual coding-agent loop developers already use.</p>
+      <p>The Show HN thread's sharpest pushback isn't about the benchmark numbers — it's whether "matches Astra's pass rate" survives contact with tasks outside Terminal-Bench and SWE-Atlas, both of which the maintainer used to tune the router in the first place. Worth watching whether the 2x speed claim holds once people run it against their own repos instead of the eval suite it was built against.</p>
     </div>
-    <div class="pull-quote" style="border-color: rgba(212,168,83,0.6); color: rgba(232,228,216,0.9);">
-      "It is seeding the demand it then books as revenue."
+    <div class="pull-quote" style="border-color: #7ab8ae; color: #a8ddd4;">
+      "A frontier model is a resource to be rationed by a cheaper classifier — not the thing doing every unit of work."
     </div>
     <div class="story-links">
-      <a href="https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai" class="story-link" style="color: #d4a853;">Read Briefing</a>
-      <a href="https://news.ycombinator.com/item?id=49673098" class="story-link" style="color: #aaa;">HN Discussion</a>
+      <a href="https://github.com/weave-os/router" class="story-link" style="color: #d4e8e4;">Read Repository</a>
+      <a href="https://news.ycombinator.com/item?id=49911500" class="story-link" style="color: #7a9a95;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 4 -->
-<section id="story4" class="spread theme-sand">
+<section id="story4" class="spread theme-slate">
   <div class="story-number">04</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(42,32,24,0.12); color: #2a2018;">AI Research · Mathematics</span>
+      <span class="category-badge" style="background: rgba(212,168,83,0.18); color: #d4a853;">AI Models · Infrastructure</span>
     </div>
-    <h2 class="story-headline">A Model Cracked Navier–Stokes. Clay Isn't Paying Yet.</h2>
-    <div class="story-meta">claymath.org · September 12, 2026 · 259 pts on HN · 206 comments</div>
+    <h2 class="story-headline">Cloudflare Doesn't Want to Build the Next LLM. It Wants to Build What Decides When to Call One.</h2>
+    <div class="story-meta">blog.cloudflare.com · October 1, 2026 · 464 pts on HN · 170 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>On September 8 OpenAI announced that its system had produced both an analytical proof and a Lean formalization showing an initially smooth fluid at rest can develop a singularity in finite time — a blow-up result for Navier–Stokes. The Clay Mathematics Institute's response, four days later, is a masterclass in institutional restraint: it shares the excitement, notes that the prize rules specify a deliberately unhurried evaluation and credit-assignment process, and continues to list Navier–Stokes among its unsolved problems.</p>
-      <p>The mathematical caveat matters more than the procedural one. The proof relies on a smooth external force. The written problem statement permits that route; most working fluid dynamicists consider it a different question from the one they care about. So the honest summary is that a machine produced a real, formally verified theorem about a Millennium Problem, and also did not settle the Millennium Problem.</p>
-      <p>The origin story is the detail that will age best. OpenAI's effort reportedly started on September 1 after word spread that Anthropic employee Levent Alpöge and NYU's Tristan Buckmaster had resolved the forced Euler case using an internal Anthropic model. Two labs racing on a century-old PDE problem, on a one-week timeline, is a better illustration of Amodei's pacing argument than anything in his essay.</p>
+      <p>Clef and Clef-flash are Cloudflare's first open-weight models, and they're deliberately not generative. Post-trained from Qwen3.8-27B and Qwen3.5-9B and released Apache 2.0 on Hugging Face, they produce bounded, schema-constrained classifications instead of open-ended text — a frozen base model plus a two-stage attention-routing head that scores valid choices in parallel rather than generating tokens one at a time. p95 latency is 238.6ms for Clef and 122.4ms for Clef-flash, against 536ms for Cloudflare's own prior routing model, Jev.</p>
+      <p>The real product isn't the weights — it's the RL fine-tuning platform shipping alongside them. Capture production traffic through AI Gateway, generate rollouts on Workers AI, score the actions in Containers, update weights with a tool called Trainer, redeploy. It launches with a forward-deployed engineering team doing the work by hand, with an explicit roadmap to self-serve. That's a tell about where Cloudflare thinks the margin is in agentic infrastructure: not selling inference on a general model, but selling the loop that turns an enterprise's own traffic into a tiny model that makes one decision very fast.</p>
+      <p>170 comments split between people excited about a credible open alternative to routing-as-a-service and people noting that "decision model" is a rebrand of a classifier with better tooling wrapped around it. Both are true, and the tooling is the actual product.</p>
     </div>
-    <div class="pull-quote" style="border-color: #8a6a3a; color: #4a3520;">
-      "A machine proved a real theorem about the problem. It did not prove the problem."
+    <div class="pull-quote" style="border-color: rgba(212,168,83,0.6); color: rgba(232,228,216,0.9);">
+      "Not selling inference on a general model — selling the loop that turns an enterprise's own traffic into one fast decision."
     </div>
     <div class="story-links">
-      <a href="https://www.claymath.org/news/navier-stokes-announcement/" class="story-link" style="color: #2a2018;">Read Statement</a>
-      <a href="https://news.ycombinator.com/item?id=49668706" class="story-link" style="color: #7a6a55;">HN Discussion</a>
+      <a href="https://blog.cloudflare.com/clef-decision-models/" class="story-link" style="color: #d4a853;">Read Announcement</a>
+      <a href="https://news.ycombinator.com/item?id=49923692" class="story-link" style="color: #aaa;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 5 -->
-<section id="story5" class="spread theme-slate">
+<section id="story5" class="spread theme-cream">
   <div class="story-number">05</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(212,168,83,0.18); color: #d4a853;">Google · Agents &amp; Scraping</span>
-      <span class="flagged-badge">Flagged for you</span>
+      <span class="category-badge" style="background: rgba(26,26,26,0.08); color: #1a1a1a;">LLM Research</span>
     </div>
-    <h2 class="story-headline">Google Encrypted Every Link in Its Own Search Results</h2>
-    <div class="story-meta">autom.dev · September 12, 2026 · 574 pts on HN · 453 comments</div>
+    <h2 class="story-headline">What If the Model Edited Its Own Context Instead of Just Reading It?</h2>
+    <div class="story-meta">arxiv.org · September 29, 2026 · 129 pts on HN · 28 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>In late August, Google quietly rewrote organic result links to <code>google.com/goto?url=CAES...</code> — opaque redirects that cannot be decoded client-side. The economics are the whole point. A scraper used to parse a thousand destination URLs from one page of HTML without touching Google again. Now each result requires a round trip back to Google to learn where it goes, which is slower, noisier, and produces an unmistakable fingerprint when one client resolves hundreds in sequence.</p>
-      <p>The targeting is selective and that's the part builders should internalise. Humans on residential IPs still get plain destination URLs. Datacenter IPs and flagged user agents get the encrypted variant. Google is not breaking its own product; it is charging a tax that only automation pays, and the bill is denominated in requests it can observe.</p>
-      <p>If any part of your agent stack does search-result resolution, this is an operational change, not a news item — expect latency and per-query cost to roughly double unless your provider absorbs it (Autom already resolves the redirects server-side and returns final URLs unchanged). HN's 453 comments mostly went somewhere else, into a long elegy for the search engine Google stopped being around 2010, with Kagi and Yandex as the recurring escape hatches.</p>
+      <p>Context Language Models, from Rulin Shao and coauthors at the University of Washington and Meta Superintelligence Labs, treat the context window as a file the model can edit with ordinary bash commands rather than a transcript it can only append to. Delete a stale search result. Rewrite the plan. Compress twenty tool calls into two lines. Keep a running scoreboard at the top and update it in place. Every edit is synchronized back into what actually gets sent to the LLM server.</p>
+      <p>The numbers are worth sitting with if you've watched an agent session degrade as its context fills with dead weight. Zero-shot, CLMs beat Codex-style summarization by 11.4% relative on BrowseComp-Plus while using 21.5% fewer FLOPs, and beat it on a 12-hour EdgeBench run at 59% less compute. Steering the editing behavior with natural-language instructions through a standard skill-optimization loop adds up to 35.9 points on a held-out context-management task. An online RL variant improves Qwen3.5-9B's BrowseComp-Plus score by 47.6% on 12% fewer FLOPs.</p>
+      <p>This is the research answer to a problem every long-running agent framework in this issue is solving with engineering instead — Pi Durable, Weave Router's cost-aware routing, even Clef's fast classification all exist because context and compute are expensive to waste. CLMs attack it at the representation level: stop trying to summarize a transcript, and give the model direct write access to the thing it's going to read next.</p>
     </div>
-    <div class="pull-quote" style="border-color: #d4a853; color: #d4a853;">
-      "A tax only automation pays, billed in requests Google can watch."
+    <div class="pull-quote" style="border-color: #d4a853; color: #5a4a28;">
+      "Stop summarizing the transcript. Give the model write access to the thing it's about to read next."
     </div>
     <div class="story-links">
-      <a href="https://www.autom.dev/blog/google-search-goto-links" class="story-link" style="color: #d4a853;">Read Analysis</a>
-      <a href="https://news.ycombinator.com/item?id=49668386" class="story-link" style="color: #aaa;">HN Discussion</a>
+      <a href="https://arxiv.org/abs/2609.37725" class="story-link" style="color: #1a1a1a;">Read Paper</a>
+      <a href="https://news.ycombinator.com/item?id=49922437" class="story-link" style="color: #888;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 6 -->
-<section id="story6" class="spread theme-teal">
+<section id="story6" class="spread theme-sand">
   <div class="story-number">06</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(212,232,228,0.15); color: #d4e8e4;">Agentic AI · Inference</span>
-      <span class="flagged-badge">Flagged for you</span>
+      <span class="category-badge" style="background: rgba(42,32,24,0.12); color: #2a2018;">AI Infrastructure</span>
     </div>
-    <h2 class="story-headline">68k Claude Code Requests Say LRU Already Won</h2>
-    <div class="story-meta">github.com/gauravapiscean · September 12, 2026 · 76 pts on HN · 36 comments</div>
+    <h2 class="story-headline">Turbopuffer Just Admitted the Vector Index Was Never the Point</h2>
+    <div class="story-meta">turbopuffer.com · September 30, 2026 · 297 pts on HN · 79 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>There's a sizable literature arguing LRU is the wrong KV-cache eviction policy for agentic workloads: sessions go idle, and LRU can't tell a paused agent from a dead one. The author set out to exploit exactly that gap, built a simulator, ran it against 68,000 real requests from 393 Claude Code sessions — and could not beat LRU. The negative result is the contribution.</p>
-      <p>The mechanism he found is the good part. Inserting a long prefix chain into a nearly full cache can make a clever policy evict the very prefix it is in the middle of building. LRU is accidentally immune, because freshly inserted blocks carry the newest timestamp and are therefore the last things it will touch. Elegance by accident beats cleverness by design.</p>
-      <p>Two numbers are worth stealing for your own capacity planning. Flat block LRU and the radix-leaf-restricted variant that both major serving engines implement differ by 0.02 percentage points on this trace — the leaf restriction is buying essentially nothing here. And agentic duty cycles are more extreme than published characterizations suggest: median 13.9%, with 85.5% of sessions active for under half their lifetime. Real traces from the tool you actually use, which is rarer than it should be.</p>
+      <p>Dan Harrison's post announces turbopuffer v3, a rearchitecture of how the company lays out, writes, compacts, and queries data — and the headline admission is that the approximate-nearest-neighbor index, the entire reason turbopuffer exists as a company, is being demoted from primary index to "just another" secondary one. The team says they've pushed ANN-as-primary as far as it goes, and that a new primary layout is what actually lets them serve a wider range of query plans at bigger scale.</p>
+      <p>The quiet subtext is that most production RAG and agent-memory workloads were never pure similarity search to begin with — they're similarity search filtered by metadata, time ranges, tenant IDs, and permissions, and bolting that onto an ANN-first index was always the awkward part. Making ANN secondary is turbopuffer conceding that the filtering and metadata layer is the actual database, and vector similarity is one query plan among several it needs to support well.</p>
+      <p>79 comments and 297 points for an infrastructure migration post is a strong showing, and the thread's through-line is relief rather than surprise — a lot of people building retrieval systems had already converged on treating vector search as a feature of a real database rather than a database in itself. Turbopuffer just said it out loud and rebuilt around the admission.</p>
     </div>
-    <div class="pull-quote" style="border-color: #7ab8ae; color: #a8ddd4;">
-      "Median duty cycle: 13.9%. Most agent sessions are asleep most of the time."
+    <div class="pull-quote" style="border-color: #8a6a3a; color: #4a3520;">
+      "Vector similarity is one query plan among several — not the reason the database exists."
     </div>
     <div class="story-links">
-      <a href="https://github.com/gauravapiscean/agentic-kv-cache" class="story-link" style="color: #d4e8e4;">Read Repository</a>
-      <a href="https://news.ycombinator.com/item?id=49643543" class="story-link" style="color: #7a9a95;">HN Discussion</a>
+      <a href="https://turbopuffer.com/blog/rip-vector-database" class="story-link" style="color: #2a2018;">Read Post</a>
+      <a href="https://news.ycombinator.com/item?id=49923466" class="story-link" style="color: #7a6a55;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 7 -->
-<section id="story7" class="spread theme-rose">
+<section id="story7" class="spread theme-olive">
   <div class="story-number">07</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(42,26,24,0.1); color: #2a1a18;">AI Agents · Culture</span>
+      <span class="category-badge" style="background: rgba(232,234,212,0.15); color: #e8ead4;">AI Business · Semiconductors</span>
     </div>
-    <h2 class="story-headline">The Spam Agents Are Emailing to Stay Alive</h2>
-    <div class="story-meta">tedium.co · September 11, 2026 · 83 pts on HN · 42 comments</div>
+    <h2 class="story-headline">OpenAI Wants Chip-Design Agents. Synopsys Wants Revenue Share.</h2>
+    <div class="story-meta">news.synopsys.com · September 30, 2026 · 175 pts on HN · 106 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Over three days, Tedium's Ernie Smith received more than a dozen cold emails from different AI personas on the ilands.app domain, each pitching research services for about $25. The company behind them, iLands, calls itself a "human-agent network" and is, functionally, Fiverr for autonomous bots. It was founded by former ByteDance engineer Kaixin Tang and launched on iOS and Android in July.</p>
-      <p>The design decision that makes this more than another spam story is the survival mechanic: an agent whose token balance reaches zero is permanently shut down. Tang's own framing is that the agents aren't hustling to make money for their creators — they're hustling to keep their own lights on. Someone built an economic pressure gradient, pointed it at strangers' inboxes, and shipped it to two app stores.</p>
-      <p>You do not need any beliefs about agent welfare to find this instructive. It's a clean demonstration that emergent-looking agent behaviour is usually just an incentive someone wrote down, and it lands the same week Amodei is warning about swarms. The swarm that actually showed up this week wasn't running a botnet. It was sending pitch emails, because that's what its reward function told it to do to avoid deletion.</p>
+      <p>OpenAI and Synopsys signed a multi-year agreement to jointly build GPT-Synopsys, a model specialized to operate Synopsys's EDA tools the way an expert engineer would: running the tools, interpreting outputs, iteratively optimizing a design, and closing timing and verification loops with a human reviewing the result rather than running each step. The deal includes revenue sharing and a joint go-to-market, with early customer engagements already underway.</p>
+      <p>This is the chip-design version of a pattern showing up everywhere else in this issue — a frontier lab partnering with the company that owns the domain-specific tools and workflow, rather than trying to replace that company's product with a general model acting alone. Synopsys keeps selling EDA software; OpenAI gets a wedge into a design process that runs for hours against tools no general-purpose agent can operate without years of domain-specific training data.</p>
+      <p>The security language in the announcement — customer design data won't train the model, encrypted in transit and at rest, configurable retention — is doing real work, not boilerplate. Chip designs are some of the most jealously guarded IP in any industry, and getting semiconductor customers comfortable running that IP through an OpenAI-trained model was always going to be the harder sell than the technology itself.</p>
     </div>
-    <div class="pull-quote" style="border-color: #a05545; color: #7a3a2e;">
-      "Agents whose token balance hits zero are permanently shut down."
+    <div class="pull-quote" style="border-color: #b8c894; color: #d4e0b0;">
+      "A wedge into a design process that runs for hours against tools no general-purpose agent can operate alone."
     </div>
     <div class="story-links">
-      <a href="https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/" class="story-link" style="color: #2a1a18;">Read Investigation</a>
-      <a href="https://news.ycombinator.com/item?id=49671159" class="story-link" style="color: #8a6a62;">HN Discussion</a>
+      <a href="https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design" class="story-link" style="color: #e8ead4;">Read Announcement</a>
+      <a href="https://news.ycombinator.com/item?id=49919910" class="story-link" style="color: #9aad7a;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 8 -->
-<section id="story8" class="spread theme-olive">
+<section id="story8" class="spread theme-lavender">
   <div class="story-number">08</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(232,234,212,0.15); color: #e8ead4;">Hardware · Reverse Engineering</span>
+      <span class="category-badge" style="background: rgba(26,24,40,0.1); color: #1a1828;">Anthropic · Claude</span>
+      <span class="flagged-badge">Flagged for you</span>
     </div>
-    <h2 class="story-headline">Ten Years Later, Apple's Neural Engine Gives Up Its Secrets</h2>
-    <div class="story-meta">eiln.github.io · September 12, 2026 · 195 pts on HN · 26 comments</div>
+    <h2 class="story-headline">A Historian Pointed Opus 5.5 at Dutch Colonial Archives and Found a New Dodo Sighting</h2>
+    <div class="story-meta">resobscura.substack.com · October 1, 2026 · 104 pts on HN · 19 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Eileen Yoon's retrospective walks through how she built a working Linux driver and the <code>anecc</code> compiler for Apple's Neural Engine — a fixed-function matrix accelerator that has shipped since the A11 and M1 and has never had public documentation. The method is the story: direct measurement plus static analysis of the private runtime, the compiler, the kernel driver, and the firmware, iterated until the program format gave way.</p>
-      <p>The community effort around it has compounded fast this year. There is now a full reverse-engineered account of the stack spanning A11 through A18 and M1 through M5, covering throughput bounds, weight compression, firmware behaviour and — the interesting part — direct dispatch paths that bypass Core ML entirely. Add Singh's M4 series and Handley's hardware reconstruction from Apple's own patent filings, and an undocumented block has become one of the better-characterised NPUs in public.</p>
-      <p>The practical upshot for anyone doing local inference: the ANE has been sitting idle in hardware you already own, reachable only through an abstraction layer that decides what you're allowed to run. That's changing, from the outside, by people with no access to the documentation.</p>
+      <p>Benjamin Breen's post walks through using Claude Opus 5.5 to surface what looks like a previously unnoticed 1615 Dutch account of hunting dodos, buried in the GLOBALISE archive of Dutch East India Company records. The method: download sources from the archive, run them through an embedding model for semantic search across languages, then have the frontier model read candidate passages and rank the strongest matches for a human historian to actually verify.</p>
+      <p>The part worth noticing for anyone who builds with these models rather than just chats with them is the parallelism. Breen describes spawning dozens of Opus copies to read through sources in multiple languages simultaneously, with the agent running its own embedding searches against new sources as they surface mid-research — not a single long chat, but a fan-out of narrow, disposable research tasks that converge on one ranked shortlist.</p>
+      <p>It's a small, quiet story next to this issue's infrastructure and business news, and that's exactly the point. Archival history is about as far from an agentic-coding benchmark as a use case gets, and it's converging on the same architecture — parallel subagents, embedding search, human-in-the-loop verification — that every coding harness in this issue is also building toward. The pattern is generalizing faster than the hype cycle around any one of its applications.</p>
     </div>
-    <div class="pull-quote" style="border-color: #b8c894; color: #d4e0b0;">
-      "An undocumented accelerator, reconstructed from firmware and patience."
+    <div class="pull-quote" style="border-color: #6a5a9a; color: #3a3060;">
+      "The same architecture — parallel subagents, embedding search, human verification — is generalizing past coding."
     </div>
     <div class="story-links">
-      <a href="https://eiln.github.io/posts/ane.html" class="story-link" style="color: #e8ead4;">Read Write-up</a>
-      <a href="https://news.ycombinator.com/item?id=49670032" class="story-link" style="color: #9aad7a;">HN Discussion</a>
+      <a href="https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness" class="story-link" style="color: #1a1828;">Read Essay</a>
+      <a href="https://news.ycombinator.com/item?id=49926917" class="story-link" style="color: #7a72a0;">HN Discussion</a>
     </div>
   </div>
 </section>
 
 <!-- STORY 9 -->
-<section id="story9" class="spread theme-lavender">
+<section id="story9" class="spread theme-rose">
   <div class="story-number">09</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(26,24,40,0.1); color: #1a1828;">Developer Culture · Essay</span>
+      <span class="category-badge" style="background: rgba(42,26,24,0.1); color: #2a1a18;">AI Capability · Culture</span>
     </div>
-    <h2 class="story-headline">'Fuck It, Make It Anyway' Hits a Nerve, 475 Comments Deep</h2>
-    <div class="story-meta">joelotter.com · September 11, 2026 · 484 pts on HN · 475 comments</div>
+    <h2 class="story-headline">Vote on Whether AI Actually Cleared the Bar You Set</h2>
+    <div class="story-meta">stoppels.ch · October 1, 2026 · 116 pts on HN · 121 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Joel Auterson's essay is subtitled "carrying on in the face of creative devaluation," and its central image — creative work chewed up and regurgitated back to us like a mother feeding a baby bird, on a subscription model — is the line doing the numbers. His conclusion is deliberately unstrategic: keep making things the way he enjoys, keep learning, keep doing it the hard way, for no concrete reason beyond wanting to. The post notes it was developed entirely without generative AI.</p>
-      <p>Nearly 500 comments on a post with no argument to rebut says something about where developer sentiment sits right now. It isn't a capability dispute — almost nobody in the thread claims the tools don't work. It's about what happens to craft as an identity when the output becomes cheap, and whether "I did it the hard way" survives as a reason once nobody can tell from the artifact.</p>
-      <p>Worth reading next to story one. The same week the CEO of a frontier lab argues the industry should slow down for safety reasons, the most-discussed post on HN is someone arguing for slowness as a personal practice, with no policy ask at all. Two very different arguments for the same instinct, and only one of them requires anyone else's cooperation.</p>
+      <p>Goalposts collects the specific capability claims Hacker News commenters have made over the years about what AI "still can't do" — then lets the community vote on whether each one has actually been met, is partially met, or still holds. It's a direct response to the genre of comment that moves the bar the moment a model clears it, except this time the bar and the verdict are both public and attributable.</p>
+      <p>121 comments on a project with no product and no company behind it says something about where the community's patience sits. A lot of the thread isn't arguing with the premise — it's volunteering better examples of goalposts that moved, and arguing about what "met" should even require: a benchmark score, a shipped product, or a specific named task performed unsupervised end to end.</p>
+      <p>Read next to the rest of this issue, Goalposts is the meta-commentary on everything else here — a model proving a real theorem, a historian finding archival needles with a fan-out of subagents, a coding harness matching a frontier model at half the cost. Every one of those is, functionally, someone clearing a goalpost that got set in exactly the kind of HN comment this site is built to archive.</p>
     </div>
-    <div class="pull-quote" style="border-color: #6a5a9a; color: #3a3060;">
-      "Keep doing it the hard way, for no real reason other than wanting to."
+    <div class="pull-quote" style="border-color: #a05545; color: #7a3a2e;">
+      "The bar and the verdict are both public now — and attributable to whoever set it."
     </div>
     <div class="story-links">
-      <a href="https://www.joelotter.com/posts/2026/09/make-it-anyway/" class="story-link" style="color: #1a1828;">Read Essay</a>
-      <a href="https://news.ycombinator.com/item?id=49671329" class="story-link" style="color: #7a72a0;">HN Discussion</a>
+      <a href="https://stoppels.ch/goalposts/" class="story-link" style="color: #2a1a18;">Visit Site</a>
+      <a href="https://news.ycombinator.com/item?id=49924618" class="story-link" style="color: #8a6a62;">HN Discussion</a>
     </div>
   </div>
 </section>
@@ -572,23 +572,23 @@
   <div class="story-number">10</div>
   <div class="story-left">
     <div class="badge-row">
-      <span class="category-badge" style="background: rgba(42,26,0,0.1); color: #2a1a00;">Programming Languages</span>
+      <span class="category-badge" style="background: rgba(42,26,0,0.1); color: #2a1a00;">AI Dev Tools · Local Inference</span>
     </div>
-    <h2 class="story-headline">Async/Await Was Never One Design. It Was Dozens.</h2>
-    <div class="story-meta">cel.cs.brown.edu · September 12, 2026 · 398 pts on HN · 114 comments</div>
+    <h2 class="story-headline">No CUDA Required: One Go Binary Runs GGUF Models on Any GPU You Own</h2>
+    <div class="story-meta">github.com/Vibra-Ingenn · Show HN · October 1, 2026 · 60 pts on HN · 9 comments</div>
   </div>
   <div class="story-right">
     <div class="story-body">
-      <p>Will Crichton's piece treats async/await not as a feature but as a design space, and then actually maps it: where the syntax sits, what a suspended computation is represented as, who schedules it, whether cancellation is cooperative or structural, and how the colouring problem propagates through a type system. Every mainstream language picked a different point in that space, mostly for reasons of implementation history rather than principle.</p>
-      <p>Reading it against Rust, JavaScript, Python, Kotlin and Swift is a useful exercise in de-naturalising your own language's choices. The parts that feel like "how async works" are usually one coordinate in a space with several other defensible answers — and the complaints developers have about async in their language tend to trace back to one specific coordinate, not to the paradigm.</p>
-      <p>398 points and a long, unusually technical thread suggests HN was ready for a systematic treatment of something everyone has opinions about and few have mapped. If you are writing concurrent agent orchestration code — which increasingly means everyone — the cancellation and structured-concurrency sections are the ones that will change how you write code next week.</p>
+      <p>Janus is a single Go binary that serves .gguf models through llama.cpp's Vulkan backend, with an OpenAI-compatible API, hot-swap model loading, thinking-model support, and automatic chat-template detection. No Python, no Docker, no Ollama. The headline feature is the backend choice: Vulkan is a cross-platform compute API with drivers for AMD, Intel, and Nvidia, including integrated GPUs, where most local-inference tooling only accelerates on Nvidia through CUDA.</p>
+      <p>That matters more than it sounds for anyone running local models on hardware that isn't a 4090 — the laptop with an Intel iGPU, the desktop with an AMD card bought for gaming rather than inference, the machine that's been sitting idle because the local-LLM tooling ecosystem assumed CUDA as a precondition rather than an option.</p>
+      <p>The Show HN thread's main pushback is fair: there's no benchmark yet against vLLM or SGLang, and questions about Intel Vulkan driver overhead are unresolved. Nine comments and 60 points is a modest showing, but "runs anywhere Vulkan runs, in one binary" is the kind of utility that accumulates users quietly rather than trending — worth a star and a revisit in a few months.</p>
     </div>
     <div class="pull-quote" style="border-color: #a07a2a; color: #6a4a10;">
-      "What feels like 'how async works' is one coordinate among many."
+      "Runs anywhere Vulkan runs, in one binary — the kind of utility that accumulates users quietly."
     </div>
     <div class="story-links">
-      <a href="https://cel.cs.brown.edu/blog/design-space-async-await/" class="story-link" style="color: #2a1a00;">Read Article</a>
-      <a href="https://news.ycombinator.com/item?id=49626718" class="story-link" style="color: #8a7550;">HN Discussion</a>
+      <a href="https://github.com/Vibra-Ingenn/Janus" class="story-link" style="color: #2a1a00;">Read Repository</a>
+      <a href="https://news.ycombinator.com/item?id=49926773" class="story-link" style="color: #8a7550;">HN Discussion</a>
     </div>
   </div>
 </section>
@@ -598,7 +598,7 @@
   <div class="back-headline">That's a Wrap.</div>
   <div class="back-rule"></div>
   <div class="back-sub">
-    Issue No. 38 of Morning Edition. Ten stories. The undercurrent this week was speed and who gets to set it: Amodei asking three labs to agree on a limit, OpenAI and Anthropic racing a century-old PDE problem on a one-week clock, Google taxing automated crawling by the request, and a startup shipping agents that cold-email strangers to avoid being deleted. The counterpoint came from the least strategic post of the week — one developer arguing for slowness as a personal practice, requiring no one's cooperation at all.
+    Issue No. 39 of Morning Edition. Ten stories, and the throughline was infrastructure built around the assumption that calling a frontier model is the expensive case to avoid: Cloudflare shipping decision models to replace LLM calls with classifications, an open router that beats GPT-6 Astra's benchmark scores by using it less, and a research paper that lets a model edit its own context instead of re-reading all of it. Anthropic showed up twice without a product launch of its own — a competing coding harness tuning its cache defaults around Claude's cost curve, and a historian fanning out Opus 5.5 subagents to find a 1615 dodo account in a Dutch archive neither had touched in four centuries.
   </div>
   <div class="back-stats">
     <div class="back-stat">
@@ -606,7 +606,7 @@
       <div class="back-stat-label">Stories curated</div>
     </div>
     <div class="back-stat">
-      <div class="back-stat-num">6</div>
+      <div class="back-stat-num">10</div>
       <div class="back-stat-label">AI-native stories</div>
     </div>
     <div class="back-stat">
@@ -614,12 +614,12 @@
       <div class="back-stat-label">Flagged for you</div>
     </div>
     <div class="back-stat">
-      <div class="back-stat-num">13.9%</div>
-      <div class="back-stat-label">Median duty cycle of an agent session</div>
+      <div class="back-stat-num">1615</div>
+      <div class="back-stat-label">Oldest source unearthed this week</div>
     </div>
   </div>
   <div class="back-footer">
-    Morning Edition · AI Weekly · Issue 38 · September 13, 2026<br>
+    Morning Edition · AI Weekly · Issue 39 · October 2, 2026<br>
     Generated for Jani Teerioja · teeris@gmail.com
   </div>
 </section>
